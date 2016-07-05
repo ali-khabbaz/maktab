@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="/vendor/jquery-ui/ui/themes/smoothness/jquery-ui.min.css" />
+    <link rel="stylesheet" type="text/css" href="/vendor/angucomplete-alt/angucomplete-alt.css" />
+    <link rel="stylesheet" type="text/css" href="/vendor/video.js/dist/video-js.min.css" />
+    <link rel="stylesheet" href="/assets/css/style.css">
+	<meta name="fragment" content="!">
+	<meta charset="UTF-8">
+	<title>MaktabTv</title>
+</head>
+<body ng-controller="MainViewCtrl as mainView">
+	<div ng-view></div>
+    <footer class="footer_page">
+        <div class="container clearfix">
+            <div class="footer_right_side">
+                <ul class="menu_footer">
+                    <li><a href="">درباره مکتب تی وی</a></li>
+                    <li><a href=""> آخرین درس های ارائه شده</a></li>
+                    <li><a href="">تماس با ما</a></li>
+                </ul>
+                <p class="clearfix footer_context">استفاده از مطالب سايت مکتب تی وی فقط برای مقاصد غیر تجاری و با ذکر منبع بلامانع است.</p>
+            </div>
+            <div class="footer_left_side">
+                <figure class="footer_logo">
+                    <a href="">
+                        <img alt="logo" src="/assets/icons/footer_logo.png">
+                    </a>
+                </figure>
+            </div>
+        </div>
+    </footer>
+</body>
+<script type="text/javascript" src="/vendor/video.js/dist/video.js" ></script>
+<script>
+    videojs.options.flash.swf = "/vendor/video.js/dist/video-js.swf"
+</script>
+<script type="text/javascript" src="/vendor/require.js" data-main="../app/main.js"></script>
+</html>

@@ -1,0 +1,14 @@
+<div ng-controller="registerCtrl as reg">
+    <p>Register</p>
+    <p><a href="/#/main">back to main</a></p>
+    <p><a href="/#/jobs">go to jobs</a></p>
+    <div ng-click="reg.logOut()">Log out</div>
+    <form>
+    	<h1 ng-hide="reg.authenticated">common buddy Register</h1>
+    	<h1 ng-show="reg.authenticated">Hello {{reg.user_email}}</h1>
+    	<input same-as name="email" ng-model="email" type="text" placeholder="Email address" required autofocus><br>
+    	<input type="password" placeholder="password" ng-model="password" required><br>
+    	<input type="password" placeholder="confirm password" ng-model="re_password" required><br>
+    	<button type="submit" class="submit_btn" ng-click="reg.register(email,password)" >submit</button>
+    </form>
+</div>

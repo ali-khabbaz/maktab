@@ -1,0 +1,11 @@
+<div ng-controller="articleListCtrl as article_list">
+    <div ng-repeat="art in article_list.article_list_data" class="article_list">
+        <a href="/#/video/{{art.article_id}}/1/1"><h2>Ttile: {{art.article_name}}</h2>
+		<p>Author :{{art.author_name}}</p>
+		<p>Resource :{{art.resource_name}}</p>
+		<p>Duration :{{art.duration}}</p>
+		<p>Released Date :{{art.released_date}}</p>
+		<p>Level :{{art.level_name}}</p>
+		<div class="article_small_desc">description :{{art.desc_small}}</div class="article_small_sesc"></a>
+    </div>
+</div>

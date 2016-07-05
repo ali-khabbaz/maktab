@@ -1,0 +1,140 @@
+<main class="main_block clearfix" ng-controller="FirstPageSearchController as search">
+    <img class="main_photo" src="assets/img/main1.jpg" alt="main">
+    <header class="header clearfix">
+        <div class="container clearfix">
+            <nav class="navBar">
+                <ul class="menu pull_right">
+                    <li><a class="home_link active clearfix" href="#/"><span></span>خانه</a></li>
+                    <li><a href="#/courses">شاخه های درسی</a></li>
+                </ul>
+                <ul class="register_menu pull_left">
+                    <li><a class="nav_register" href=""><span></span>عضویت</a></li>
+                    <li><a class="nav_logIn" href=""><span></span>ورود</a></li>
+                </ul>
+            </nav>
+            <div class="logo pull_left">
+                <a href=""><img src="assets/icons/logo.png"></a>
+            </div>
+        </div>
+    </header>
+    <div class="main_context">
+        <div class="search_block">
+            <!--morteza-->
+            <!-- <input class="main_search"> -->
+            <div data-ng-if="search.searchData" class="anguComplete_wrapper clearfix">
+                <div class=" clearfix" ng-keypress="search.keyEventHandler($event)" angucomplete-alt id="ex1" placeholder="Find a Course On Virtually anything" maxlength="50" pause="100" selected-object="search.selectedValue" local-data="search.searchData" search-fields="name,subcategoryName" title-field="name,subcategoryName" minlength="1" input-class="main_search" match-class="highlight" input-changed="search.inputChanged"></div>
+            </div>
+            <a class="main_button" href=""><span></span>جستجو</a>
+        </div>
+        <div class="search_context">
+            <p>دسترسی سریع و آسان به فایلهای ویدیویی آموزشی</p>
+        </div>
+    </div>
+    <footer class="main_footer clearfix">
+        <div class="container">
+            <span class="coursera_logo"></span>
+            <span class="udemy_logo"></span>
+            <span class="lynda_logo"></span>
+            <span class="pluralsight_logo"></span>
+        </div>
+    </footer>
+</main>
+<section class="categories clearfix" data-ng-controller="TopCategories as tc">
+    <div class="container clearfix" data-ng-if="tc.topCategories">
+        <div class="category_wrapper clearfix">
+            <article class="category clearfix" data-ng-repeat="info in tc.topCategories">
+                <a class="clearfix">
+                    <figure class="category_img clearfix">
+                        <img src="assets/img/computer.jpg" alt="computerPrograming">
+                    </figure>
+                    <header class="category_header clearfix">
+                        <h4><span></span>{{info.categoryName}}</h4>
+                    </header>
+                    <main class="clearfix">
+                        <ul class="category_list">
+                            <li class="category_list_item" data-ng-repeat="el in info.subCategoryNames">
+                                <a href=""><span></span>{{el}}</a>
+                            </li>
+                        </ul>
+                    </main>
+                </a>
+            </article>
+        </div>
+    </div>
+</section>
+<section class="courses clearfix" data-ng-controller="TopArticlesAndSubCategories as taas">
+    <div class="container clearfix" data-ng-if="taas.topSubCategories[0].articles">
+        <div class="tabs_wrapper clearfix">
+            <ul class="tabs_list clearfix">
+                <!-- <li ng-click="taas.changeTab('Best')"><a data-ng-class="{'active' : taas.tab === 'Best'}" href="">محبوب ترین درس ها</a></li> -->
+                <li ng-click="taas.changeTab(info.name)" data-ng-repeat="info in taas.topSubCategories"><a data-ng-class="{'active' : taas.tab === info.name}" href="">{{info.name}}</a></li>
+            </ul>
+        </div>
+        <section data-ng-repeat="info in taas.topSubCategories" class="course_wrapper clearfix" data-ng-show="taas.tab === info.name ">
+            <div class="loading-container" ng-if="taas.loadingshow">
+                <!--<div class="loader">-->
+                <div class="loading-bars">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+                <!--</div>-->
+            </div>
+            <article class="course clearfix" ng-if="!taas.loadingshow" data-ng-repeat="el in info.articles">
+                <a class="clearfix" href="#/video/{{el.articleId}}">
+                    <figure class="course_img clearfix">
+                        <div class="price clearfix">
+                            <p>رایــگان</p>
+                        </div>
+                        <!-- <img class="course_img" src="assets/img/course_small.jpg" alt="softLearning"> -->
+                        <img class="course_img" src="assets/img/articles/{{el.articleId}}/Main-001.jpg" width="277" alt="softLearning">
+                    </figure>
+                    <header class="course_header clearfix">
+                        <h4>
+                            {{el.articleName}}
+                        </h4>
+                    </header>
+                    <ul class="list_details clearfix">
+                        <!--morteza-->
+                        <li class="list_details_item list_details_teacher clearfix">
+                            <p>مدرس:</p>
+                            <p>{{el.articleAuthorName}}</p>
+                        </li>
+                        <li class="list_details_item list_details_source clearfix">
+                            <p>{{el.articleResourceName}}</p>
+                        </li>
+                        <li class="list_details_item list_details_time clearfix">
+                            <p>{{el.articleDuration}} دقیقه</p>
+                        </li>
+                    </ul>
+                    <footer class="course_footer clearfix">
+                        <div class="pull_right date_wrapper clearfix">
+                            <span class="date icon"></span>
+                            <p>20/02/1395</p>
+                        </div>
+                        <div class="pull_left view_wrapper clearfix">
+                            <span class="view icon"></span>
+                            <p>بازدید {{el.articleViews}}</p>
+                        </div>
+                    </footer>
+                </a>
+            </article>
+        </section>
+    </div>
+</section>
+<section class="rss_email clearfix">
+    <div class="container clearfix">
+        <div class="rss_email_context">
+            <div class="rss_email_img clearfix">
+                <span></span>
+            </div>
+            <p class="rss_email_context">برای اطلاع از آخرین ویدیوهای ارائه شده ایمیل خود را وارد نمایید:</p>
+        </div>
+        <div class="rss_email_register">
+            <input class="email_input_rss" type="text">
+            <a>ثبت</a>
+        </div>
+    </div>
+</section>

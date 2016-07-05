@@ -1,0 +1,14 @@
+<div ng-controller="loginCtrl as login">
+    <p>Login</p>
+    <p><a href="/#/main">back to main</a></p>
+    <p ng-hide="login.authenticated"><a href="/#/register">back to register</a></p>
+    <p ng-show="login.authenticated">you already logged in as {{login.user}}</p>
+    <a href=""><p ng-show="login.authenticated" ng-click="login.logOut()">Log out</p></a>
+    <form ng-hide="login.authenticated">
+    	<h1>Log In</h1>
+    	<input same-as name="email" ng-model="email" type="text" placeholder="Email address" required autofocus><br>
+    	<input type="password" placeholder="password" ng-model="password" required><br>
+    	<button type="submit" class="submit_btn" ng-click="login.login(email,password)" >login</button>
+        <button type="button" class="submit_btn" ng-click="login.google('google')" >Google</button>
+    </form>
+</div>

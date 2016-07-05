@@ -1,0 +1,194 @@
+<div data-ng-controller="videoCtrl as vc">
+    <main class="main_block  clearfix">
+        <div class="main_video clearfix">
+            <header class="header clearfix">
+                <div class="container clearfix">
+                    <nav class="navBar">
+                        <ul class="menu pull_right">
+                            <li><a class="home_link active clearfix" href="#/"><span></span>خانه</a></li>
+                            <!--  <li><a href="">دروس ارائه شده</a></li> -->
+                            <li><a href="#/courses">شاخه های درسی</a></li>
+                        </ul>
+                        <ul class="register_menu pull_left">
+                            <li><a class="nav_register" href=""><span></span>عضویت</a></li>
+                            <li><a class="nav_logIn" href=""><span></span>ورود</a></li>
+                        </ul>
+                    </nav>
+                    <div class="logo pull_left">
+                        <a href=""><img src="assets/icons/logo.png"></a>
+                    </div>
+                </div>
+            </header>
+            <header class="header_video_course clearfix">
+                <div class="container video_course_title_wrapper">
+                    <h1 class="video_course_title"><span></span>{{vc.articleInfo.name}}<span></span></h1>
+                    <div class="video_course_title_detail_wrapper">
+                        <p class="video_course_title_detail date"><span class="icon"></span><span>تاریخ ارائه</span><span class="date_value">{{vc.articleInfo.releasedDate}}</span></p>
+                        <p class="video_course_title_detail views"><span class="icon"></span><span>تعداد بازدید</span><span class="view_value">{{vc.articleInfo.views}}</span></p>
+                    </div>
+                </div>
+            </header>
+        </div>
+    </main>
+    <section class="intro_course clearfix">
+        <div class="container clearfix">
+            <div class="video_course_wrapper clearfix" data-ng-show="vc.videoAddress">
+                <!-- <video id="my-video" class="video-js vjs-default-skin vjs-big-play-centered" controls preload="auto" width="820" height="460" poster="assets/img/video.jpg">
+                    <source ng-src="{{vc.videoAddress.wmv}}" type='video/wmv'>
+                    <source ng-src="{{vc.videoAddress.mp4}}" type='video/mp4'>
+                    <source ng-src="{{vc.videoAddress.webm}}" type='video/webm'>
+                    <p class="vjs-no-js">
+                        To view this video please enable JavaScript, and consider upgrading to a web browser that
+                        <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+                    </p>
+                </video> -->
+                <video id="my-video2"></video>
+                <!-- <figure class="video_figure clearfix">
+                    <img src="assets/img/video.jpg" align="photoShopTraining">
+                    <a href="" class="icon_play"></a>
+                </figure> -->
+                <section class="course_content clearfix" data-ng-if="vc.articleVideos">
+                    <header class="section_header content_header clearfix">
+                        <h4>توضیحات</h4></header>
+                    <div class="course_main_intro">
+                        <p>
+                            {{vc.articleInfo.descBig}}
+                        </p>
+                    </div>
+                    <header class="section_header content_header clearfix">
+                        <h4>قسمت ها</h4></header>
+                    <section class="section_course" data-ng-repeat="info in vc.articleVideos" data-ng-if="info">
+                        <header class="section_course_header">
+                            <h5>بخش {{vc.count[info.sectionId-1]}}:</h5>
+                            <h5>{{info.sectionName}}</h5></header>
+                        <article class="section_course_accordion" data-ng-repeat="el in info.videos">
+                            <header class="header_section_course_accordion clearfix" ng-click="vc.accordion($event)">
+                                <div class="title_section_course_accordion clearfix">
+                                    <!--  <span class="section_course_num">{{}}</span> -->
+                                    <span class="icon_video"></span>
+                                    <p class="subject_section_course"><span>قسمت {{vc.count[el.videoId-1]}}</span><span>{{el.videoName}}</span></p>
+                                    <span class="icon_accordion"></span>
+                                    <span class="type_section_course">ویدئو</span>
+                                </div>
+                                <div class="preview_section_course_accordion clearfix">
+                                    <p><span class="icon_time"></span><span>{{el.duration}} دقیقه</span></p>
+                                    <p class="video_preview" ng-class="{ 'video_preview_active': info.sectionId == vc.selectedSection && el.videoId == vc.selectedVideo  }" data-ng-click="vc.selectVideo(info.sectionId,el.videoId)">نمایش</p>
+                                </div>
+                            </header>
+                            <main class="main_section_course_accordion">
+                                <p>
+                                    این قسمت درباره اصول اولیه فتوشاپ ونحوه رسم شگل های اصلی است در این قسمت نحوه ایجاد کردن فضای کاری مخصوص به خود را فرا می گیرید و از نحوه ی کار با ابزارهای اصلی فتوشاپ و میانبرهای آن آموزش داده می شود
+                                </p>
+                            </main>
+                        </article>
+                    </section>
+                </section>
+            </div>
+            <aside class="aside_wrapper">
+                <section class="video_course_details">
+                    <header class="section_header clearfix">
+                        <h4>جزئیات</h4></header>
+                    <main class="main_details_course clearfix">
+                        <ul class="list_course_video_details clearfix">
+                            <li class="list_course_video_details_item clearfix">
+                                <p class="subject_details">ارائه شده توسط:</p>
+                                <p class="details_value">{{vc.articleInfo.resourceName}}</p>
+                            </li>
+                            <li class="list_course_video_details_item clearfix">
+                                <p class="subject_details">مدرس:</p>
+                                <p class="details_value">{{vc.articleInfo.authorName}}</p>
+                            </li>
+                            <li class="list_course_video_details_item clearfix">
+                                <p class="subject_details">مدت زمان:</p>
+                                <p class="details_value">{{vc.articleInfo.articleDuration}} ساعت </p>
+                            </li>
+                            <li class="list_course_video_details_item clearfix">
+                                <p class="subject_details">زبان:</p>
+                                <p class="details_value">انگلیسی</p>
+                            </li>
+                            <li class="list_course_video_details_item clearfix">
+                                <p class="subject_details">تعداد بخش ها:</p>
+                                <p class="details_value">{{vc.articleVideos.length}} بخش</p>
+                            </li>
+                            <li class="list_course_video_details_item clearfix">
+                                <p class="subject_details">دسته بندی شده:</p>
+                                <p class="details_value">{{vc.articleInfo.subCategoryName}}
+                                    <- {{vc.articleInfo.categoryName}}</p>
+                            </li>
+                        </ul>
+                        <ul class="list_course_download_details">
+                            <li class="list_course_download_details_item clearfix">
+                                <p class="course_download_details_num">87</p>
+                                <p class="course_download_details">بار دانلود شده</p>
+                            </li>
+                            <li class="list_course_download_details_item clearfix">
+                                <p class="course_rating">
+                                    <span class="star_full"></span>
+                                    <span class="star_full"></span>
+                                    <span class="star_full"></span>
+                                    <span class="star_full"></span>
+                                    <span class="star_blank"></span>
+                                </p>
+                            </li>
+                            <li class="list_course_download_details_item clearfix">
+                                <p class="price_subject">قیمت:</p>
+                                <p class="price_value">رایـــگـــان</p>
+                            </li>
+                            <li class="list_course_download_details_item clearfix">
+                                <button class="download_link_course clearfix"><span class="icon"></span>د‌انـلـود</button>
+                            </li>
+                        </ul>
+                    </main>
+                </section>
+                <section class="similar_courses">
+                    <header class="section_header clearfix">
+                        <h4>درس های مشابه</h4></header>
+                    <ul class="similar_courses_list">
+                        <li class="similar_courses_item clearfix">
+                            <a class="similar_courses_item_link clearfix" href="">
+                                <figure class="similar_course_figure">
+                                    <img src="assets/img/similar_course.jpg" alt="systemLearning">
+                                </figure>
+                                <div class="similar_course_details">
+                                    <p>یادگیری سیستم عامل</p>
+                                    <p>joie teribiani</p>
+                                    <p class="course_rating">
+                                        <span class="star_full"></span>
+                                        <span class="star_full"></span>
+                                        <span class="star_full"></span>
+                                        <span class="star_full"></span>
+                                        <span class="star_blank"></span>
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="similar_courses_item clearfix">
+                            <a class="similar_courses_item_link clearfix" href="">
+                                <figure class="similar_course_figure">
+                                    <img src="assets/img/similar_course_1.jpg" alt="systemLearning">
+                                </figure>
+                                <div class="similar_course_details">
+                                    <p>یادگیری سیستم عامل</p>
+                                    <p>joie teribiani</p>
+                                    <p class="course_rating">
+                                        <span class="star_full"></span>
+                                        <span class="star_full"></span>
+                                        <span class="star_full"></span>
+                                        <span class="star_full"></span>
+                                        <span class="star_blank"></span>
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+                <section class="search_video_section clearfix">
+                    <header class="section_header clearfix">
+                        <h4>جستجو</h4></header>
+                    <div>
+                        <input type="text" class="search_video_section_input"><span></span></div>
+                </section>
+            </aside>
+        </div>
+    </section>
+</div>

@@ -1,0 +1,247 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: 1px solid red;
+}
+
+body.main {
+    background-image: url('/css/img/bg.png');
+    background-repeat: no-repeat;
+    background-position: 0px 1px;
+}
+
+.top_search {
+    width: 100%;
+    min-height: 668px;
+    position: relative;
+}
+
+.top_search .container {
+    width: 100%;
+    height: 668px;
+    background-image: url('/css/img/man_tablet.jpg');
+    background-size: cover;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.top_search .top {
+    width: 100%;
+    height: 36px;
+}
+
+.top_search .top .login {
+    width: 300px;
+    height: 36px;
+    float: right;
+}
+
+.top_search .top .logo {
+    width: 130px;
+    height: 36px;
+    margin: 0 auto;
+}
+
+.top_search .top .search_box {
+    width: 848px;
+    height: 357px;
+    margin: 0 auto;
+    margin-top: 110px;
+}
+
+.top_cards {
+    width: 100%;
+    min-height: 2000px;
+    padding-top: 40px;
+}
+
+.top_cards .container {
+    width: 1137px;
+    min-height: 1923px;
+    margin: 0 auto;
+}
+
+.top_cards .top_courses {
+    width: 1137px;
+    height: 364px;
+    margin: 0 auto;
+    margin-left: -14px;
+}
+
+.top_cards .newest_courses {
+    width: 1137px;
+    height: 1420px;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-left: -14px;
+}
+
+.top_cards .browse {
+    width: 1137px;
+    height: 80px;
+    margin: 0 auto;
+    margin-top: 41px;
+    margin-left: -14px;
+}
+
+.signup_section {
+    width: 100%;
+    min-height: 10px;
+    padding: 26px 0 28px;
+}
+
+.signup_section .container {
+    width: 1137px;
+    min-height: 170px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+.signup_section .text {
+    width: 620px;
+    height: 131px;
+    margin: 0 auto;
+}
+
+.signup_section .signup {
+    width: 175px;
+    height: 58px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.footer {
+    width: 100%;
+    min-height: 75px;
+}
+
+.footer .container {
+    width: 1149px;
+    min-height: 77px;
+    margin: 0 auto;
+}
+
+div.main_courses .search_login {
+    width: 100%;
+    height: 52px;
+}
+
+div.main_courses .search_login .login {
+    float: right;
+    height: 52px;
+    width: 290px;
+}
+
+div.main_courses .search_login .logo {
+    float: right;
+    height: 52px;
+    width: 105px;
+    margin-right: 331px;
+}
+
+div.main_courses .search_login .search {
+    float: right;
+    height: 52px;
+    width: 300px;
+    margin-right: 175px;
+}
+
+div.main_courses .search_login .browse_btn {
+    height: 52px;
+    margin-right: 1210px;
+    margin-left: 2px;
+}
+
+div.main_courses .main {
+    width: 100%;
+    min-height: 1750px;
+}
+
+div.main_courses .main .left {
+    float: left;
+    width: 240px;
+    height: 1750px;
+}
+
+div.main_courses .main .left menu {
+    width: 240px;
+    height: 500px;
+}
+
+div.main_courses .main .right {
+    height: 1750px;
+    margin-left: 310px;
+    margin-right: 70px;
+}
+
+div.main_courses .main .right .box {
+    width: 100%;
+    height: 343px;
+}
+
+div.main_courses .main .right .box .nav {
+    width: 100%;
+    height: 60px;
+}
+
+div.main_courses .main .right .box .course:nth-child(2) {
+    width: 229px;
+    height: 277px;
+    margin-left: 0;
+}
+
+div.main_courses .main .right .box .course {
+    float: left;
+    width: 229px;
+    height: 277px;
+    margin-left: 16px;
+}
+
+div.main_courses menu ul {
+    list-style-type: none;
+}
+
+div.main_courses menu ul li {
+    margin-top: 10px;
+    height: 30px;
+    padding-left: 39px;
+    padding-top: 4px;
+}
+
+div.main_courses .search input {
+    margin-top: 12px;
+    height: 34px;
+    width: 292px;
+    margin-left: 4px;
+    background-color: #E4E2E2;
+    border-radius: 8px;
+    outline: none;
+}
+
+.videogular-container {
+    width: 100%;
+    height: 320px;
+    margin: auto;
+    overflow: hidden;
+}
+
+@media (min-width: 800px) {
+    .videogular-container {
+        width: 1170px;
+        height: 658.125px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .videogular-container {
+        width: 940px;
+        height: 528.75px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .videogular-container {
+        width: 728px;
+        height: 409.5px;
+    }
+}
