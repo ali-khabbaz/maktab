@@ -134,9 +134,9 @@
                                 <p class="price_subject">قیمت:</p>
                                 <p class="price_value">رایـــگـــان</p>
                             </li>
-                            <li class="list_course_download_details_item clearfix">
-                                <button class="download_link_course clearfix"><span class="icon"></span>د‌انـلـود</button>
-                            </li>
+                            <!--  <li class="list_course_download_details_item clearfix">
+                               <button class="download_link_course clearfix"><span class="icon"></span>د‌انـلـود</button>
+                           </li> -->
                         </ul>
                     </main>
                 </section>
@@ -182,11 +182,15 @@
                         </li>
                     </ul>
                 </section>
-                <section class="search_video_section clearfix">
+                <section class="search_video_section clearfix" ng-controller="FirstPageSearchController as search">
                     <header class="section_header clearfix">
                         <h4>جستجو</h4></header>
-                    <div>
-                        <input type="text" class="search_video_section_input"><span></span></div>
+                    <!-- <div>
+                        <input type="text" class="search_video_section_input"><span></span>
+                    </div> -->
+                    <div data-ng-if="search.searchData" class="anguComplete_wrapper clearfix">
+                        <div class=" clearfix" ng-keypress="search.keyEventHandler($event)" angucomplete-alt id="ex1" placeholder="جستجوی عنوان آموزشی" maxlength="50" pause="100" selected-object="search.selectedValue" local-data="search.searchData" search-fields="name,subcategoryName" title-field="name,subcategoryName" minlength="1" input-class="main_search" match-class="highlight" input-changed="search.inputChanged"></div>
+                    </div>
                 </section>
             </aside>
         </div>
