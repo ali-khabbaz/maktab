@@ -14,7 +14,9 @@
 					getCategoryAndSubCategoriesAndArticles: getCategoryAndSubCategoriesAndArticles,
 					categoryAndSubCategoriesAndArticlesDataReady: categoryAndSubCategoriesAndArticlesDataReady,
 					filterArticlesSubCategory: filterArticlesSubCategory,
-					getSearchResult: getSearchResult
+					getSearchResult: getSearchResult,
+					extractSoftwares: extractSoftwares,
+					noSoftwareSelected: noSoftwareSelected
 				};
 			return factory;
 
@@ -222,6 +224,34 @@
 					}
 				}
 				return temp;
+			}
+
+			function extractSoftwares(arr) {
+				var temp = [],
+					temp2 = [],
+					i = null;
+				for (i = 0; i < arr.length; i++) {
+					if (temp2.indexOf(arr[i].softwareName) === -1) {
+						temp.push({
+							name: arr[i].softwareName,
+							select: false
+						});
+						temp2.push(arr[i].softwareName);
+					}
+				}
+				return temp;
+			}
+
+			function noSoftwareSelected(softwares) {
+				var i = null,
+					key = true;
+				for (i = 0; i < softwares.length; i++) {
+					if (softwares[i].select) {
+						key = false;
+						return key;
+					}
+				}
+				return key;
 			}
 		}
 	});

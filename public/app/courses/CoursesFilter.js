@@ -15,6 +15,9 @@
 			vm.accordion = accordion;
 			vm.selectedArticles = '';
 			vm.searchWord = params.searchWord;
+			vm.filterCourses = filterCourses;
+			vm.softwares = null;
+			vm.selectedSoftwares = [];
 			main();
 
 			function main() {
@@ -35,7 +38,9 @@
 				vm.articles = res.data;
 				vm.categoryAndSubCategoriesAndArticles =
 					cf.categoryAndSubCategoriesAndArticlesDataReady(res.data);
-				console.log('----getCategoryAndSubCategoriesAndArticles----------', vm.articles);
+				vm.softwares = cf.extractSoftwares(res.data);
+				console.log('----getCategoryAndSubCategoriesAndArticles----------',
+					vm.articles, vm.categoryAndSubCategoriesAndArticles, vm.softwares);
 			}
 
 			function getSearchResultSuccess(res) {
@@ -58,6 +63,26 @@
 				vm.selectedSubCategory = subCategory;
 				vm.selectedArticles = cf.filterArticlesSubCategory(vm.articles, subCategory);
 				console.log('selectedArticles', vm.selectedArticles, vm.selectedArticles);
+			}
+
+			function filterCourses(inp) {
+				var i = null;
+				if (!vm.selectedSubCategory || (vm.selectedSubCategory === inp.subCategoryName)) {
+					if (cf.noSoftwareSelected(vm.softwares)) {
+						return true;
+					} else {
+						for (i = 0; i < vm.softwares.length; i++) {
+							if (inp.softwareName === vm.softwares[i].name &&
+								vm.softwares[i].select) {
+								return true;
+							}
+						}
+						return false;
+					}
+					return true;
+				} else {
+					return false;
+				}
 			}
 		}
 	});

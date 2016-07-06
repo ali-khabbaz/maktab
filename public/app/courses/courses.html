@@ -54,9 +54,9 @@
                     <main class="filter_main">
                         <div class="courses_accordion" data-ng-repeat="info in cf.categoryAndSubCategoriesAndArticles">
                             <!--morteza-->
-                            <h4 class="header_courses_accordion" ng-click="cf.accordion($event)"><span class="icon_accordion"></span>{{info.categoryName}}<span class="course_num">{{info.num}}</span></h4>
+                            <h4 class="header_courses_accordion" ng-click="cf.accordion($event)"><span class="icon_accordion"></span>{{::info.categoryName}}<span class="course_num">{{::info.num}}</span></h4>
                             <ul class="list_courses_accordion">
-                                <li data-ng-click="cf.selectSubCategory(el.name)" class="list_courses_item" data-ng-repeat="el in info.subCategories"><a href="">{{el.name}}</a><span class="course_num">{{el.articles.length}}</span>
+                                <li data-ng-click="cf.selectSubCategory(el.name)" class="list_courses_item" data-ng-repeat="el in info.subCategories"><a href="">{{::el.name}}</a><span class="course_num">{{::el.articles.length}}</span>
                                 </li>
                             </ul>
                         </div>
@@ -71,6 +71,15 @@
                         <p class="check_filter">
                             <input class="input_check_filter" id="notFree" type="checkbox">
                             <label class="label_check_filter" for="notFree">پرداختی</label>
+                        </p>
+                    </main>
+
+                    <header class="filter_header clearfix">
+                        <h4>نرم افزارها</h4></header>
+                    <main class="filter_main clearfix">
+                        <p class="check_filter" data-ng-repeat="info in cf.softwares">
+                            <input class="input_check_filter" id="free" type="checkbox" data-ng-model="info.select" >
+                            <label class="label_check_filter" for="free">{{::info.name}}</label>
                         </p>
                     </main>
                 </div>
@@ -91,41 +100,41 @@
                     </ul>
                 </div>
                 <div class="courses clearfix">
-                    <article class="course clearfix" data-ng-repeat="info in cf.articles" data-ng-if=" !cf.selectedSubCategory || (cf.selectedSubCategory === info.subCategoryName) ">
-                        <a class="clearfix" href="#/video/{{info.articleId}}">
+                    <article class="course clearfix" data-ng-repeat="info in cf.articles | filter:cf.filterCourses">
+                        <a class="clearfix" href="#/video/{{::info.articleId}}">
                             <figure class="course_img clearfix">
                                 <div class="price clearfix">
                                     <p>رایــگان</p>
                                 </div>
-                                <img class="course_img" src="assets/img/articles/{{info.articleId}}/Main-001.jpg" width="277" alt="softLearning">
+                                <img class="course_img" src="assets/img/articles/{{::info.articleId}}/Main-001.jpg" width="277" alt="softLearning">
                             </figure>
                             <header class="course_header clearfix">
                                 <h4>
-                                    {{info.articleName}}
+                                    {{::info.articleName}}
                                 </h4>
                             </header>
                             <ul class="list_details clearfix">
                              <!--morteza-->
                                 <li class="list_details_item list_details_source clearfix">
                                     <p>منبع:</p>
-                                    <p>{{info.articleResource}}</p>
+                                    <p>{{::info.articleResource}}</p>
                                 </li>
                                 <li class="list_details_item list_details_teacher clearfix">
                                     <p>مدرس:</p>
-                                    <p>{{info.articleAuthor}}</p>
+                                    <p>{{::info.articleAuthor}}</p>
                                 </li>
                                 <li class="list_details_item list_details_time clearfix">
-                                    <p>{{info.articleDuration}} ساعت</p>
+                                    <p>{{::info.articleDuration}} ساعت</p>
                                 </li>
                             </ul>
                             <footer class="course_footer clearfix">
                                 <div class="pull_right date_wrapper clearfix">
                                     <span class="date icon"></span>
-                                    <p>{{info.articleReleaseDate}}</p>
+                                    <p>{{::info.articleReleaseDate}}</p>
                                 </div>
                                 <div class="pull_left view_wrapper clearfix">
                                     <span class="view icon"></span>
-                                    <p>بازدید {{info.articleViews}}</p>
+                                    <p>بازدید {{::info.articleViews}}</p>
                                 </div>
                             </footer>
                         </a>
