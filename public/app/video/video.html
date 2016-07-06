@@ -144,7 +144,25 @@
                     <header class="section_header clearfix">
                         <h4>درس های مشابه</h4></header>
                     <ul class="similar_courses_list">
-                        <li class="similar_courses_item clearfix">
+                     <li class="similar_courses_item clearfix" data-ng-repeat="info in vc.similarArticles">
+                            <a class="similar_courses_item_link clearfix" href="">
+                                <figure class="similar_course_figure">
+                                    <img src="assets/img/articles/{{::info.articleId}}/Main-001.jpg" width="142" alt="systemLearning">
+                                </figure>
+                                <div class="similar_course_details">
+                                    <p>{{::info.articleName}}</p>
+                                    <p>{{::info.authorName}}</p>
+                                    <p class="course_rating">
+                                        <span class="star_full"></span>
+                                        <span class="star_full"></span>
+                                        <span class="star_full"></span>
+                                        <span class="star_full"></span>
+                                        <span class="star_blank"></span>
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                        <!-- <li class="similar_courses_item clearfix">
                             <a class="similar_courses_item_link clearfix" href="">
                                 <figure class="similar_course_figure">
                                     <img src="assets/img/similar_course.jpg" alt="systemLearning">
@@ -179,7 +197,7 @@
                                     </p>
                                 </div>
                             </a>
-                        </li>
+                        </li> -->
                     </ul>
                 </section>
                 <section class="search_video_section clearfix" ng-controller="FirstPageSearchController as search">

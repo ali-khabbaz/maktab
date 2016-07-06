@@ -1,10 +1,12 @@
 /*jshint multistr: true */
 (function () {
 	'use strict';
-	var showDb = require('../utilities.js').showDb;
+	var showDb = require('../utilities.js').showDb,
+		q = require('../requires.js').q;
 
 	function getArticleInfo(req, res) {
-		var query = 'SELECT \
+		var funcs = [],
+			query = 'SELECT \
 					  v.article_id, \
 					  v.section_id, \
 					  v.video_id, \
@@ -36,7 +38,28 @@
 					AND sam.article_id = a.id \
 					AND c.id = sc.category_id \
 					AND sam.subCategory_id = sc.id';
-		showDb(query).then(function (res1) {
+		funcs.push(showDb(query));
+		query = 'SELECT \
+				  a.id articleId, \
+				  a.name articleName, \
+				  a.author_name authorName, \
+				  a.`like`, \
+				  a.views \
+				FROM articles a, \
+				     software s, \
+				     software_article_map sam \
+				WHERE a.id = sam.article_id \
+				AND s.id = sam.software_id \
+				AND s.name IN (SELECT \
+				    s.name \
+				  FROM articles a, \
+				       software s, \
+				       software_article_map sam \
+				  WHERE a.id = sam.article_id \
+				  AND s.id = sam.software_id \
+				  AND a.id = ' + req.body.article_id + ')';
+		funcs.push(showDb(query));
+		q.all(funcs).then(function (res1) {
 			res.send({
 				'err': null,
 				'data': res1

@@ -24,13 +24,13 @@
 			vm.articleVideos = null;
 			vm.selectVideo = selectVideo;
 			vm.accordion = accordion;
+			vm.similarArticles = null;
 
 
 
 			main();
 
 			function main() {
-				console.log('------par------', par);
 				vf.getArticleInfo(par).then(getArticleInfoDone);
 				leavePage();
 			}
@@ -41,9 +41,9 @@
 				}
 				vm.articleVideos = res[1];
 				vm.articleInfo = res[2];
+				vm.similarArticles = res[3];
 				vm.showList = true;
 				selectVideo(1, 1);
-				console.log('articleVideos-------', vm.articleVideos);
 			}
 
 			function selectVideo(sectionId, videoId) {
