@@ -16,14 +16,19 @@
 					  a.author_name articleAuthor, \
 					  a.resource_name articleResource, \
 					  a.views articleViews, \
-					  a.`like` articleLikes \
+					  a.`like` articleLikes, \
+					  s.name softwareName \
 					FROM category c, \
 					     sub_category sc, \
 					     subcategory_article_map sam, \
-					     articles a \
+					     articles a, \
+					     software s, \
+     					 software_article_map sam1 \
 					WHERE c.id = sc.category_id \
 					AND sam.subCategory_id = sc.id \
 					AND sam.article_id = a.id \
+					AND s.id = sam1.software_id \
+					AND sam1.article_id = a.id \
 					AND a.name LIKE \'%' + req.body.searchWord + '%\' \
 					ORDER BY categoryName ASC, subCategoryName ASC';
 		showDb(query).then(function (res1) {

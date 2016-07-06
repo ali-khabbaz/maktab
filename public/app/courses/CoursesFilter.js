@@ -45,6 +45,7 @@
 
 			function getSearchResultSuccess(res) {
 				vm.articles = res[1];
+				vm.softwares = cf.extractSoftwares(res[1]);
 				vm.categoryAndSubCategoriesAndArticles = res[2];
 				console.log('-----getSearchResultSuccess---------', res);
 			}
