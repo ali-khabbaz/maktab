@@ -24,8 +24,8 @@
 		password: 'bahbah',
 		db: 'maktab_13950315'
 	});
-
-
+	var compression = require('compression');
+	app.use(compression());
 	if (cluster.isMaster) {
 		// Fork workers.
 		for (var i = 0; i < numCPUs; i++) {
@@ -35,10 +35,10 @@
 			console.log('worker ' + worker.process.pid + ' died');
 		});
 	} else {
-		var compression = require('compression');
+
 		// Workers can share any TCP connection
 		// In this case its a HTTP server
-		app.use(compression());
+
 		app.set('views', __dirname + '/public/views');
 		app.set('view engine', 'ejs');
 		app.use(logger('dev'));
