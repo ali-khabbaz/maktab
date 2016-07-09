@@ -391,6 +391,10 @@ div.main_context div.search_block a.main_button {
     height: 100px;
     overflow-y: auto;
 }
+.angucomplete-selected-row {
+    background-color: #97a8bc;
+    color: #ffffff;
+}
 div.main_context div.search_block a.main_button span {
     width: 24px;
     height: 24px;
@@ -795,7 +799,7 @@ div.footer_left_side figure.footer_logo {
 /******************* FilterCourse **************************/
 
 section.section_filter_course {
-    background-color: #f7f8fc;
+    background-color: #eeeff1;
     position: relative;
 }
 
@@ -810,6 +814,7 @@ section.filter_course_wrapper div.filter_course {
     top: 0;
     bottom: 0;
     margin-left: 2%;
+    padding-bottom: 5%;
     background-color: #fff;
 }
 
@@ -818,6 +823,7 @@ section.filter_course_wrapper div.course_wrapper {
     float: left;
     position: relative;
     margin-top: 10px;
+    min-height: 620px;
 }
 
 div.filter_cluster header.filter_header {
@@ -857,6 +863,7 @@ div.courses_accordion h4.header_courses_accordion span.icon_accordion {
 main.filter_main p.check_filter {
     float: right;
     width: 50%;
+    padding-right: 5px;
 }
 
 main.filter_main p.check_filter input.input_check_filter {
@@ -985,6 +992,7 @@ section.filter_course_wrapper div.courses article.course:nth-child(3n) {
 
 section.filter_course_wrapper div.courses {
     margin-bottom: 20px;
+    min-height: 540px;
 }
 
 
@@ -1026,7 +1034,10 @@ section.filter_course_wrapper div.course_wrapper .paging {
     padding-left: 10px;
     margin-bottom: 10px;
 }
-
+section.filter_course_wrapper div.course_wrapper .paging.bottom_side_video{
+    position: relative;
+    bottom: 0;
+}
 
 /****Paging****/
 
@@ -1317,7 +1328,7 @@ section.section_course header.section_course_header h5 {
 
 /***********courseAccordion**************/
 
-article.section_course_accordion header.header_section_course_accordion {
+article.section_course_accordion header.header_lecture_course {
     background-color: #f7f8fc;
     color: #73757c;
     padding: 7px 11px;
@@ -1325,12 +1336,19 @@ article.section_course_accordion header.header_section_course_accordion {
     border-bottom: none;
 }
 
-article.section_course_accordion header.header_section_course_accordion:hover {
+section.section_course header.section_course_header:hover{
+    cursor: pointer;
+}
+section.section_course header.section_course_header:hover h5{
+    color: #0b71cb;
+}
+
+article.section_course_accordion header.header_lecture_course:hover {
     cursor: pointer;
     color: #00c853;
 }
 
-header.header_section_course_accordion span.icon_video {
+header.header_lecture_course span.icon_video {
     width: 24px;
     height: 24px;
     display: inline-block;
@@ -1339,15 +1357,17 @@ header.header_section_course_accordion span.icon_video {
     background: url("../icons/icons.png") -320px -57px;
 }
 
-header.header_section_course_accordion p.subject_section_course {
+header.header_lecture_course p.subject_section_course {
     margin-right: 10px;
 }
 
-p.subject_section_course span:nth-child(2) {
+p.subject_section_course bdi {
     margin-right: 4px;
 }
-
-header.header_section_course_accordion span.icon_accordion {
+p.subject_section_course span{
+    float: right;
+}
+header.section_course_header span.icon_accordion {
     width: 24px;
     height: 24px;
     display: inline-block;
@@ -1356,29 +1376,29 @@ header.header_section_course_accordion span.icon_accordion {
     background: url("../icons/icons.png") -347px -57px;
 }
 
-header.header_section_course_accordion span.type_section_course {
+header.header_lecture_course span.type_section_course {
     color: #0b71cb;
 }
 
-article.section_course_accordion header.header_section_course_accordion p,
-header.header_section_course_accordion span {
+article.section_course_accordion header.header_lecture_course p,
+header.header_lecture_course bdi {
     display: inline-block;
     float: right;
     line-height: 24px;
 }
 
-header.header_section_course_accordion div.title_section_course_accordion {
+header.header_lecture_course div.title_lecture_course {
     float: right;
     width: 70%;
 }
 
-header.header_section_course_accordion div.preview_section_course_accordion {
+header.header_lecture_course div.preview_section_course_accordion {
     float: left;
     width: 30%;
 }
 
-header.header_section_course_accordion div.preview_section_course_accordion p,
-header.header_section_course_accordion div.preview_section_course_accordion span {
+header.header_lecture_course div.preview_section_course_accordion p,
+header.header_lecture_course div.preview_section_course_accordion span {
     float: left;
 }
 
@@ -1390,7 +1410,7 @@ div.preview_section_course_accordion p.video_preview {
     margin-left: 6px;
 }
 
-header.header_section_course_accordion span.icon_time {
+header.header_lecture_course span.icon_time {
     width: 16px;
     height: 16px;
     display: inline-block;
@@ -1399,7 +1419,7 @@ header.header_section_course_accordion span.icon_time {
     background: url("../icons/icons.png") -293px -60px;
 }
 
-section.section_course article.section_course_accordion:last-child header.header_section_course_accordion {
+section.section_course article.section_course_accordion:last-child header.header_lecture_course {
     border-bottom: 1px solid #eee;
 }
 
@@ -1420,12 +1440,12 @@ article.section_course_accordion main.main_section_course_accordion {
 
 /*activeAccordion*/
 
-article.section_course_accordion header.header_section_course_accordion.active {
+article.section_course_accordion header.header_lecture_course.active {
     border-bottom: 1px solid #eee;
     background-color: #f1f7ff;
 }
 
-header.header_section_course_accordion.active span.icon_accordion {
+header.section_course_header.active span.icon_accordion {
     background: url("../icons/icons.png") -369px -57px;
 }
 
@@ -1480,7 +1500,7 @@ a.similar_courses_item_link:hover div.similar_course_details p {
 section.search_video_section input.search_video_section_input {
     background: #f5f5f5;
     border: 1px solid #ccc;
-    padding: 9px;
+    padding: 10px 9px;
     width: 100%;
     color: #3f4853;
 }
@@ -1489,7 +1509,7 @@ section.search_video_section div {
     position: relative;
 }
 
-section.search_video_section span {
+section.search_video_section i{
     width: 32px;
     height: 32px;
     display: inline-block;
@@ -1500,111 +1520,13 @@ section.search_video_section span {
     left: 6px;
     top: 3px;
 }
+section.search_video_section .angucomplete-dropdown{
+    margin-top:0;
+}
 
 #my-video{
     width: 800px;
     height: 480px;
-}
-/******************Loading***********************/
-.spinner {
-    -webkit-animation: rotator 1.4s linear infinite;
-    animation: rotator 1.4s linear infinite;
-}
-
-@-webkit-keyframes rotator {
-    0% {
-        -webkit-transform: rotate(0deg);
-        transform: rotate(0deg);
-    }
-    100% {
-        -webkit-transform: rotate(270deg);
-        transform: rotate(270deg);
-    }
-}
-
-@keyframes rotator {
-    0% {
-        -webkit-transform: rotate(0deg);
-        transform: rotate(0deg);
-    }
-    100% {
-        -webkit-transform: rotate(270deg);
-        transform: rotate(270deg);
-    }
-}
-.path {
-    stroke-dasharray: 187;
-    stroke-dashoffset: 0;
-    -webkit-transform-origin: center;
-    transform-origin: center;
-    -webkit-animation: dash 1.4s ease-in-out infinite, colors 5.6s ease-in-out infinite;
-    animation: dash 1.4s ease-in-out infinite, colors 5.6s ease-in-out infinite;
-}
-
-@-webkit-keyframes colors {
-    0% {
-        stroke: #4285F4;
-    }
-    25% {
-        stroke: #DE3E35;
-    }
-    50% {
-        stroke: #F7C223;
-    }
-    75% {
-        stroke: #1B9A59;
-    }
-    100% {
-        stroke: #4285F4;
-    }
-}
-
-@keyframes colors {
-    0% {
-        stroke: #4285F4;
-    }
-    25% {
-        stroke: #DE3E35;
-    }
-    50% {
-        stroke: #F7C223;
-    }
-    75% {
-        stroke: #1B9A59;
-    }
-    100% {
-        stroke: #4285F4;
-    }
-}
-@-webkit-keyframes dash {
-    0% {
-        stroke-dashoffset: 187;
-    }
-    50% {
-        stroke-dashoffset: 46.75;
-        -webkit-transform: rotate(135deg);
-        transform: rotate(135deg);
-    }
-    100% {
-        stroke-dashoffset: 187;
-        -webkit-transform: rotate(450deg);
-        transform: rotate(450deg);
-    }
-}
-@keyframes dash {
-    0% {
-        stroke-dashoffset: 187;
-    }
-    50% {
-        stroke-dashoffset: 46.75;
-        -webkit-transform: rotate(135deg);
-        transform: rotate(135deg);
-    }
-    100% {
-        stroke-dashoffset: 187;
-        -webkit-transform: rotate(450deg);
-        transform: rotate(450deg);
-    }
 }
 /*****************loadingBars******************/
 .loading-container{

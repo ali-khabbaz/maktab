@@ -100,11 +100,10 @@
 				});
 			}
 
-
+			//morteza
 			function accordion(event) {
 				var parent = null;
-				console.log($(event.target));
-				if ($(event.target).is('div')) {
+				if ($(event.target).is('h5')) {
 					parent = $(event.target).parent();
 				} else if ($(event.target).is('span')) {
 					parent = $(event.target).closest('header');
@@ -113,10 +112,10 @@
 				}
 				if (parent.hasClass('active')) {
 					parent.removeClass('active');
-					parent.siblings('main').slideUp();
+					parent.siblings('article').slideUp();
 				} else {
 					parent.addClass('active');
-					parent.siblings('main').slideDown();
+					parent.siblings('article').slideDown();
 				}
 			}
 

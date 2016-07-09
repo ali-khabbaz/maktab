@@ -18,19 +18,26 @@
 			vm.filterCourses = filterCourses;
 			vm.softwares = null;
 			vm.selectedSoftwares = [];
+			vm.loadingshow = true;
 			main();
-
+			
+			// morteza
 			function main() {
 				console.log('params------', vm.searchWord);
 				if (!vm.searchWord) {
 					cf.getCategoryAndSubCategoriesAndArticles()
-						.success(CategoryAndSubCategoriesAndArticlesSuccess);
+						.success(function(data){
+							CategoryAndSubCategoriesAndArticlesSuccess(data);
+							vm.loadingshow = false;
+						});
 				} else {
 					console.log('search-------');
 					cf.getSearchResult({
 							searchWord: vm.searchWord
 						})
-						.then(getSearchResultSuccess);
+						.then(function(data){
+							getSearchResultSuccess(data);
+						});
 				}
 			}
 
