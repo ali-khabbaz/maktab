@@ -1,6 +1,9 @@
 (function () {
 	'use strict';
 
+	var compression = require('compression');
+	app.use(compression());
+
 	var express = require('./server/requires.js').express,
 		app = require('./server/requires.js').app,
 		c = require('./server/requires.js').c,
@@ -17,15 +20,14 @@
 		localStrategy = require('./server/requires.js').localStrategy;
 
 
-	var PORT = 80;
+	var PORT = 8080;
 	c.connect({
 		host: '127.0.0.1',
 		user: 'root',
 		password: 'bahbah',
 		db: 'maktab_13950315'
 	});
-	var compression = require('compression');
-	app.use(compression());
+
 	if (cluster.isMaster) {
 		// Fork workers.
 		for (var i = 0; i < numCPUs; i++) {
@@ -62,7 +64,8 @@
 		});
 
 		var strategy_opts = {
-			usernameField: 'email'
+			usernameField: 'email',
+			passReqToCallback: true
 		};
 
 		var login_strategy = new localStrategy(strategy_opts, function (email, password, done) {

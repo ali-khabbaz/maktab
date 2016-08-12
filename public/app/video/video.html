@@ -1,4 +1,4 @@
-<div data-ng-controller="videoCtrl as vc">
+<div data-ng-controller="videoController as vc">
     <main class="main_block  clearfix">
         <div class="main_video clearfix">
             <header class="header clearfix">
@@ -63,11 +63,13 @@
                             <h5>بخش {{vc.count[info.sectionId-1]}}:</h5>
                             <h5>{{info.sectionName}}</h5></header>
                         <article class="section_course_accordion" data-ng-repeat="el in info.videos">
-                            <header class="header_lecture_course clearfix" >
+                            <header class="header_lecture_course clearfix">
                                 <div class="title_lecture_course clearfix">
                                     <!--  <span class="section_course_num">{{}}</span> -->
                                     <span class="icon_video"></span>
-                                    <p class="subject_section_course"><span>قسمت {{vc.count[el.videoId-1]}}</span><bdi>{{el.videoName}}</bdi></p>
+                                    <p class="subject_section_course"><span>قسمت {{vc.count[el.videoId-1]}}</span>
+                                        <bdi>{{el.videoName}}</bdi>
+                                    </p>
                                     <!--<span class="type_section_course">ویدئو</span>-->
                                 </div>
                                 <div class="preview_section_course_accordion clearfix">
@@ -76,9 +78,9 @@
                                 </div>
                             </header>
                             <!--<main class="main_section_course_accordion">-->
-                                <!--<p>-->
-                                    <!--این قسمت درباره اصول اولیه فتوشاپ ونحوه رسم شگل های اصلی است در این قسمت نحوه ایجاد کردن فضای کاری مخصوص به خود را فرا می گیرید و از نحوه ی کار با ابزارهای اصلی فتوشاپ و میانبرهای آن آموزش داده می شود-->
-                                <!--</p>-->
+                            <!--<p>-->
+                            <!--این قسمت درباره اصول اولیه فتوشاپ ونحوه رسم شگل های اصلی است در این قسمت نحوه ایجاد کردن فضای کاری مخصوص به خود را فرا می گیرید و از نحوه ی کار با ابزارهای اصلی فتوشاپ و میانبرهای آن آموزش داده می شود-->
+                            <!--</p>-->
                             <!--</main>-->
                         </article>
                     </section>
@@ -144,8 +146,8 @@
                     <header class="section_header clearfix">
                         <h4>درس های مشابه</h4></header>
                     <ul class="similar_courses_list">
-                     <li class="similar_courses_item clearfix" data-ng-repeat="info in vc.similarArticles">
-                            <a class="similar_courses_item_link clearfix" href="">
+                        <li class="similar_courses_item clearfix" data-ng-repeat="info in vc.similarArticles">
+                            <a class="similar_courses_item_link clearfix" href="#/video/{{::info.articleId}}">
                                 <figure class="similar_course_figure">
                                     <img src="assets/img/articles/{{::info.articleId}}/Main-001.jpg" width="142" alt="systemLearning">
                                 </figure>
@@ -208,11 +210,7 @@
                     </div> -->
                     <!--morteza-->
                     <div data-ng-if="search.searchData" class="anguComplete_wrapper clearfix">
-                        <div class="anguComplete_video clearfix" ng-keypress="search.keyEventHandler($event)"
-                             angucomplete-alt id="ex1" maxlength="50" pause="100" selected-object="search.selectedValue"
-                             local-data="search.searchData" search-fields="name,subcategoryName"
-                             title-field="name,subcategoryName" minlength="1" input-class="search_video_section_input"
-                             match-class="highlight" input-changed="search.inputChanged"></div>
+                        <div class="anguComplete_video clearfix" ng-keypress="search.keyEventHandler($event)" angucomplete-alt id="ex1" maxlength="50" pause="100" selected-object="search.selectedValue" local-data="search.searchData" search-fields="name,subcategoryName" title-field="name,subcategoryName" minlength="1" input-class="search_video_section_input" match-class="highlight" input-changed="search.inputChanged"></div>
                         <i></i>
                     </div>
                 </section>
