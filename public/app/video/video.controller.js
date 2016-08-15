@@ -97,6 +97,7 @@
 		}*/
 		//morteza
 		function accordion(event) {
+			console.log('event',event);
 			var parent = null;
 			if ($(event.target).is('h5')) {
 				parent = $(event.target).parent();
@@ -109,6 +110,8 @@
 				parent.removeClass('active');
 				parent.siblings('article').slideUp();
 			} else {
+				$('header.section_course_header.active').removeClass('active');
+				$('article.section_course_accordion').slideUp(700)
 				parent.addClass('active');
 				parent.siblings('article').slideDown();
 			}

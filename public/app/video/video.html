@@ -58,10 +58,11 @@
                     <header class="section_header content_header clearfix">
                         <h4>قسمت ها</h4></header>
                     <section class="section_course" data-ng-repeat="info in vc.articleVideos" data-ng-if="info">
-                        <header class="section_course_header active" ng-click="vc.accordion($event)">
+                        <header class="section_course_header" ng-class="{ 'active': $index==0}" ng-click="vc.accordion($event)">
                             <span class="icon_accordion"></span>
                             <h5>بخش {{vc.count[info.sectionId-1]}}:</h5>
-                            <h5>{{info.sectionName}}</h5></header>
+                            <h5>{{info.sectionName}}</h5>
+                        </header>
                         <article class="section_course_accordion" data-ng-repeat="el in info.videos">
                             <header class="header_lecture_course clearfix">
                                 <div class="title_lecture_course clearfix">
@@ -73,7 +74,7 @@
                                     <!--<span class="type_section_course">ویدئو</span>-->
                                 </div>
                                 <div class="preview_section_course_accordion clearfix">
-                                    <p><span class="icon_time"></span><span>{{el.duration}} دقیقه</span></p>
+                                    <p class="time_course_container"><span class="time_num">{{el.duration}} دقیقه</span><span class="icon_time"></span></p>
                                     <p class="video_preview" ng-class="{ 'video_preview_active': info.sectionId == vc.selectedSection && el.videoId == vc.selectedVideo  }" data-ng-click="vc.selectVideo(info.sectionId,el.videoId)">نمایش</p>
                                 </div>
                             </header>
