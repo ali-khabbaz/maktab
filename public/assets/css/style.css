@@ -869,7 +869,48 @@ main.filter_main p.check_filter {
 main.filter_main p.check_filter input.input_check_filter {
     margin: 4px 0 0 4px;
     float: right;
+    position: relative;
 }
+
+/**********CheckBoxTemplate************/
+/*main.filter_main p.check_filter input.input_check_filter:before{*/
+    /*border: 2px solid #ccc;*/
+    /*content: "";*/
+    /*cursor: pointer;*/
+    /*display: block;*/
+    /*height: 15px;*/
+    /*position: absolute;*/
+    /*-moz-transition: all 0.3s ease-in-out;*/
+    /*-o-transition: all 0.3s ease-in-out;*/
+    /*-webkit-transition: all 0.3s ease-in-out;*/
+    /*transition: all 0.3s ease-in-out;*/
+    /*width: 15px;*/
+    /*z-index: 1;*/
+/*}*/
+/*main.filter_main p.check_filter input.input_check_filter:after{*/
+    /*background: #fff;*/
+    /*content: "";*/
+    /*display: block;*/
+    /*height: 15px;*/
+    /*position: absolute;*/
+    /*top: 0;*/
+    /*width: 15px;*/
+    /*z-index: 0;*/
+/*}*/
+/*main.filter_main p.check_filter input.input_check_filter:checked:before {*/
+    /*border-color: #009688;*/
+/*}*/
+/*main.filter_main p.check_filter input.input_check_filter:checked:before {*/
+    /*border-top-style: none;*/
+    /*border-right-style: none;*/
+    /*height: 10px;*/
+    /*-moz-transform: rotate(-45deg);*/
+    /*-ms-transform: rotate(-45deg);*/
+    /*-o-transform: rotate(-45deg);*/
+    /*-webkit-transform: rotate(-45deg);*/
+    /*transform: rotate(-45deg);*/
+/*}*/
+/********************************/
 
 main.filter_main p.check_filter label.label_check_filter {
     float: right;
@@ -1299,6 +1340,8 @@ section.course_content div.course_main_intro p {
     font-size: 12px;
     line-height: 36px;
     color: #4e4e4e;
+    text-align: left;
+    direction: ltr;
 }
 
 section.course_content header.content_header h4 {
@@ -1313,7 +1356,12 @@ section.course_content section.section_course {
 section.section_course header.section_course_header {
     margin-bottom: 4px;
 }
-
+section.section_course article.section_course_accordion{
+    display: none;
+}
+section.section_course:nth-of-type(1) article.section_course_accordion{
+    display: block;
+}
 section.section_course header.section_course_header h5 {
     font-size: 14px;
     color: #66696e;
@@ -1324,7 +1372,7 @@ section.section_course header.section_course_header h5 {
 /***********courseAccordion**************/
 
 article.section_course_accordion header.header_lecture_course {
-    background-color: #f7f8fc;
+    background-color: #f1f4ff;
     color: #73757c;
     padding: 7px 11px;
     border: 1px solid #eee;
@@ -1413,10 +1461,13 @@ header.header_lecture_course span.icon_time {
     height: 16px;
     display: inline-block;
     float: right;
-    margin: 4px 2px 0 0;
+    margin: 4px 2px 0 3px;
     background: url("../icons/icons.png") -293px -60px;
 }
-
+header.header_lecture_course span.time_num{
+    width: 53px;
+    display: inline-block;
+}
 section.section_course article.section_course_accordion:last-child header.header_lecture_course {
     border-bottom: 1px solid #eee;
 }

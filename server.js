@@ -24,7 +24,7 @@
 	c.connect({
 		host: '127.0.0.1',
 		user: 'root',
-		password: 'bahbah',
+		password: '',
 		db: 'maktab_13950315'
 	});
 
