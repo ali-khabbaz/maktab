@@ -56,7 +56,9 @@
                             <!--morteza-->
                             <h4 class="header_courses_accordion" ng-click="cc.accordion($event)"><span class="icon_accordion"></span>{{::info.categoryName}}<span class="course_num">{{::info.num}}</span></h4>
                             <ul class="list_courses_accordion">
-                                <li data-ng-click="cc.selectSubCategory(el.name)" class="list_courses_item" data-ng-repeat="el in info.subCategories"><a href="">{{::el.name}}</a><span class="course_num">{{::el.articles.length}}</span>
+                                <li data-ng-click="cc.selectSubCategory(el.name)" class="list_courses_item" data-ng-repeat="el in info.subCategories">
+                                    <a href="">{{::el.name}}</a>
+                                    <span class="course_num">{{::el.articles.length}}</span>
                                 </li>
                             </ul>
                         </div>
@@ -118,7 +120,7 @@
                                 <div class="price clearfix">
                                     <p>رایــگان</p>
                                 </div>
-                                <img class="course_img" src="assets/img/articles/{{::info.articleId}}/Main-001.jpg" width="277" alt="softLearning">
+                                <img class="course_img" ng-src="assets/img/articles/{{::info.articleId}}/Main-001.jpg" onerror="this.src='assets/img/defaultImage.png'" width="277" alt="{{info.articleName}}">
                             </figure>
                             <header class="course_header clearfix">
                                 <h4>

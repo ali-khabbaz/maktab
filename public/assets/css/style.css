@@ -157,9 +157,10 @@ ul li {
     clear: both;
 }
 
-.ng-cloak{
+.ng-cloak {
     display: none !important;
 }
+
 /***************** GlobalStyle *******************/
 
 body {
@@ -228,9 +229,7 @@ button {
     color: #00c853;
 }
 
-
 /**************** homePage **********************/
-
 
 /******** navBar ********/
 
@@ -336,7 +335,6 @@ ul.register_menu li a.nav_logIn span {
     background: url('../icons/icons.png') -159px -18px;
 }
 
-
 /******** Main ********/
 
 main.main_block {
@@ -372,7 +370,8 @@ div.main_context div.search_block input.main_search {
     float: right;
     color: #47555c;
 }
-div.search_block div.anguComplete_wrapper{
+
+div.search_block div.anguComplete_wrapper {
     float: right;
 }
 
@@ -385,16 +384,19 @@ div.main_context div.search_block a.main_button {
     padding: 7px 31px;
     color: #fff;
 }
+
 .angucomplete-dropdown {
     width: 100%;
     margin-top: 44px;
     height: 100px;
     overflow-y: auto;
 }
+
 .angucomplete-selected-row {
     background-color: #97a8bc;
     color: #ffffff;
 }
+
 div.main_context div.search_block a.main_button span {
     width: 24px;
     height: 24px;
@@ -448,7 +450,6 @@ footer.main_footer span.pluralsight_logo {
     width: 220px;
     margin-right: 3%;
 }
-
 
 /******** categories *******/
 
@@ -523,9 +524,11 @@ article.category main {
     font-size: 14px;
     color: #494949;
 }
-.category_list li a:hover{
+
+.category_list li a:hover {
     text-decoration: underline;
 }
+
 li.category_list_item a span {
     background: url("../icons/icons.png") -45px -21px;
     width: 16px;
@@ -534,7 +537,6 @@ li.category_list_item a span {
     float: right;
     margin-left: 2px;
 }
-
 
 /********************** Courses ************************/
 
@@ -549,7 +551,7 @@ section.course_wrapper article.course {
     margin-left: 30px;
     position: relative;
     margin-top: 50px;
-    transition: all .5s;
+    transition: -webkit-box-shadow .5s,-moz-box-shadow .5s,box-shadow .5s;
     -webkit-box-shadow: -2px 3px 4px 0 rgba(0, 0, 0, 0.16);
     -moz-box-shadow: -2px 3px 4px 0 rgba(0, 0, 0, 0.16);
     box-shadow: -2px 3px 4px 0 rgba(0, 0, 0, 0.16);
@@ -616,7 +618,7 @@ ul.list_details li {
 }
 
 ul.list_details li.list_details_teacher {
-    display:block;
+    display: block;
 }
 
 ul.list_details li.list_details_source {
@@ -627,9 +629,10 @@ ul.list_details li.list_details_time {
     float: right;
     margin-left: 0;
 }
-ul.list_details li.list_details_item p{
+
+ul.list_details li.list_details_item p {
     font-size: 10px;
-    color:#898989 ;
+    color: #898989;
 }
 
 ul.list_details li.list_details_teacher p {
@@ -676,7 +679,6 @@ footer.course_footer span.icon.view {
 div.view_wrapper {
     margin-left: 10px;
 }
-
 
 /******** RssEmail *********/
 
@@ -742,7 +744,6 @@ div.rss_email_register a {
     border-bottom-right-radius: 5px;
 }
 
-
 /********* Footer **********/
 
 footer.footer_page {
@@ -794,7 +795,6 @@ p.footer_context {
 div.footer_left_side figure.footer_logo {
     float: left;
 }
-
 
 /******************* FilterCourse **************************/
 
@@ -980,21 +980,20 @@ section.filter_course_wrapper div.courses article.course {
     width: 30.7%;
     position: relative;
     margin: 15px 0 5px 25px;
-    transition: all .5s;
+    /*transition: -webkit-box-shadow .5s,-moz-box-shadow .5s,box-shadow .5s;*/
     -webkit-box-shadow: -2px 3px 4px 0 rgba(0, 0, 0, 0.16);
     -moz-box-shadow: -2px 3px 4px 0 rgba(0, 0, 0, 0.16);
     box-shadow: -2px 3px 4px 0 rgba(0, 0, 0, 0.16);
 }
 
-section.filter_course_wrapper div.courses article.course:nth-child(3n) {
+section.filter_course_wrapper div.courses article.course:nth-of-type(3n) {
     margin-left: 0;
 }
 
 section.filter_course_wrapper div.courses {
-    margin-bottom: 20px;
-    min-height: 540px;
+    margin-bottom: 40px;
+    min-height: 1000px;
 }
-
 
 /*SortView*/
 
@@ -1034,7 +1033,8 @@ section.filter_course_wrapper div.course_wrapper .paging {
     padding-left: 10px;
     margin-bottom: 10px;
 }
-section.filter_course_wrapper div.course_wrapper .paging.bottom_side_video{
+
+section.filter_course_wrapper div.course_wrapper .paging.bottom_side_video {
     position: relative;
     bottom: 0;
 }
@@ -1091,7 +1091,6 @@ section.filter_course_wrapper div.course_wrapper .paging.bottom_side_video{
     text-decoration: none;
     background: #fcfcfc;
 }
-
 
 /********************** VideoCourses ************************/
 
@@ -1152,7 +1151,6 @@ p.video_course_title_detail.views span.view_value {
     margin-right: 7px;
 }
 
-
 /***Video***/
 
 section.intro_course {
@@ -1185,7 +1183,6 @@ figure.video_figure a.icon_play {
     height: 80px;
     background: url("../icons/icons.png") -101px -47px;
 }
-
 
 /*****aside*****/
 
@@ -1286,7 +1283,6 @@ li.list_course_download_details_item button.download_link_course span.icon {
     float: right;
 }
 
-
 /************CourseContent**************/
 
 section.course_content {
@@ -1325,7 +1321,6 @@ section.section_course header.section_course_header h5 {
     display: inline-block;
 }
 
-
 /***********courseAccordion**************/
 
 article.section_course_accordion header.header_lecture_course {
@@ -1336,10 +1331,11 @@ article.section_course_accordion header.header_lecture_course {
     border-bottom: none;
 }
 
-section.section_course header.section_course_header:hover{
+section.section_course header.section_course_header:hover {
     cursor: pointer;
 }
-section.section_course header.section_course_header:hover h5{
+
+section.section_course header.section_course_header:hover h5 {
     color: #0b71cb;
 }
 
@@ -1364,9 +1360,11 @@ header.header_lecture_course p.subject_section_course {
 p.subject_section_course bdi {
     margin-right: 4px;
 }
-p.subject_section_course span{
+
+p.subject_section_course span {
     float: right;
 }
+
 header.section_course_header span.icon_accordion {
     width: 24px;
     height: 24px;
@@ -1423,7 +1421,6 @@ section.section_course article.section_course_accordion:last-child header.header
     border-bottom: 1px solid #eee;
 }
 
-
 /*mainAccordion*/
 
 article.section_course_accordion main.main_section_course_accordion {
@@ -1436,7 +1433,6 @@ article.section_course_accordion main.main_section_course_accordion {
     border: 1px solid #eee;
     border-top: none;
 }
-
 
 /*activeAccordion*/
 
@@ -1459,7 +1455,7 @@ li.similar_courses_item {
     border: 1px solid #ccc;
 }
 
-li.similar_courses_item+li.similar_courses_item {
+li.similar_courses_item + li.similar_courses_item {
     border-top: none;
 }
 
@@ -1494,7 +1490,6 @@ a.similar_courses_item_link:hover div.similar_course_details p {
     color: #0b71cb;
 }
 
-
 /*******SearchVideo*******/
 
 section.search_video_section input.search_video_section_input {
@@ -1509,7 +1504,7 @@ section.search_video_section div {
     position: relative;
 }
 
-section.search_video_section i{
+section.search_video_section i {
     width: 32px;
     height: 32px;
     display: inline-block;
@@ -1520,16 +1515,18 @@ section.search_video_section i{
     left: 6px;
     top: 3px;
 }
-section.search_video_section .angucomplete-dropdown{
-    margin-top:0;
+
+section.search_video_section .angucomplete-dropdown {
+    margin-top: 0;
 }
 
-#my-video{
+#my-video {
     width: 800px;
     height: 480px;
 }
+
 /*****************loadingBars******************/
-.loading-container{
+.loading-container {
     height: 600px;
     display: -webkit-box;
     display: -moz-box;
@@ -1547,9 +1544,11 @@ section.search_video_section .angucomplete-dropdown{
     -webkit-justify-content: center;
     justify-content: center;
 }
+
 .loading-bars {
     text-align: center;
 }
+
 .loading-bars .bar {
     height: 20px;
     width: 10px;
@@ -1557,21 +1556,27 @@ section.search_video_section .angucomplete-dropdown{
     display: inline-block;
     animation: pulse 1.2s infinite ease-out;
 }
+
 .loading-bars .bar:nth-of-type(0n+1) {
     animation-delay: 0s;
 }
+
 .loading-bars .bar:nth-of-type(0n+2) {
     animation-delay: 0.2s;
 }
+
 .loading-bars .bar:nth-of-type(0n+3) {
     animation-delay: 0.4s;
 }
+
 .loading-bars .bar:nth-of-type(0n+4) {
     animation-delay: 0.6s;
 }
+
 .loading-bars .bar:nth-of-type(0n+5) {
     animation-delay: 0.8s;
 }
+
 @keyframes pulse {
     0%, 75% {
         transform: scale(1, 1);

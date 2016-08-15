@@ -1,0 +1,1294 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"other",
+				"otherAsset"
+			],
+			[
+				"flo",
+				"flogDate"
+			],
+			[
+				"show",
+				"show_db"
+			],
+			[
+				"new",
+				"newSeries"
+			],
+			[
+				"selec",
+				"selectedLegends"
+			],
+			[
+				"barI",
+				"barInRange"
+			],
+			[
+				"svg",
+				"svgWidth"
+			],
+			[
+				"sand",
+				"sandogh_hamsan"
+			],
+			[
+				"topR",
+				"topRatedTotalNetCtrl	(topRatedTotalNet.controller.js)"
+			],
+			[
+				"total",
+				"totalNetSortFields	(topRated.controller.js)"
+			],
+			[
+				"baz",
+				"bazdehSortFields	(topRated.controller.js)"
+			],
+			[
+				"tota",
+				"totalNetSortFields	(sandoghYab.factory.js)"
+			],
+			[
+				"topRa",
+				"topRatedTotalNetCtrl"
+			],
+			[
+				"top",
+				"topRatedCtrl	(app.js)"
+			],
+			[
+				"bazde",
+				"bazdehOneDaySlider"
+			],
+			[
+				"min",
+				"minValue"
+			],
+			[
+				"age",
+				"ageSliderInit"
+			],
+			[
+				"max",
+				"maxValue	(sandoghYab.controller.js)"
+			],
+			[
+				"lib",
+				"lib/"
+			],
+			[
+				"col",
+				"div.col"
+			],
+			[
+				"sandogh",
+				"sandoghFilter"
+			],
+			[
+				"fu",
+				"fundType	(filter.html)"
+			],
+			[
+				"fun",
+				"fundTypes	(sandoghYab.controller.js)"
+			],
+			[
+				"ng-",
+				"ng-click	AngularJS"
+			],
+			[
+				"sortD",
+				"sortDirection	(sandoghYab.controller.js)"
+			],
+			[
+				"sor",
+				"sortDirections	(sandoghYab.factory.js)"
+			],
+			[
+				"sort",
+				"sortFields	(sandoghYab.controller.js)"
+			],
+			[
+				"change",
+				"changeSortField"
+			],
+			[
+				"cha",
+				"changeSortField"
+			],
+			[
+				"switch",
+				"switch〔keyword〕"
+			],
+			[
+				"get",
+				"getSandoghInfo	(sandoghYab.factory.js)"
+			],
+			[
+				"sa",
+				"sandoghYab	(app.js)"
+			],
+			[
+				"inde",
+				"indexOf('title"
+			],
+			[
+				"find",
+				"findUser"
+			],
+			[
+				"sele",
+				"selectedSection	(videoCtrl.js)"
+			],
+			[
+				"vide",
+				"videoId"
+			],
+			[
+				"art",
+				"articleVideos"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"section",
+				"sectionId	(videoCtrl.js)"
+			],
+			[
+				"cate",
+				"categoryName"
+			],
+			[
+				"su",
+				"subCategoryName	(videoFactory.js)"
+			],
+			[
+				"artic",
+				"articleVideos"
+			],
+			[
+				"resour",
+				"resourceName	(videoFactory.js)"
+			],
+			[
+				"arti",
+				"articleInfo"
+			],
+			[
+				"home",
+				"homeFactory	(homeFactory.js)"
+			],
+			[
+				"count",
+				"counting	(homeFactory.js)"
+			],
+			[
+				"vi",
+				"videoCtrl.js"
+			],
+			[
+				"filter",
+				"filterArticlesSubCategory	(coursesFactory.js)"
+			],
+			[
+				"subC",
+				"subCategoryName"
+			],
+			[
+				"subCa",
+				"subCategoryName	(getCategoryAndSubCategoriesAndArticles.js)"
+			],
+			[
+				"articleRe",
+				"articleReleaseDate	(getCategoryAndSubCategoriesAndArticles.js)"
+			],
+			[
+				"ar",
+				"article"
+			],
+			[
+				"articleL",
+				"articleLikes	(getCategoryAndSubCategoriesAndArticles.js)"
+			],
+			[
+				"articleI",
+				"articleInsertDate	(getCategoryAndSubCategoriesAndArticles.js)"
+			],
+			[
+				"sub",
+				"subCategories"
+			],
+			[
+				"categor",
+				"categoryAndSubCategories"
+			],
+			[
+				"getC",
+				"getCategoryAndSubCategories	(coursesFactory.js)"
+			],
+			[
+				"courses",
+				"coursesFactory	(coursesFactory.js)"
+			],
+			[
+				"getCa",
+				"getCategoryAndSubCategories	(server.js)"
+			],
+			[
+				"jq",
+				"jquery-ui/"
+			],
+			[
+				"getT",
+				"getTopSubCategories"
+			],
+			[
+				"getBes",
+				"getBestArticles	(server.js)"
+			],
+			[
+				"getTop",
+				"getTopArticles	(server.js)"
+			],
+			[
+				"chan",
+				"changeTab('best	(main.html)"
+			],
+			[
+				"cons",
+				"console.	.assert(assertion, message)"
+			],
+			[
+				"ma",
+				"main_search"
+			],
+			[
+				"down",
+				"downloadData"
+			],
+			[
+				"dow",
+				"downloadSpeed	(MainViewCtrl.js)"
+			],
+			[
+				"tor",
+				"torrentSize"
+			],
+			[
+				"download",
+				"downloadData	(MainViewCtrl.js)"
+			],
+			[
+				"ite",
+				"iteachyou.ir.sql"
+			],
+			[
+				"po",
+				"pointer"
+			],
+			[
+				"text",
+				"text-decoration"
+			],
+			[
+				"fon",
+				"font-weight"
+			],
+			[
+				"font",
+				"font-style"
+			],
+			[
+				"log",
+				"$log	AngularJS"
+			],
+			[
+				"info",
+				"info"
+			],
+			[
+				"data",
+				"dataDetails"
+			],
+			[
+				"sec",
+				"sectionTitle"
+			],
+			[
+				"sma",
+				"smallDesc"
+			],
+			[
+				"for",
+				"for	for (…) {…}"
+			],
+			[
+				"plura",
+				"pluralsight"
+			],
+			[
+				"fou",
+				"foundBodies"
+			],
+			[
+				"ude",
+				"udemyPageParser"
+			],
+			[
+				"type",
+				"typeChecker"
+			],
+			[
+				"index",
+				"indexOf	(body.html)"
+			],
+			[
+				"file",
+				"fileList"
+			],
+			[
+				"read",
+				"readDir"
+			],
+			[
+				"plur",
+				"pluralsightUrlFinder"
+			],
+			[
+				"make",
+				"makeRequest"
+			],
+			[
+				"plural",
+				"pluralsightCookie"
+			],
+			[
+				"pl",
+				"place"
+			],
+			[
+				"err",
+				"error"
+			],
+			[
+				"sea",
+				"searchQuery"
+			],
+			[
+				"console",
+				"console.log"
+			],
+			[
+				"ng-c",
+				"ng-controller	AngularJS"
+			],
+			[
+				"se",
+				"searchQuery"
+			],
+			[
+				"ho",
+				"homeFactory.js"
+			],
+			[
+				"inpu",
+				"inputChanged"
+			],
+			[
+				"con",
+				"console"
+			],
+			[
+				"eve",
+				"event"
+			],
+			[
+				"loca",
+				"localData"
+			],
+			[
+				"title",
+				"titleField"
+			],
+			[
+				"cou",
+				"countries"
+			],
+			[
+				"searc",
+				"searchData"
+			],
+			[
+				"getS",
+				"getSearchData"
+			],
+			[
+				"a",
+				"angucomplete-alt/"
+			],
+			[
+				"res",
+				"resourceName"
+			],
+			[
+				"ng-cl",
+				"ng-click	AngularJS"
+			],
+			[
+				"auth",
+				"authorName	(videoFactory.js)"
+			],
+			[
+				"desc",
+				"descBig	(videoFactory.js)"
+			],
+			[
+				"rele",
+				"releasedDate	(videoFactory.js)"
+			],
+			[
+				"leve",
+				"levelName	(videoFactory.js)"
+			],
+			[
+				"article",
+				"articleMetadata"
+			],
+			[
+				"ng-re",
+				"ng-repeat	AngularJS"
+			],
+			[
+				"main",
+				"mainViewFactory.js"
+			],
+			[
+				"ang",
+				"anguChange	(video.html)"
+			],
+			[
+				"angu",
+				"angucomplete"
+			],
+			[
+				"an",
+				"angucomplete	(main.js)"
+			],
+			[
+				"videogular_",
+				"videogular_overplay"
+			],
+			[
+				"videogular",
+				"videogular_controls"
+			],
+			[
+				"sani",
+				"sanitize"
+			],
+			[
+				"getA",
+				"getApiUrl"
+			],
+			[
+				"creteT",
+				"createTrustedUrl"
+			],
+			[
+				"sectio",
+				"sectionId"
+			],
+			[
+				"$sce",
+				"$sce	AngularJS"
+			],
+			[
+				"$loca",
+				"$location	AngularJS"
+			],
+			[
+				"img",
+				"imgAddress	(uploadCtrl.js)"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 354.0,
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"the",
+				"Themr: List themes"
+			],
+			[
+				"th",
+				"Themr: List themes"
+			],
+			[
+				"dele",
+				"Trimmer: Delete empty lines."
+			],
+			[
+				"theme",
+				"Colorsublime: Install Theme"
+			],
+			[
+				"them",
+				"Themr: List themes"
+			],
+			[
+				"install th",
+				"Colorsublime: Install Theme"
+			],
+			[
+				"themr",
+				"Themr: List themes"
+			],
+			[
+				"colorcode",
+				"Tweak Colorcode to current color scheme"
+			],
+			[
+				"color",
+				"Toggle Colorcode on this view"
+			],
+			[
+				"add",
+				"Package Control: Add Repository"
+			],
+			[
+				"dlee",
+				"Trimmer: Delete empty lines."
+			],
+			[
+				"inde",
+				"Indent XML"
+			],
+			[
+				"packa",
+				"Preferences: Package Control Settings – User"
+			],
+			[
+				"min",
+				"Pretty JSON: Minify (compress) JSON"
+			],
+			[
+				"de",
+				"Trimmer: Delete empty lines."
+			],
+			[
+				"",
+				"Auto indent"
+			],
+			[
+				"delete",
+				"Trimmer: Delete empty lines."
+			],
+			[
+				"mini",
+				"Pretty JSON: Minify (compress) JSON"
+			],
+			[
+				"delte",
+				"Trimmer: Delete empty lines."
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"js",
+				"Set Syntax: JSON"
+			],
+			[
+				"delet",
+				"Trimmer: Delete empty lines."
+			],
+			[
+				"delette",
+				"Trimmer: Delete empty lines."
+			],
+			[
+				"space",
+				"Trimmer: Remove blank spaces."
+			],
+			[
+				"empty",
+				"Trimmer: Delete empty lines."
+			],
+			[
+				"pac",
+				"Package Control: List Packages"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Remove Package"
+			],
+			[
+				"json",
+				"Pretty JSON: Format (Pretty Print) JSON"
+			],
+			[
+				"jso",
+				"Set Syntax: JSON"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"package",
+				"Package Control: Create Package File"
+			],
+			[
+				"packaeg",
+				"Package Control: Discover Packages"
+			],
+			[
+				"in",
+				"Auto indent"
+			],
+			[
+				"pack",
+				"Preferences: Browse Packages"
+			],
+			[
+				"syntax",
+				"Set Syntax: Web Inspector (Log)"
+			],
+			[
+				"node",
+				"Nodejs::User File Settings"
+			],
+			[
+				"web",
+				"Set Syntax: Web Inspector (Stack)"
+			],
+			[
+				"aut",
+				"Auto indent"
+			],
+			[
+				"auto",
+				"Auto indent"
+			],
+			[
+				"auti",
+				"Auto indent"
+			],
+			[
+				"toggle",
+				"View: Toggle Menu"
+			],
+			[
+				"defaul",
+				"Preferences: Package Control Settings – Default"
+			],
+			[
+				"setting",
+				"Preferences: Settings - Default"
+			],
+			[
+				"ind",
+				"Indent XML"
+			],
+			[
+				"i",
+				"Indent XML"
+			],
+			[
+				"index",
+				"Indent XML"
+			],
+			[
+				"Package Control: in",
+				"Package Control: Install Package"
+			],
+			[
+				"indent",
+				"Indentation: Convert to Tabs"
+			]
+		],
+		"width": 510.0
+	},
+	"console":
+	{
+		"height": 60.0,
+		"history":
+		[
+			"git clone https://github.com/carlcalderon/sublime-color-schemes/ ~/Library/Application\\ Support/Sublime\\ Text\\ 2/Packages/Color\\ Scheme\\ \\-\\ carlcalderon",
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
+			"git clone git://github.com/sokolovstas/SublimeWebInspector.git Web\\ Inspector",
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
+			"hide",
+			"view.settings().get('color_scheme')",
+			"view.settings().get('theme')",
+			"import urllib2,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); os.makedirs( ipp ) if not os.path.exists(ipp) else None; urllib2.install_opener( urllib2.build_opener( urllib2.ProxyHandler()) ); by = urllib2.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); open( os.path.join( ipp, pf), 'wb' ).write(by) if dh == h else None; print('Error validating download (got %s instead of %s), please try manual install' % (dh, h) if dh != h else 'Please restart Sublime Text to finish installation')",
+			"indent",
+			"indentxml",
+			"indentx",
+			"import urllib2,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); os.makedirs( ipp ) if not os.path.exists(ipp) else None; urllib2.install_opener( urllib2.build_opener( urllib2.ProxyHandler()) ); by = urllib2.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); open( os.path.join( ipp, pf), 'wb' ).write(by) if dh == h else None; print('Error validating download (got %s instead of %s), please try manual install' % (dh, h) if dh != h else 'Please restart Sublime Text to finish installation')"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": false,
+		"show_minimap": true,
+		"show_open_files": true,
+		"show_tabs": true,
+		"side_bar_visible": false,
+		"status_bar_visible": true
+	},
+	"expanded_folders":
+	[
+		"/F/programming/reza/gulp_maktab"
+	],
+	"file_history":
+	[
+		"/C/Users/ali/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/C/Users/ali.khabbaz/AppData/Roaming/Sublime Text 3/Packages/JSHint Gutter/JSHint.sublime-settings",
+		"/C/Users/ali.khabbaz/AppData/Roaming/Sublime Text 3/Packages/User/ESLint-Formatter.sublime-settings",
+		"/E/Projects/RASAM-NEW/new2/RASAM_EHSAN/src/client/app/app.module.js",
+		"/C/Users/ali.khabbaz/AppData/Roaming/Sublime Text 3/Packages/User/ESLint.sublime-settings",
+		"/C/Users/ali.khabbaz/AppData/Roaming/Sublime Text 3/Packages/ESLint/ESLint.sublime-settings",
+		"/C/Users/ali.khabbaz/AppData/Roaming/Sublime Text 3/Packages/ESLint-Formatter/ESLint-Formatter.sublime-settings",
+		"/E/Projects/RASAM-NEW/new2/RASAM_EHSAN/src/client/app/main/CodalNews/CodalNews.controller.js",
+		"/C/Users/ali.khabbaz/AppData/Roaming/Sublime Text 3/Packages/ESLint/Default (Windows).sublime-keymap",
+		"/E/Projects/RASAM-NEW/new2/RASAM_EHSAN/package.json",
+		"/C/Users/ali.khabbaz/Documents/ReceivedFiles/Shidi/ALI.sql",
+		"/E/Projects/RASAM-NEW/new2/RASAM_EHSAN/src/client/app/main/mainFactory.js",
+		"/E/Projects/RASAM-NEW/new2/RASAM_EHSAN/src/client/app/sandogh/sandoghFactory.js",
+		"/E/Projects/RASAM-NEW/new2/RASAM_EHSAN/src/client/app/sandoghYab/sandoghYabFactory.js",
+		"/E/Projects/RASAM-NEW/new2/RASAM_EHSAN/src/client/dist/js/app.js",
+		"/E/Projects/RASAM-NEW/new2/RASAM_EHSAN/src/client/app/topRated/topRatedFactory.js",
+		"/E/Projects/RASAM-NEW/new2/RASAM_EHSAN/src/client/app/sandogh/information/information.controller.js",
+		"/E/Projects/RASAM-NEW/new2/RASAM_EHSAN/src/client/app/compare/compare.factory.js",
+		"/E/Projects/RASAM-NEW/new2/RASAM_EHSAN/src/client/app/compare/rightPanel/rightPanel.controller.js",
+		"/E/Projects/RASAM-NEW/new2/RASAM_EHSAN/src/client/app/main/financeValuePure/financeValuePure.controller.js",
+		"/C/Users/ali.khabbaz/Desktop/CODAL_DATA.sql",
+		"/E/Projects/RASAM/new_rasam/public/user/app/scripts/controllers/rankController.js",
+		"/E/Projects/RASAM/new_rasam/public/user/app/scripts/controllers/detailsCombineAssetController.js",
+		"/E/Projects/RASAM/new_rasam/server/utilities/akhiDateConverter.js",
+		"/E/Projects/RASAM/new_rasam/public/user/app/lib/akhiDateConverter.js",
+		"/E/Projects/RASAM/new_rasam/public/user/app/views/details.html",
+		"/E/Projects/RASAM/new_rasam/server/apps/perSandoghFullAsset/httpHandlers.js",
+		"/E/Projects/RASAM/new_rasam/server/apps/perSandoghData/httpHandlers.js",
+		"/E/Projects/RASAM/new_rasam/public/user/app/scripts/controllers/detailsController.js",
+		"/E/Projects/RASAM/new_rasam/server/apps/perSandoghData/config.js",
+		"/E/Projects/RASAM/new_rasam/test.js",
+		"/E/Projects/RASAM/new_rasam/server/modules/validator/validator.js",
+		"/E/Projects/RASAM/new_rasam/server/apps/authentication/httpHandlers.js",
+		"/E/Projects/RASAM/new_rasam/public/visitor/app/scripts/factories/login/logInOutFactory.js",
+		"/E/Projects/RASAM/new_rasam/public/visitor/app/scripts/controllers/loginController.js",
+		"/E/Projects/RASAM/new_rasam/public/visitor/app/views/login.html",
+		"/E/Projects/RASAM/new_rasam/server/apps/authentication/config.js",
+		"/E/Projects/RASAM/new_rasam/html/user.html",
+		"/E/Projects/D3/stackBarDirective/stackBarChart_2.html",
+		"/E/Projects/D3/stackBarDirective/stackBarChart_2.js",
+		"/E/Projects/D3/test.js",
+		"/C/Users/ali.khabbaz/Desktop/ijaz.js",
+		"/E/Projects/ionic/test_2/www/index.html",
+		"/E/Projects/ionic/test_2/www/templates/topRated.html",
+		"/E/Projects/ionic/test_2/www/templates/menu.html",
+		"/E/Projects/ionic/test_2/www/js/app.js",
+		"/E/Projects/ionic/test_2/www/js/controllers/home.controller.js",
+		"/E/Projects/ionic/test_2/www/templates/topRated/totalNet.html",
+		"/E/Projects/ionic/test_2/www/js/controllers/topRated/topRatedTotalNet.controller.js",
+		"/E/Projects/ionic/test_2/www/js/factories/sandoghYab.factory.js",
+		"/E/Projects/ionic/test_2/www/js/controllers/topRated.controller.js",
+		"/E/Projects/ionic/test_2/www/templates/topRated/sort.html",
+		"/E/Projects/ionic/test_2/www/json/topRatedTotalNet.json",
+		"/E/Projects/ionic/test_2/www/js/factories/topFuns.Factory.js",
+		"/E/Projects/ionic/test_2/www/templates/home.html",
+		"/E/Projects/ionic/test_2/www/js/controllers/topRated/topRatedBazdeh.controller.js",
+		"/E/Projects/RASAM/maps/ipc_maps/map_type_2.js",
+		"/E/Projects/RASAM/maps/ipc_maps/map.js",
+		"/E/Projects/ionic/test_2/www/css/rasam.css",
+		"/E/Projects/ionic/test_2/www/templates/sandoghYab.html",
+		"/E/Projects/ionic/test_2/www/templates/sandoghYab/filter.html",
+		"/E/Projects/ionic/test_2/www/js/controllers/sandoghYab.controller.js",
+		"/E/Projects/ionic/test_2/www/json/sandoghInfoData.json",
+		"/E/Projects/ionic/test_2/www/lib/angular-strap/dist/angular-strap.js",
+		"/E/Projects/ionic/test_2/www/lib/angular-strap/dist/angular-strap.tpl.js",
+		"/E/Projects/ionic/test_2/www/js/filters/sandoghFilter.filter.js",
+		"/E/Projects/ionic/test_2/www/js/filters/sandoghType.filter.js",
+		"/E/Projects/ionic/test_2/www/templates/sandoghYab/sort.html",
+		"/E/Projects/ionic/test_2/www/js/controllers/sandoghYabCtrl.js",
+		"/C/Users/ali.khabbaz/AppData/Roaming/Sublime Text 3/Packages/JSHint Gutter/.jshintrc",
+		"/E/Projects/ionic/test_2/www/templates/piChart.html",
+		"/E/Projects/ionic/test_2/config.xml",
+		"/E/Projects/ionic/test_2/README.md",
+		"/E/programming/reza/crawler/1.js",
+		"/E/programming/wringle/wringle/server/apps/register.js",
+		"/E/programming/wringle/wringle/test.js",
+		"/E/programming/reza/morteza_13950218/public/app/video/video.html",
+		"/E/programming/reza/morteza_13950218/public/app/main/main.html",
+		"/E/programming/reza/morteza_13950218/public/app/courses/CoursesFilter.js",
+		"/E/programming/reza/morteza_13950218/public/app/courses/courses.html",
+		"/E/programming/reza/morteza_13950218/public/app/main/controllers/TopArticlesAndSubCategoriesController.js",
+		"/E/programming/reza/morteza_13950218/public/app/main/MainViewCtrl.js",
+		"/E/programming/reza/morteza_13950218/public/app/video/videoCtrl.js",
+		"/E/programming/reza/morteza_13950218/public/assets/css/style.css",
+		"/E/programming/reza/morteza_13950218/server/requires.js",
+		"/E/node_modules/mariasql/package.json",
+		"/E/programming/node_modules/mariasql/package.json",
+		"/C/Users/ali_khabbaz/Downloads/Telegram Desktop/style.css",
+		"/E/programming/reza/morteza_13950218/public/css/style.css",
+		"/C/Users/ali_khabbaz/AppData/Local/Temp/MobaXterm7.0/RemoteFiles/3/root@5.135.127.175/utilities.js",
+		"/C/Users/ali_khabbaz/AppData/Local/Temp/MobaXterm7.0/RemoteFiles/2/root@5.135.127.175/requires.js",
+		"/C/Users/ali_khabbaz/AppData/Local/Temp/MobaXterm7.0/RemoteFiles/1/root@5.135.127.175/server.js",
+		"/C/Users/ali_khabbaz/Desktop/MariaDB.repo",
+		"/E/programming/reza/morteza_13950218/server.js",
+		"/E/programming/reza/morteza_13950218/public/app/app.js",
+		"/E/programming/reza/morteza_13950218/public/vendor/video.js/dist/video.js",
+		"/E/programming/reza/morteza_13950218/public/app/main.js",
+		"/E/programming/reza/morteza_13950218/server/apps/getArticleInfo.js",
+		"/E/programming/reza/morteza_13950218/public/app/video/videoFactory.js",
+		"/E/programming/reza/morteza_13950218/public/views/index.ejs",
+		"/C/Users/ali_khabbaz/AppData/Local/Temp/MobaXterm7.0/RemoteFiles/0/root@185.105.236.133/package.json",
+		"/E/programming/reza/morteza_13950218/public/app/main/homeFactory.js",
+		"/E/programming/myTest/server.js",
+		"/E/programming/reza/morteza_13950218/server/apps/getCategoryAndSubCategoriesAndArticles.js",
+		"/E/programming/reza/morteza_13950218/public/app/courses/coursesFactory.js",
+		"/C/Users/ali_khabbaz/AppData/Roaming/Sublime Text 3/Packages/JSCS-Formatter/Default (Windows).sublime-keymap",
+		"/E/programming/reza/morteza_13950218/public/app/courses/courses.filter.js",
+		"/C/Users/ali_khabbaz/Desktop/index.html",
+		"/E/bower_components/Materialize/dist/js/materialize.js",
+		"/C/Users/ali_khabbaz/AppData/Local/Temp/7zO5AA9.tmp/index.html",
+		"/C/Users/ali_khabbaz/AppData/Local/Temp/7zO1B8C.tmp/style.css",
+		"/E/programming/reza/morteza_13950218/public/app/main/controllers/TopCategories.js",
+		"/E/programming/reza/morteza_13950218/public/app/courses/mainCoursesController.js",
+		"/E/programming/reza/morteza_13950218/server/apps/getTopCategories.js",
+		"/E/programming/reza/morteza_13950218/server/apps/getCategoryAndSubCategories.js",
+		"/D/13950220.sql",
+		"/E/programming/reza/morteza_13950218/public/vendor/jquery-ui/ui/accordion.js",
+		"/E/programming/reza/morteza_13950218/public/app/routes.js",
+		"/E/programming/reza/morteza_13950218/server/apps/getBestArticles.js",
+		"/E/bower_components/jquery-ui/ui/accordion.js",
+		"/E/programming/reza/morteza_13950218/server/apps/getTopArticles.js",
+		"/E/programming/reza/morteza_13950218/server/apps/getTopSubCategories.js",
+		"/E/programming/reza/morteza_13950218/public/app/main/controllers/TopCardsController.js",
+		"/E/programming/reza/morteza_13950218/server/apps/getBestCourses.js",
+		"/E/programming/torrent/parseTorrent.js",
+		"/C/Users/ali_khabbaz/AppData/Local/Temp/MobaXterm7.0/RemoteFiles/1/root@185.105.236.133/spawn.js",
+		"/E/programming/wringle/dbMyComments.txt",
+		"/C/Users/ali_khabbaz/AppData/Local/Temp/MobaXterm7.0/RemoteFiles/7/root@185.105.236.133/MainViewCtrl.js"
+	],
+	"find":
+	{
+		"height": 30.0
+	},
+	"find_in_files":
+	{
+		"height": 158.0,
+		"where_history":
+		[
+			"<project>",
+			"E:\\Projects\\RASAM",
+			"<project>",
+			"E:\\Projects\\RASAM",
+			"<project>",
+			"E:\\programming\\iman\\telephone\\2",
+			"<project>",
+			"D:\\projects",
+			"<project>",
+			"D:\\projects\\Rasam_28-8",
+			"D:\\projects\\nodejs\\oun\\ipc&apc-det-final-13-05-1393 -  vps - sequential"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"bazdeh",
+			"naghd",
+			"bonds",
+			"saham",
+			"\\",
+			"CODAL",
+			"صندوق سرمایه گذاری ",
+			"SEND_DATE",
+			"ي",
+			"127.0.0.1:8080",
+			"192.168.1.68:8080",
+			"totalNetAssetValue_last_day",
+			"totalNetAssetValue_last_one_month",
+			"toFixed",
+			"CommaFormatted",
+			"comma",
+			"CommaFormatted",
+			"comma",
+			"commaForma",
+			") + ;",
+			"English_Numbers_To_Persian",
+			"toFixed(2)",
+			"otherAsset",
+			"otherAssetPer",
+			"((+temp[k]",
+			"temp",
+			"saham",
+			"temp[k]",
+			"tarikh_pardakht",
+			"img",
+			"flogDate",
+			"dfd.resolve({\n						success: true,\n						retrievedUser: retrievedUser\n					});",
+			"return {\n                        success: true,\n						retrievedUser: retrievedUser\n					}",
+			"return {\n						success: true,\n						retrievedUser: retrievedUser\n					};",
+			"return {\n				success: true,\n				retrievedUser: retrievedUser\n			};",
+			"return {\n						success: true,\n						retrievedUser: retrievedUser\n					};",
+			"dfd.resolve(config.e[4])",
+			"return {\n						success: true,\n						retrievedUser: retrievedUser\n					};",
+			"return config.e[4];",
+			"dateConverter",
+			"evalLogin",
+			"email",
+			"isUsername",
+			"evalLogin",
+			"temp[1]",
+			"evalLogin",
+			"pass",
+			"isUsername",
+			"username",
+			"loginForm",
+			"logInOutFactory",
+			"lioFactory",
+			"loginModel",
+			"!logged",
+			"ng-show=\"!logged\"",
+			"yScaleOptimizer",
+			"barCounter",
+			"\"",
+			"getsandoghBazarData",
+			"getSandoghBazarData",
+			"topBazdeh",
+			"bazdehSortFields",
+			"sortFields",
+			"topRatedBazdehCtrl",
+			"s_name",
+			"home",
+			"sandoghYab",
+			"console.log",
+			"99",
+			"bazdeh_one_month_part_bazdeh",
+			"Day",
+			"bazdehOneDaySlider",
+			".minValue",
+			"bazdeh_one_year_part_bazdeh",
+			"bazdehSixDaySlider",
+			"bazdehThreeDaySlider",
+			"bazdehOneMonthSlider",
+			"bazdehOneDaySlider",
+			"ageSlider",
+			"age",
+			"OneYear",
+			"SixDay",
+			"One",
+			"bazdehOneDaySlider",
+			"ageSlider",
+			"filterActive",
+			"sandoghFilter",
+			"bazdeh_one_month_part_bazdeh",
+			"-100",
+			"OneMonth",
+			"Month",
+			"One",
+			"bazdeh_one_year_part_bazdeh",
+			"OneYear",
+			"bazdeh_six_month_part_bazdeh",
+			"SixMonth",
+			"three",
+			"Three",
+			"bazdeh_one_month_part_bazdeh",
+			"OneMonth",
+			"ageRangeCalculator",
+			"bazdeh_one_month_part_bazdeh",
+			"Month",
+			"age",
+			"ageSlider",
+			"age",
+			"res",
+			".age",
+			"age",
+			"dataRanges.age",
+			"RzSlider",
+			"rzslider",
+			"slider",
+			"rzslider",
+			"li",
+			",",
+			"Sort",
+			"$scope.modal",
+			"Sort",
+			"Modal",
+			"sortFields",
+			"sortLables",
+			"changeSortField",
+			"]",
+			"sandoghYabFac",
+			"ion-header-bar",
+			"i",
+			"\""
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"codal",
+			"",
+			"publish_date",
+			"ی",
+			"rasamfunds.ir",
+			"p_sandogh_name",
+			"getApiUrl()",
+			"//console.log",
+			"mainFac.getApiUrl()",
+			"//console.log",
+			"mainFac.getApiUrl()",
+			"//console.log",
+			"<link rel=\"icon\" href=\"/css/img/telegram_lib/favicon.ico\" type=\"image/x-icon\" />",
+			"'",
+			"apiUrl",
+			"cachedToken",
+			"tableDideban",
+			"col_1",
+			"col_0",
+			"col_45",
+			"",
+			"ی",
+			"$scope.btn_x_select(0, 'all', 'btn5');",
+			"into @s_t , @bye",
+			"select s_totalNetAssetValue , date",
+			"order by date desc limit 1 ",
+			"date <= @max_date and date >= @pre_1",
+			"date <= @max_date or date >= @pre_1",
+			"\"",
+			"\"site\"",
+			"\"name\"",
+			"\"id\"",
+			"شرکت سبدگردان",
+			"شرکت سرمایه گذاری",
+			"\"",
+			"\"site\"",
+			"\"name\"",
+			"\"id\"",
+			"شرکت مشاور سرمایه گذاری",
+			"\"",
+			"\"site\"",
+			"\"name\"",
+			"\"id\"",
+			"\"",
+			"\"site\"",
+			"\"name\"",
+			"\"id\"",
+			"id\"",
+			"\"",
+			"\"site\"",
+			"\"name\"",
+			"\"id\"",
+			"\"",
+			"\"site\"",
+			"\"name\"",
+			"\"id\"",
+			"\"",
+			"\"site\"",
+			"\"name\"",
+			"\"id\"",
+			"\"",
+			"\"site\"",
+			"\"name\"",
+			"\"id\"",
+			"\"",
+			"\"site\"",
+			"\"name\"",
+			"\"id\"",
+			"\"",
+			"\"site\"",
+			"\"name\"",
+			"\"id\"",
+			"\"",
+			"\"site\"",
+			"\"name\"",
+			"\"id\"",
+			"\"",
+			"\"site\"",
+			"\"name\"",
+			"\"id\"",
+			"\"",
+			"\"site\"",
+			"\"name\"",
+			"\"id\"",
+			"\"",
+			"\"site\"",
+			"\"name\"",
+			"\"id\"",
+			"\"",
+			"\"site\"",
+			"\"name\"",
+			"\"id\"",
+			"\"",
+			"\"site\"",
+			"\"name\"",
+			"\"id\"",
+			"\"",
+			"\"site\"",
+			"\"name\"",
+			"\"id\"",
+			"\"",
+			"\"site\"",
+			"\"name\"",
+			"\"id\"",
+			"\"",
+			"\"site\"",
+			"\"name\"",
+			"\"id\"",
+			"\"",
+			"\"site\"",
+			"\"name\"",
+			"\"id\"",
+			"\"",
+			"\"site\"",
+			"\"name\"",
+			"\"id\"",
+			"\"",
+			"\"site\"",
+			"\"name\"",
+			"\"id\"",
+			"\"",
+			"\"site\"",
+			"\"name\"",
+			"\"id\"",
+			"\"",
+			"\"site\"",
+			"\"name\"",
+			"\"id\""
+		],
+		"reverse": false,
+		"show_context": false,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": false
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 30.0
+	},
+	"input":
+	{
+		"height": 46.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.astyle_error_message":
+	{
+		"height": 0.0
+	},
+	"output.exec":
+	{
+		"height": 264.0
+	},
+	"output.find_results":
+	{
+		"height": 162.0
+	},
+	"project": "maktabGulp.sublime-project",
+	"replace":
+	{
+		"height": 56.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 358.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

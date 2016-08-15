@@ -1,9 +1,6 @@
 (function () {
 	'use strict';
 
-	var compression = require('compression');
-	app.use(compression());
-
 	var express = require('./server/requires.js').express,
 		app = require('./server/requires.js').app,
 		c = require('./server/requires.js').c,
@@ -18,6 +15,9 @@
 		createToken = require('./server/utilities.js').createToken,
 		passport = require('./server/requires.js').passport,
 		localStrategy = require('./server/requires.js').localStrategy;
+
+	var compression = require('compression');
+	app.use(compression());
 
 
 	var PORT = 8080;

@@ -1,0 +1,53 @@
+Remember that you can report errors and get help in https://github.com/NicoSantangelo/sublime-gulp
+
+07-29-2016 10:25:
+C:\Users\ali\AppData\Roaming\Sublime Text 3\Packages\Gulp\write_tasks_to_cache.js:31
+        throw ex;
+        ^
+
+ReferenceError: gulp is not defined
+    at Object.<anonymous> (F:\programming\reza\gulp_maktab\.sublime-gulp-tmp.js:24:23)
+    at Module._compile (module.js:409:26)
+    at Object.Module._extensions..js (module.js:416:10)
+    at Module.load (module.js:343:32)
+    at Function.Module._load (module.js:300:12)
+    at Module.require (module.js:353:17)
+    at require (internal/module.js:12:17)
+    at requireGulp (C:\Users\ali\AppData\Roaming\Sublime Text 3\Packages\Gulp\write_tasks_to_cache.js:28:16)
+    at Object.<anonymous> (C:\Users\ali\AppData\Roaming\Sublime Text 3\Packages\Gulp\write_tasks_to_cache.js:83:12)
+    at Module._compile (module.js:409:26)
+
+
+07-29-2016 10:38:
+C:\Users\ali\AppData\Roaming\Sublime Text 3\Packages\Gulp\write_tasks_to_cache.js:31
+        throw ex;
+        ^
+
+Error: Cannot find module 'gulp-concat'
+    at Function.Module._resolveFilename (module.js:325:15)
+    at Function.Module._load (module.js:276:25)
+    at Module.require (module.js:353:17)
+    at require (internal/module.js:12:17)
+    at F:\programming\reza\gulp_maktab\.sublime-gulp-tmp.js:6:12
+    at Object.<anonymous> (F:\programming\reza\gulp_maktab\.sublime-gulp-tmp.js:44:3)
+    at Module._compile (module.js:409:26)
+    at Object.Module._extensions..js (module.js:416:10)
+    at Module.load (module.js:343:32)
+    at Function.Module._load (module.js:300:12)
+
+
+07-29-2016 11:54:
+C:\Users\ali\AppData\Roaming\Sublime Text 3\Packages\Gulp\write_tasks_to_cache.js:31
+        throw ex;
+              ^
+ReferenceError: gulp is not defined
+    at Object.<anonymous> (F:\programming\reza\gulp_maktab\.sublime-gulp-tmp.js:45:23)
+    at Module._compile (module.js:460:26)
+    at Object.Module._extensions..js (module.js:478:10)
+    at Module.load (module.js:355:32)
+    at Function.Module._load (module.js:310:12)
+    at Module.require (module.js:365:17)
+    at require (module.js:384:17)
+    at requireGulp (C:\Users\ali\AppData\Roaming\Sublime Text 3\Packages\Gulp\write_tasks_to_cache.js:28:16)
+    at Object.<anonymous> (C:\Users\ali\AppData\Roaming\Sublime Text 3\Packages\Gulp\write_tasks_to_cache.js:83:12)
+    at Module._compile (module.js:460:26)
