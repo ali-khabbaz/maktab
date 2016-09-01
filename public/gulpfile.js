@@ -77,7 +77,8 @@
 		var target = gulp.src('./views/_index.ejs');
 
 		return target
-			.pipe(inject(gulp.src(['./assets/dist/vendor.js', './assets/dist/script.js'], {
+			.pipe(inject(gulp.src(['./assets/dist/vendor.js',
+				'./assets/dist/script.js'], {
 				read: false
 			}), {
 				starttag: '<!-- inject:before-body:{{ext}} -->'
@@ -145,7 +146,8 @@
 		var target = gulp.src('./views/_index.ejs');
 
 		return target
-			.pipe(inject(gulp.src(['./assets/dist/vendor.js', './assets/dist/script.js'], {
+			.pipe(inject(gulp.src(['./assets/dist/vendor.js',
+				'./assets/dist/script.js'], {
 				read: false
 			}), {
 				starttag: '<!-- inject:before-body:{{ext}} -->'

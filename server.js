@@ -136,6 +136,7 @@
 			sec_list = require('./server/apps/sec_list.js').sec_list,
 			sections = require('./server/apps/sections.js').sections,
 			getTopCards = require('./server/apps/getTopCards.js').getTopCards,
+			getVideoLink = require('./server/apps/getVideoLink.js').getVideoLink,
 			getTopArticles = require('./server/apps/getTopArticles.js').getTopArticles,
 			getSearchData = require('./server/apps/getSearchData.js').getSearchData,
 			getBestCourses = require('./server/apps/getBestCourses.js').getBestCourses,
@@ -280,6 +281,7 @@
 		app.post('/app/sec_list', sec_list);
 		app.post('/app/sections', sections);
 		app.post('/app/getTopCards', getTopCards);
+		app.post('/app/getVideoLink/', getVideoLink);
 		app.post('/app/getTopArticles', getTopArticles);
 		app.get('/app/getSearchData', getSearchData);
 		app.post('/app/getBestCourses', getBestCourses);

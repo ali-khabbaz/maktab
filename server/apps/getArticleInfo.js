@@ -16,6 +16,7 @@
 					  v.section_name, \
 					  v.video_name, \
 					  v.duration, \
+					  v.link, \
 					  a.name, \
 					  a.views, \
 					  a.released_date, \

@@ -7,7 +7,9 @@
 	function videoFactory($q, $http, $location, mainViewFactory, $sce) {
 		var factory = {
 			getArticleInfo: getArticleInfo,
-			createTrustedUrl: createTrustedUrl
+			createTrustedUrl: createTrustedUrl,
+			getVideoLink: getVideoLink,
+			cerateuploadBoyUrl: cerateuploadBoyUrl
 		};
 		return factory;
 
@@ -18,6 +20,10 @@
 				'videos/' + par.artId + '/' + sectionId + '/' + videoId + '.mp4');
 		}
 
+		function cerateuploadBoyUrl(link) {
+			return $sce.trustAsResourceUrl(link);
+		}
+
 		function getArticleInfo(par) {
 			var url = mainViewFactory.getApiUrl() + "app/getArticleInfo",
 				i, temp, articleInfo = [],
@@ -25,21 +31,20 @@
 			$http.post(url, {
 				"article_id": par.artId
 			}).success(function (res) {
-				if (res.err) {
+				if(res.err) {
 					dfd.resolve([res.err]);
 				} else {
-					for (i = 0; i < res.data[0].length; i++) {
+					for(i = 0; i < res.data[0].length; i++) {
 						temp = {};
-						if (!articleInfo[res.data[0][i].section_id]) {
+						if(!articleInfo[res.data[0][i].section_id]) {
 							temp.sectionName = res.data[0][i].section_name;
 							temp.sectionId = res.data[0][i].section_id;
 							temp.videos = [];
 							temp.videos.push({
 								videoId: res.data[0][i].video_id,
 								videoName: res.data[0][i].video_name,
-								duration: res.data[0][i].duration
-									/*,
-																		id: res.data[0][i].id,*/
+								duration: res.data[0][i].duration,
+								link: res.data[0][i].link
 							});
 							articleInfo[temp.sectionId] = temp;
 						} else {
@@ -47,13 +52,14 @@
 							temp.videos.push({
 								videoId: res.data[0][i].video_id,
 								videoName: res.data[0][i].video_name,
-								duration: res.data[0][i].duration
+								duration: res.data[0][i].duration,
+								link: res.data[0][i].link
 							});
 							articleInfo[res.data[0][i].section_id].videos.push(temp.videos[0]);
 						}
 					}
-					for (i = 0; i < articleInfo.length; i++) {
-						if (!articleInfo[i]) {
+					for(i = 0; i < articleInfo.length; i++) {
+						if(!articleInfo[i]) {
 							articleInfo.splice(i, 1);
 							i--;
 						}
@@ -78,6 +84,16 @@
 				}
 			});
 			return dfd.promise;
+		}
+
+		function getVideoLink(htmlLink) {
+			return $http({
+				url: mainViewFactory.getApiUrl() + 'app/getVideoLink',
+				method: 'POST',
+				data: {
+					link: htmlLink
+				}
+			});
 		}
 	}
 }());
