@@ -52,18 +52,6 @@
 			console.log('link', vm.articleVideos[(sectionId - 1)].videos[(videoId - 1)]
 				.link);
 			if(vm.articleVideos[(sectionId - 1)].videos[(videoId - 1)].link !== null) {
-
-				// if(!jwPlayer) {
-				// 	jwPlayer = jwplayer('my-video2');
-				// }
-				// jwPlayer.setup({
-				// 	file: vm.articleVideos[(sectionId - 1)].videos[(videoId - 1)].link,
-				// 	image: "assets/img/articles/" + vm.parameter.artId + "/Main.jpg",
-				// 	title: vm.articleVideos[sectionId - 1].videos[videoId - 1].videoName,
-				// 	"height": 480,
-				// 	"width": 800
-				// });
-
 				videoFactory.getVideoLink(vm.articleVideos[(sectionId - 1)].videos[(
 						videoId - 1)].link)
 					.success(function (res) {
@@ -101,16 +89,6 @@
 					"width": 800
 				});
 			}
-			// if(!jwPlayer) {
-			// 	jwPlayer = jwplayer('my-video2');
-			// }
-			// jwPlayer.setup({
-			// 	file: vm.videoAddress.mp4,
-			// 	image: "assets/img/articles/" + vm.parameter.artId + "/Main.jpg",
-			// 	title: vm.articleVideos[sectionId - 1].videos[videoId - 1].videoName,
-			// 	"height": 480,
-			// 	"width": 800
-			// });
 		}
 		//morteza
 		function accordion(event) {
