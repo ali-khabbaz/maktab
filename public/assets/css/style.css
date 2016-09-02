@@ -1,24 +1,34 @@
 /********************** StyleReset ***************************/
 
 @font-face {
-    font-family: 'iran';
-    src: url('../fonts/IRANSans-Bold-web.eot');
-    src: url('../fonts/IRANSans-Bold-web.eot?#iefix') format('eot'), url('../fonts/IRANSans-Bold-web.woff') format('woff');
-    font-weight: bold;
+	font-family: 'iran';
+        src: url('../fonts/IRANSans-Bold-web.eot');
+	src: url('../fonts/IRANSans-Bold-web.eot?#iefix') format('eot'),  /* IE6–8 */
+       url('../fonts/IRANSans-Bold-web.woff2') format('woff2'),  /* Chrome36+, Opera24+*/
+       url('../fonts/IRANSans-Bold-web.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+       url('../fonts/IRANSans-Bold-web.ttf') format('ttf');
+	font-weight: bold;
+}
+
+
+@font-face {
+  font-family: 'iran';
+        src: url('../fonts/IRANSans-Medium-web.eot');
+  src: url('../fonts/IRANSans-Medium-web.eot?#iefix') format('eot'),  /* IE6–8 */
+       url('../fonts/IRANSans-Medium-web.woff2') format('woff2'),  /* Chrome36+, Opera24+*/
+       url('../fonts/IRANSans-Medium-web.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+       url('../fonts/IRANSans-Medium-web.ttf') format('ttf');
+  font-weight: 500;
 }
 
 @font-face {
-    font-family: 'iran';
-    src: url('../fonts/IRANSans-Medium-web.eot');
-    src: url('../fonts/IRANSans-Medium-web.eot?#iefix') format('eot'), url('../fonts/IRANSans-Medium-web.woff') format('woff');
-    font-weight: 500;
-}
-
-@font-face {
-    font-family: 'iran';
-    src: url('../fonts/IRANSans-web.eot');
-    src: url('../fonts/IRANSans-web.eot?#iefix') format('eot'), url('../fonts/IRANSans-web.woff') format('woff');
-    font-weight: normal;
+  font-family: 'iran';
+        src: url('../fonts/IRANSans-web.eot');
+  src: url('../fonts/IRANSans-web.eot?#iefix') format('eot'),  /* IE6–8 */
+       url('../fonts/IRANSans-web.woff2') format('woff2'),  /* Chrome36+, Opera24+*/
+       url('../fonts/IRANSans-web.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+       url('../fonts/IRANSans-web.ttf') format('ttf');
+  font-weight: 500;
 }
 
 * {
@@ -340,13 +350,15 @@ ul.register_menu li a.nav_logIn span {
 main.main_block {
     position: relative;
 }
-
-img.main_photo {
+div.main_bg{
+	background:url('../img/mainBg.png');
+	height: 600px;
+}
+/*img.main_photo {
     width: 100%;
     height: 100%;
     float: right;
-}
-
+}*/
 div.main_context {
     width: 55%;
     top: 50%;
@@ -451,7 +463,7 @@ footer.main_footer span.pluralsight_logo {
     margin-right: 3%;
 }
 
-/******** categories *******/
+/******** categories_main_page *******/
 
 section.categories {
     background: url("../img/texture.jpg");
@@ -537,11 +549,85 @@ li.category_list_item a span {
     float: right;
     margin-left: 2px;
 }
-
+/********************TopCategories**********************/
+section.special_offer_courses_list{
+  margin-top: 40px;
+}
+section.special_offer_courses_list article.special_offer_course_item{
+  background: #f1f1f1 url("../img/courseOfferBg.png");
+  width: 49.5%;
+  margin:0 0 1% 1%;
+  float: right;
+	transition: -webkit-box-shadow .5s,-moz-box-shadow .5s,box-shadow .5s;
+    -webkit-box-shadow: -2px 3px 4px 0 rgba(0, 0, 0, 0.16);
+    -moz-box-shadow: -2px 3px 4px 0 rgba(0, 0, 0, 0.16);
+    box-shadow: -2px 3px 4px 0 rgba(0, 0, 0, 0.16);
+}
+section.special_offer_courses_list article.special_offer_course_item:nth-of-type(2n){
+  margin-left: 0;
+}
+article.special_offer_course_item div.special_offer_course_subject{
+		float: right;
+		width: 40%;
+		margin: 90px 40px 0 0px;
+}
+div.special_offer_course_subject a.download_direct_link{
+	background-color: #07c957;
+	color: #fff;
+	font-size: 15px;
+	border-radius: 4px 4px 6px 6px;
+	border-bottom: 4px solid #01b24a;
+	padding: 10px 15px;
+	margin: 10px 0 0 0;
+	float: right;
+}
+article.special_offer_course_item h4.special_offer_header_course{
+	font-size: 20px;
+	line-height: 1.9;
+}
+article.special_offer_course_item h4.header_angular_training{
+	margin-top: 15px;
+}
+article.special_offer_course_item h4.header_angular_training span{
+	color:#a6120d;
+}
+article.special_offer_course_item figure.special_offer_figure{
+  position: relative;
+}
+article.special_offer_course_item figure.special_offer_figure img{
+    float: left;
+}
+article.special_offer_course_item figure.special_offer_figure img.ribbon{
+    position: absolute;
+    right:0;
+    top: 0;
+}
+article.special_offer_course_item figure.special_offer_figure img.animation_learning{
+    margin: 0 0px 20px 20px;
+}
+article.special_offer_course_item figure.special_offer_figure img.photoshop_learning{
+		margin: 11px 0 2px 20px;
+}
+article.special_offer_course_item figure.special_offer_figure img.angular_learning{
+    margin: 83px 0 78px 19px;
+}
+article.special_offer_course_item figure.special_offer_figure img.office_learning{
+    margin: 15px 0 20px 40px;
+}
+section.special_offer_courses_list article.special_offer_course_item:hover {
+		cursor: pointer;
+    background-color: #f1f1f1;
+    -webkit-box-shadow: -2px 4px 11px 2px rgba(0, 0, 0, 0.40);
+    -moz-box-shadow: -2px 4px 11px 2px rgba(0, 0, 0, 0.40);
+    box-shadow: -2px 4px 11px 2px rgba(0, 0, 0, 0.40);
+}
 /********************** Courses ************************/
-
+div.course_bg{
+	background:url('../img/courseBg.png');
+    height: 273px;
+}
 section.courses {
-    margin: 75px 0;
+    margin: 40px 0;
 }
 
 section.course_wrapper article.course {
@@ -869,7 +955,48 @@ main.filter_main p.check_filter {
 main.filter_main p.check_filter input.input_check_filter {
     margin: 4px 0 0 4px;
     float: right;
+    position: relative;
 }
+
+/**********CheckBoxTemplate************/
+/*main.filter_main p.check_filter input.input_check_filter:before{*/
+    /*border: 2px solid #ccc;*/
+    /*content: "";*/
+    /*cursor: pointer;*/
+    /*display: block;*/
+    /*height: 15px;*/
+    /*position: absolute;*/
+    /*-moz-transition: all 0.3s ease-in-out;*/
+    /*-o-transition: all 0.3s ease-in-out;*/
+    /*-webkit-transition: all 0.3s ease-in-out;*/
+    /*transition: all 0.3s ease-in-out;*/
+    /*width: 15px;*/
+    /*z-index: 1;*/
+/*}*/
+/*main.filter_main p.check_filter input.input_check_filter:after{*/
+    /*background: #fff;*/
+    /*content: "";*/
+    /*display: block;*/
+    /*height: 15px;*/
+    /*position: absolute;*/
+    /*top: 0;*/
+    /*width: 15px;*/
+    /*z-index: 0;*/
+/*}*/
+/*main.filter_main p.check_filter input.input_check_filter:checked:before {*/
+    /*border-color: #009688;*/
+/*}*/
+/*main.filter_main p.check_filter input.input_check_filter:checked:before {*/
+    /*border-top-style: none;*/
+    /*border-right-style: none;*/
+    /*height: 10px;*/
+    /*-moz-transform: rotate(-45deg);*/
+    /*-ms-transform: rotate(-45deg);*/
+    /*-o-transform: rotate(-45deg);*/
+    /*-webkit-transform: rotate(-45deg);*/
+    /*transform: rotate(-45deg);*/
+/*}*/
+/********************************/
 
 main.filter_main p.check_filter label.label_check_filter {
     float: right;
@@ -1299,6 +1426,8 @@ section.course_content div.course_main_intro p {
     font-size: 12px;
     line-height: 36px;
     color: #4e4e4e;
+    text-align: left;
+    direction: ltr;
 }
 
 section.course_content header.content_header h4 {
@@ -1313,7 +1442,12 @@ section.course_content section.section_course {
 section.section_course header.section_course_header {
     margin-bottom: 4px;
 }
-
+section.section_course article.section_course_accordion{
+    display: none;
+}
+section.section_course:nth-of-type(1) article.section_course_accordion{
+    display: block;
+}
 section.section_course header.section_course_header h5 {
     font-size: 14px;
     color: #66696e;
@@ -1324,7 +1458,7 @@ section.section_course header.section_course_header h5 {
 /***********courseAccordion**************/
 
 article.section_course_accordion header.header_lecture_course {
-    background-color: #f7f8fc;
+    background-color: #f1f4ff;
     color: #73757c;
     padding: 7px 11px;
     border: 1px solid #eee;
@@ -1413,10 +1547,13 @@ header.header_lecture_course span.icon_time {
     height: 16px;
     display: inline-block;
     float: right;
-    margin: 4px 2px 0 0;
+    margin: 4px 2px 0 3px;
     background: url("../icons/icons.png") -293px -60px;
 }
-
+header.header_lecture_course span.time_num{
+    width: 53px;
+    display: inline-block;
+}
 section.section_course article.section_course_accordion:last-child header.header_lecture_course {
     border-bottom: 1px solid #eee;
 }

@@ -52,6 +52,7 @@
 		}
 
 		function accordion(event) {
+			
 			if ($(event.target).hasClass('active')) {
 				$(event.target).removeClass('active');
 				$(event.target).siblings('ul').slideUp();
