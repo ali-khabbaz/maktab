@@ -550,46 +550,42 @@ li.category_list_item a span {
     margin-left: 2px;
 }
 /********************TopCategories**********************/
+/********************TopCategories**********************/
 section.special_offer_courses_list{
   margin-top: 40px;
 }
 section.special_offer_courses_list article.special_offer_course_item{
-  background: #f1f1f1 url("../img/courseOfferBg.png");
+  background-color: #f1f1f1;
   width: 49.5%;
   margin:0 0 1% 1%;
   float: right;
-	transition: -webkit-box-shadow .5s,-moz-box-shadow .5s,box-shadow .5s;
+  transition: -webkit-box-shadow .5s,-moz-box-shadow .5s,box-shadow .5s;
     -webkit-box-shadow: -2px 3px 4px 0 rgba(0, 0, 0, 0.16);
     -moz-box-shadow: -2px 3px 4px 0 rgba(0, 0, 0, 0.16);
     box-shadow: -2px 3px 4px 0 rgba(0, 0, 0, 0.16);
 }
+section.special_offer_courses_list article.angular_learning_item{
+  background-image: url('../img/angularTrainingBG.png');
+  height: 254px;
+}
+section.special_offer_courses_list article.office_learning_item{
+    background: #f1f1f1 url('../img/officeBG.png') no-repeat 0 100%;
+}
 section.special_offer_courses_list article.special_offer_course_item:nth-of-type(2n){
   margin-left: 0;
 }
-article.special_offer_course_item div.special_offer_course_subject{
-		float: right;
-		width: 40%;
-		margin: 90px 40px 0 0px;
-}
-div.special_offer_course_subject a.download_direct_link{
-	background-color: #07c957;
-	color: #fff;
-	font-size: 15px;
-	border-radius: 4px 4px 6px 6px;
-	border-bottom: 4px solid #01b24a;
-	padding: 10px 15px;
-	margin: 10px 0 0 0;
-	float: right;
-}
 article.special_offer_course_item h4.special_offer_header_course{
-	font-size: 20px;
-	line-height: 1.9;
+  float: right;
+  margin: 90px 32px 0 0px;
+  font-size: 20px;
+  width: 40%;
+  line-height: 1.9;
 }
 article.special_offer_course_item h4.header_angular_training{
-	margin-top: 15px;
+  margin-top: 114px;
 }
 article.special_offer_course_item h4.header_angular_training span{
-	color:#a6120d;
+  color:#a6120d;
 }
 article.special_offer_course_item figure.special_offer_figure{
   position: relative;
@@ -603,20 +599,22 @@ article.special_offer_course_item figure.special_offer_figure img.ribbon{
     top: 0;
 }
 article.special_offer_course_item figure.special_offer_figure img.animation_learning{
-    margin: 0 0px 20px 20px;
+	position: absolute;
+	left: 0;
+	top: 0;
 }
 article.special_offer_course_item figure.special_offer_figure img.photoshop_learning{
-		margin: 11px 0 2px 20px;
+    margin: 11px 0 2px 20px;
 }
 article.special_offer_course_item figure.special_offer_figure img.angular_learning{
-    margin: 83px 0 78px 19px;
+    margin: 83px 0 0 19px;
 }
 article.special_offer_course_item figure.special_offer_figure img.office_learning{
     margin: 15px 0 20px 40px;
 }
 section.special_offer_courses_list article.special_offer_course_item:hover {
-		cursor: pointer;
-    background-color: #f1f1f1;
+    cursor: pointer;
+    background-color: #fcfcfc;
     -webkit-box-shadow: -2px 4px 11px 2px rgba(0, 0, 0, 0.40);
     -moz-box-shadow: -2px 4px 11px 2px rgba(0, 0, 0, 0.40);
     box-shadow: -2px 4px 11px 2px rgba(0, 0, 0, 0.40);
