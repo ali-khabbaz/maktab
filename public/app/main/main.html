@@ -4,8 +4,13 @@
         <div class="container clearfix">
             <nav class="navBar">
                 <ul class="menu pull_right">
-                    <li><a class="home_link active clearfix" href="#/"><span></span>خانه</a></li>
-                    <li><a href="#/courses">شاخه های درسی</a></li>
+                    <li>
+                        <a class="home_link active clearfix" href="#/">
+                            <span></span>خانه</a>
+                    </li>
+                    <li>
+                        <a href="#/courses">شاخه های درسی</a>
+                    </li>
                 </ul>
                 <!-- <ul class="register_menu pull_left">
                     <li><a class="nav_register" href=""><span></span>عضویت</a></li>
@@ -18,72 +23,103 @@
         </div>
     </header>
     <div class="main_bg clearfix">
-      <div class="main_context">
-          <div class="search_block">
-              <!--morteza-->
-              <!-- <input class="main_search"> -->
-              <div data-ng-if="search.searchData" class="anguComplete_wrapper clearfix">
-                  <div class=" clearfix" ng-keypress="search.keyEventHandler($event)" angucomplete-alt id="ex1"
-                       placeholder="جستجوی عنوان آموزشی" maxlength="50" pause="100" selected-object="search.selectedValue"
-                       local-data="search.searchData" search-fields="name,subcategoryName" title-field="name,subcategoryName"
-                       minlength="1" input-class="main_search" match-class="highlight" input-changed="search.inputChanged"></div>
-              </div>
-              <a class="main_button" href=""><span></span>جستجو</a>
-          </div>
-          <div class="search_context">
-              <p>دسترسی سریع و آسان به فایلهای ویدیویی آموزشی</p>
-          </div>
-      </div>
-      <footer class="main_footer clearfix">
-          <div class="container">
-              <span class="coursera_logo"></span>
-              <span class="udemy_logo"></span>
-              <span class="lynda_logo"></span>
-              <span class="pluralsight_logo"></span>
-          </div>
-      </footer>
+        <div class="main_context">
+            <div class="search_block">
+                <!--morteza-->
+                <!-- <input class="main_search"> -->
+                <div data-ng-if="search.searchData" class="anguComplete_wrapper clearfix">
+                    <div
+                        class=" clearfix"
+                        ng-keypress="search.keyEventHandler($event)"
+                        angucomplete-alt
+                        id="ex1"
+                        placeholder="جستجوی عنوان آموزشی"
+                        maxlength="50"
+                        pause="100"
+                        selected-object="search.selectedValue"
+                        local-data="search.searchData"
+                        search-fields="name,subcategoryName"
+                        title-field="name,subcategoryName"
+                        minlength="1"
+                        input-class="main_search"
+                        match-class="highlight"
+                        input-changed="search.inputChanged"></div>
+                </div>
+                <a class="main_button" href="">
+                    <span></span>جستجو</a>
+            </div>
+            <div class="search_context">
+                <p>دسترسی سریع و آسان به فایلهای ویدیویی آموزشی</p>
+            </div>
+        </div>
+        <footer class="main_footer clearfix">
+            <div class="container">
+                <span class="coursera_logo"></span>
+                <span class="udemy_logo"></span>
+                <span class="lynda_logo"></span>
+                <span class="pluralsight_logo"></span>
+            </div>
+        </footer>
     </div>
-
-
 </main>
 <section class="special_offer_courses_list">
-  <div class="container clearfix">
-    <article class="special_offer_course_item clearfix">
-      <h4 class="special_offer_header_course">جدیدترین آموزش های انیمیشن</h4>
-      <figure class="special_offer_figure">
-        <img class="ribbon" alt="ribbon" src="assets/img/ribbon.png">
-        <img class="animation_learning" alt="animation_learning" src="assets/img/androidTraining.png">
-      </figure>
-    </article>
-    <article class="special_offer_course_item clearfix">
-      <h4 class="special_offer_header_course">جدیدترین آموزش های فتوشاپ</h4>
-      <figure class="special_offer_figure">
-        <img class="ribbon" alt="ribbon" src="assets/img/ribbon.png">
-        <img class="photoshop_learning" alt="photoshop_learning" src="assets/img/photoshopTraining.png">
-      </figure>
-    </article>
-    <article class="special_offer_course_item angular_learning_item clearfix">
-      <h4 class="special_offer_header_course header_angular_training">آموزش انگولار نسخه <span>2</span></h4>
-      <figure class="special_offer_figure">
-        <img  class="ribbon" alt="ribbon" src="assets/img/ribbon.png">
-        <img class="angular_learning" alt="angular_learning" src="assets/img/angularTraining.png">
-      </figure>
-    </article>
-    <article class="special_offer_course_item office_learning_item clearfix">
-      <h4 class="special_offer_header_course">جدیدترین مجموعه آفیس 2016</h4>
-      <figure class="special_offer_figure">
-        <img class="ribbon" alt="ribbon" src="assets/img/ribbon.png">
-        <img class="office_learning" alt="office_learning" src="assets/img/officeTraining1.png">
-      </figure>
-    </article>
-  </div>
+    <div class="container clearfix">
+        <a class="special_offer_link" href="#">
+            <article class="special_offer_course_item clearfix">
+                <header>
+                    <h4 class="special_offer_header_course">جدیدترین های آموزش اندروید</h4>
+                </header>
+                <figure class="special_offer_figure">
+                    <img class="ribbon" alt="ribbon" src="assets/img/ribbon.png">
+                    <img class="animation_learning" alt="androidTraining" src="assets/img/androidTraining.png">
+                </figure>
+            </article>
+        </a>
+        <a class="special_offer_link" href="#/courses/photoshop">
+            <article class="special_offer_course_item clearfix">
+                <header>
+                    <h4 class="special_offer_header_course">جدیدترین آموزش های فتوشاپ</h4>
+                </header>
+                <figure class="special_offer_figure">
+                    <img class="ribbon" alt="ribbon" src="assets/img/ribbon.png">
+                    <img class="photoshop_learning" alt="photoshop_learning" src="assets/img/photoshopTraining.png">
+                </figure>
+            </article>
+        </a>
+        <a class="special_offer_link" href="#">
+            <article class="special_offer_course_item angular_learning_item clearfix">
+                <header>
+                    <h4 class="special_offer_header_course header_angular_training">آموزش انگولار نسخه
+                        <span>2</span>
+                    </h4>
+                </header>
+                <figure class="special_offer_figure">
+                    <img class="ribbon" alt="ribbon" src="assets/img/ribbon.png">
+                    <img class="angular_learning" alt="angular_learning" src="assets/img/angularTraining.png">
+                </figure>
+            </article>
+        </a>
+        <a class="special_offer_link" href="#">
+            <article class="special_offer_course_item office_learning_item clearfix">
+                <header>
+                    <h4 class="special_offer_header_course">جدیدترین مجموعه آفیس 2016</h4>
+                </header>
+                <figure class="special_offer_figure">
+                    <img class="ribbon" alt="ribbon" src="assets/img/ribbon.png">
+                    <img class="office_learning" alt="office_learning" src="assets/img/officeTraining1.png">
+                </figure>
+            </article>
+        </a>
+    </div>
 </section>
 <section class="courses clearfix" data-ng-controller="TopArticlesAndSubCategories as taas">
     <div class="container clearfix" data-ng-if="taas.topSubCategories[0].articles">
         <div class="tabs_wrapper clearfix">
             <ul class="tabs_list clearfix">
                 <!-- <li ng-click="taas.changeTab('Best')"><a data-ng-class="{'active' : taas.tab === 'Best'}" href="">محبوب ترین درس ها</a></li> -->
-                <li ng-click="taas.changeTab(info.name)" data-ng-repeat="info in taas.topSubCategories"><a data-ng-class="{'active' : taas.tab === info.name}" href="">{{info.name}}</a></li>
+                <li ng-click="taas.changeTab(info.name)" data-ng-repeat="info in taas.topSubCategories">
+                    <a data-ng-class="{'active' : taas.tab === info.name}" href="">{{info.name}}</a>
+                </li>
             </ul>
         </div>
         <section data-ng-repeat="info in taas.topSubCategories" class="course_wrapper clearfix" data-ng-show="taas.tab === info.name ">
@@ -105,8 +141,7 @@
                             <p>رایــگان</p>
                         </div>
                         <!-- <img class="course_img" src="assets/img/course_small.jpg" alt="softLearning"> -->
-                        <img class="course_img" ng-src="assets/img/articles/{{el.articleId}}/Main-001.jpg"
-                             onerror="this.src='assets/img/defaultImage.png'" width="277" alt="{{el.articleName}}">
+                        <img class="course_img" ng-src="assets/img/articles/{{el.articleId}}/Main-001.jpg" onerror="this.src='assets/img/defaultImage.png'" width="277" alt="{{el.articleName}}">
                     </figure>
                     <header class="course_header clearfix">
                         <h4>
@@ -123,7 +158,8 @@
                             <p>{{el.articleResourceName}}</p>
                         </li>
                         <li class="list_details_item list_details_time clearfix">
-                            <p>{{el.articleDuration}} دقیقه</p>
+                            <p>{{el.articleDuration}}
+                                دقیقه</p>
                         </li>
                     </ul>
                     <footer class="course_footer clearfix">
@@ -133,7 +169,8 @@
                         </div>
                         <div class="pull_left view_wrapper clearfix">
                             <span class="view icon"></span>
-                            <p>بازدید {{el.articleViews}}</p>
+                            <p>بازدید
+                                {{el.articleViews}}</p>
                         </div>
                     </footer>
                 </a>
