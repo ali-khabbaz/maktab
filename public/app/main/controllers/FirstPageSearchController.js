@@ -21,7 +21,7 @@
 
 		function getSearchData() {
 			homeFactory.getSearchData().then(function (res) {
-				if (res[0]) {
+				if(res[0]) {
 					console.log('getSearchDataErrrrrrrr', res[0]);
 				} else {
 					vm.searchData = res[1];
@@ -31,16 +31,16 @@
 
 		function keyEventHandler(event) {
 			var keyCode = event.which || event.keyCode;
-			if (keyCode === 13) {
+			if(keyCode === 13) {
 				console.log('enter');
-				$location.path('/courses/' + searchQuery);
+				$location.path('/courses/search/' + searchQuery);
 			}
 		}
 		$scope.$on('selectResult', function (event, data) {
-			if (data.originalObject.categoryName) {
+			if(data.originalObject.categoryName) {
 				$location.path('/courses/' + data.originalObject.categoryName + '/' +
 					data.originalObject.subcategoryName);
-			} else if (data.originalObject.name) {
+			} else if(data.originalObject.name) {
 				$location.path('/video/' + data.originalObject.id);
 			}
 		});

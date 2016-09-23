@@ -73,23 +73,6 @@
 			.pipe(gulp.dest('./assets/dist/'));
 	});*/
 
-	gulp.task('prod', ['js', 'css'], function () {
-		var target = gulp.src('./views/_index.ejs');
-
-		return target
-			.pipe(inject(gulp.src(['./assets/dist/vendor.js',
-				'./assets/dist/script.js'], {
-				read: false
-			}), {
-				starttag: '<!-- inject:before-body:{{ext}} -->'
-			}))
-			.pipe(inject(gulp.src(['./assets/dist/style.css'])))
-			.pipe(rename(function (path) {
-				path.basename = path.basename.replace('_', '');
-			}))
-			.pipe(gulp.dest('./views/'));
-	});
-
 	gulp.task('css', function () {
 		gulp.src(commonCss)
 			.pipe(concat('style.css'))
@@ -101,21 +84,6 @@
 	});
 
 	gulp.task('js', function () {
-		gulp.src(['./app/app.module.js', './app/**/*.module.js', './app/core/*.js'])
-			.pipe(concat('script.js'))
-			.pipe(uglify())
-			.pipe(ngAnnotate())
-			.pipe(gulp.dest('./assets/dist/'));
-
-		gulp.src(commonJsBefore)
-			.pipe(concat('vendor.js'))
-			.pipe(uglify())
-			.pipe(iife())
-			.pipe(ngAnnotate())
-			.pipe(gulp.dest('./assets/dist/'));
-	});
-	//in video module after adding video route file error shows up
-	gulp.task('js-test', function () {
 		gulp.src(['./app/app.module.js', './app/**/*.module.js',
 				'./app/**/*.js'
 			])
@@ -142,7 +110,7 @@
 	});
 
 
-	gulp.task('prod-test', ['js-test', 'css'], function () {
+	gulp.task('prod', ['js', 'css'], function () {
 		var target = gulp.src('./views/_index.ejs');
 
 		return target

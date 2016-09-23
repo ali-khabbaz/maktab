@@ -4,8 +4,13 @@
         <div class="container clearfix">
             <nav class="navBar">
                 <ul class="menu pull_right">
-                    <li><a class="home_link active clearfix" href="#/"><span></span>خانه</a></li>
-                    <li><a href="">شاخه های درسی</a></li>
+                    <li>
+                        <a class="home_link active clearfix" href="#/">
+                            <span></span>خانه</a>
+                    </li>
+                    <li>
+                        <a href="">شاخه های درسی</a>
+                    </li>
                 </ul>
                 <!-- <ul class="register_menu pull_left">
                     <li><a class="nav_register" href=""><span></span>عضویت</a></li>
@@ -18,11 +23,11 @@
         </div>
     </header>
     <div class="course_bg clearfix">
-      <div class="main_context">
-          <div class="search_context">
-              <p>تمام دروس ارائه شده</p>
-          </div>
-      </div>
+        <div class="main_context">
+            <div class="search_context">
+                <p>تمام دروس ارائه شده</p>
+            </div>
+        </div>
     </div>
 </main>
 <section ng-cloak class="section_filter_course clearfix">
@@ -56,7 +61,10 @@
                     <main class="filter_main">
                         <div class="courses_accordion" data-ng-repeat="info in cc.categoryAndSubCategoriesAndArticles">
                             <!--morteza-->
-                            <h4 class="header_courses_accordion" ng-click="cc.accordion($event)"><span class="icon_accordion"></span>{{::info.categoryName}}<span class="course_num">{{::info.num}}</span></h4>
+                            <h4 class="header_courses_accordion" ng-click="cc.accordion($event)">
+                                <span class="icon_accordion"></span>{{::info.categoryName | capitalize}}
+                                <span class="course_num">{{::info.num}}</span>
+                            </h4>
                             <ul class="list_courses_accordion">
                                 <li data-ng-click="cc.selectSubCategory(el.name)" class="list_courses_item" data-ng-repeat="el in info.subCategories">
                                     <a href="">{{::el.name}}</a>
@@ -66,7 +74,8 @@
                         </div>
                     </main>
                     <header class="filter_header clearfix">
-                        <h4>قیمت</h4></header>
+                        <h4>قیمت</h4>
+                    </header>
                     <main class="filter_main clearfix">
                         <p class="check_filter">
                             <input class="input_check_filter" id="free" type="checkbox">
@@ -78,11 +87,39 @@
                         </p>
                     </main>
                     <header class="filter_header clearfix">
-                        <h4>نرم افزارها</h4></header>
+                        <h4>نرم افزارها</h4>
+                    </header>
                     <main class="filter_main clearfix">
                         <p class="check_filter" data-ng-repeat="info in cc.softwares">
                             <input class="input_check_filter" id="soft_{{::info.name}}" type="checkbox" data-ng-model="info.select">
-                            <label class="label_check_filter" for="soft_{{::info.name}}">{{::info.name}}</label>
+                            <label class="label_check_filter" for="soft_{{::info.name}}">{{::info.name | capitalize}}</label>
+                        </p>
+                    </main>
+                    <header class="filter_header clearfix">
+                        <h4>مدرسین</h4>
+                    </header>
+                    <main class="filter_main clearfix">
+                        <p class="check_filter" data-ng-repeat="info in cc.authors">
+                            <input class="input_check_filter" id="author_{{::info.name}}" type="checkbox" data-ng-model="info.select">
+                            <label class="label_check_filter" for="author_{{::info.name}}">{{::info.name | capitalize}}</label>
+                        </p>
+                    </main>
+                    <header class="filter_header clearfix">
+                        <h4>منابع</h4>
+                    </header>
+                    <main class="filter_main clearfix">
+                        <p class="check_filter" data-ng-repeat="info in cc.resources">
+                            <input class="input_check_filter" id="resource_{{::info.name}}" type="checkbox" data-ng-model="info.select">
+                            <label class="label_check_filter" for="resource_{{::info.name}}">{{::info.name | capitalize}}</label>
+                        </p>
+                    </main>
+                    <header class="filter_header clearfix">
+                        <h4>سطوح</h4>
+                    </header>
+                    <main class="filter_main clearfix">
+                        <p class="check_filter" data-ng-repeat="info in cc.levels">
+                            <input class="input_check_filter" id="level_{{::info.name}}" type="checkbox" data-ng-model="info.select">
+                            <label class="label_check_filter" for="level_{{::info.name}}">{{::info.name | capitalize}}</label>
                         </p>
                     </main>
                 </div>
@@ -140,7 +177,8 @@
                                     <p>{{::info.articleAuthor}}</p>
                                 </li>
                                 <li class="list_details_item list_details_time clearfix">
-                                    <p>{{::info.articleDuration}} ساعت</p>
+                                    <p>{{::info.articleDuration}}
+                                        ساعت</p>
                                 </li>
                             </ul>
                             <footer class="course_footer clearfix">
@@ -150,7 +188,8 @@
                                 </div>
                                 <div class="pull_left view_wrapper clearfix">
                                     <span class="view icon"></span>
-                                    <p>بازدید {{::info.articleViews}}</p>
+                                    <p>بازدید
+                                        {{::info.articleViews}}</p>
                                 </div>
                             </footer>
                         </a>

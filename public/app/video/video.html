@@ -5,9 +5,14 @@
                 <div class="container clearfix">
                     <nav class="navBar">
                         <ul class="menu pull_right">
-                            <li><a class="home_link active clearfix" href="#/"><span></span>خانه</a></li>
+                            <li>
+                                <a class="home_link active clearfix" href="#/">
+                                    <span></span>خانه</a>
+                            </li>
                             <!--  <li><a href="">دروس ارائه شده</a></li> -->
-                            <li><a href="#/courses">شاخه های درسی</a></li>
+                            <li>
+                                <a href="#/courses">شاخه های درسی</a>
+                            </li>
                         </ul>
                         <!-- <ul class="register_menu pull_left">
                             <li><a class="nav_register" href=""><span></span>عضویت</a></li>
@@ -21,10 +26,21 @@
             </header>
             <header class="header_video_course clearfix">
                 <div class="container video_course_title_wrapper">
-                    <h1 class="video_course_title"><span></span>{{vc.articleInfo.name}}<span></span></h1>
+                    <h1 class="video_course_title">
+                        <span></span>{{vc.articleInfo.name}}
+                        <span></span>
+                    </h1>
                     <div class="video_course_title_detail_wrapper">
-                        <p class="video_course_title_detail date"><span class="icon"></span><span>تاریخ ارائه</span><span class="date_value">{{vc.articleInfo.releasedDate}}</span></p>
-                        <p class="video_course_title_detail views"><span class="icon"></span><span>تعداد بازدید</span><span class="view_value">{{vc.articleInfo.views}}</span></p>
+                        <p class="video_course_title_detail date">
+                            <span class="icon"></span>
+                            <span>تاریخ ارائه</span>
+                            <span class="date_value">{{vc.articleInfo.releasedDate}}</span>
+                        </p>
+                        <p class="video_course_title_detail views">
+                            <span class="icon"></span>
+                            <span>تعداد بازدید</span>
+                            <span class="view_value">{{vc.articleInfo.views}}</span>
+                        </p>
                     </div>
                 </div>
             </header>
@@ -49,18 +65,21 @@
                 </figure> -->
                 <section class="course_content clearfix" data-ng-if="vc.articleVideos">
                     <header class="section_header content_header clearfix">
-                        <h4>توضیحات</h4></header>
+                        <h4>توضیحات</h4>
+                    </header>
                     <div class="course_main_intro">
                         <p>
                             {{vc.articleInfo.descBig}}
                         </p>
                     </div>
                     <header class="section_header content_header clearfix">
-                        <h4>قسمت ها</h4></header>
+                        <h4>قسمت ها</h4>
+                    </header>
                     <section class="section_course" data-ng-repeat="info in vc.articleVideos" data-ng-if="info">
                         <header class="section_course_header" ng-class="{ 'active': $index==0}" ng-click="vc.accordion($event)">
                             <span class="icon_accordion"></span>
-                            <h5>بخش {{vc.count[info.sectionId-1]}}:</h5>
+                            <h5>بخش
+                                {{vc.count[info.sectionId-1]}}:</h5>
                             <h5>{{info.sectionName}}</h5>
                         </header>
                         <article class="section_course_accordion" data-ng-repeat="el in info.videos">
@@ -68,13 +87,19 @@
                                 <div class="title_lecture_course clearfix">
                                     <!--  <span class="section_course_num">{{}}</span> -->
                                     <span class="icon_video"></span>
-                                    <p class="subject_section_course"><span>قسمت {{vc.count[el.videoId-1]}}</span>
+                                    <p class="subject_section_course">
+                                        <span>قسمت
+                                            {{vc.count[el.videoId-1]}}</span>
                                         <bdi>{{el.videoName}}</bdi>
                                     </p>
                                     <!--<span class="type_section_course">ویدئو</span>-->
                                 </div>
                                 <div class="preview_section_course_accordion clearfix">
-                                    <p class="time_course_container"><span class="time_num">{{el.duration}} دقیقه</span><span class="icon_time"></span></p>
+                                    <p class="time_course_container">
+                                        <span class="time_num">{{el.duration}}
+                                            دقیقه</span>
+                                        <span class="icon_time"></span>
+                                    </p>
                                     <p class="video_preview" ng-class="{ 'video_preview_active': info.sectionId == vc.selectedSection && el.videoId == vc.selectedVideo  }" data-ng-click="vc.selectVideo(info.sectionId,el.videoId)">نمایش</p>
                                 </div>
                             </header>
@@ -90,20 +115,27 @@
             <aside class="aside_wrapper">
                 <section class="video_course_details">
                     <header class="section_header clearfix">
-                        <h4>جزئیات</h4></header>
+                        <h4>جزئیات</h4>
+                    </header>
                     <main class="main_details_course clearfix">
                         <ul class="list_course_video_details clearfix">
                             <li class="list_course_video_details_item clearfix">
                                 <p class="subject_details">ارائه شده توسط:</p>
-                                <p class="details_value">{{vc.articleInfo.resourceName}}</p>
+                                <a href="#/courses/filter/software//author//resource/{{vc.articleInfo.resourceName}}/level/">
+                                    <p class="details_value">{{vc.articleInfo.resourceName}}</p>
+                                </a>
                             </li>
                             <li class="list_course_video_details_item clearfix">
                                 <p class="subject_details">مدرس:</p>
-                                <p class="details_value">{{vc.articleInfo.authorName}}</p>
+                                <a href="#/courses/filter/software//author/{{vc.articleInfo.authorName}}/resource//level/">
+                                    <p class="details_value">{{vc.articleInfo.authorName}}</p>
+                                </a>
                             </li>
                             <li class="list_course_video_details_item clearfix">
                                 <p class="subject_details">مدت زمان:</p>
-                                <p class="details_value">{{vc.articleInfo.articleDuration}} ساعت </p>
+                                <p class="details_value">{{vc.articleInfo.articleDuration}}
+                                    ساعت
+                                </p>
                             </li>
                             <li class="list_course_video_details_item clearfix">
                                 <p class="subject_details">زبان:</p>
@@ -111,17 +143,13 @@
                             </li>
                             <li class="list_course_video_details_item clearfix">
                                 <p class="subject_details">تعداد بخش ها:</p>
-                                <p class="details_value">{{vc.articleVideos.length}} بخش</p>
+                                <p class="details_value">{{vc.articleVideos.length}}
+                                    بخش</p>
                             </li>
                             <li class="list_course_video_details_item clearfix">
                                 <p class="subject_details">دسته بندی شده:</p>
                                 <p class="details_value">{{vc.articleInfo.subCategoryName}}
-                                    <- {{vc.articleInfo.categoryName}}</p>
-                            </li>
-                        </ul>
-                        <ul class="list_course_download_details">
-                            <li class="list_course_download_details_item clearfix">
-                                <p class="course_download_details_num">87</p>
+                                <- {{vc.articleInfo.categoryName}} </p> </li> </ul> <ul class="list_course_download_details"> <li class="list_course_download_details_item clearfix"> <p class="course_download_details_num">87</p>
                                 <p class="course_download_details">بار دانلود شده</p>
                             </li>
                             <li class="list_course_download_details_item clearfix">
@@ -145,7 +173,8 @@
                 </section>
                 <section class="similar_courses">
                     <header class="section_header clearfix">
-                        <h4>درس های مشابه</h4></header>
+                        <h4>درس های مشابه</h4>
+                    </header>
                     <ul class="similar_courses_list">
                         <li class="similar_courses_item clearfix" data-ng-repeat="info in vc.similarArticles">
                             <a class="similar_courses_item_link clearfix" href="#/video/{{::info.articleId}}">
@@ -205,13 +234,28 @@
                 </section>
                 <section class="search_video_section clearfix" ng-controller="FirstPageSearchController as search">
                     <header class="section_header clearfix">
-                        <h4>جستجو</h4></header>
+                        <h4>جستجو</h4>
+                    </header>
                     <!-- <div>
                         <input type="text" class="search_video_section_input"><span></span>
                     </div> -->
                     <!--morteza-->
                     <div data-ng-if="search.searchData" class="anguComplete_wrapper clearfix">
-                        <div class="anguComplete_video clearfix" ng-keypress="search.keyEventHandler($event)" angucomplete-alt id="ex1" maxlength="50" pause="100" selected-object="search.selectedValue" local-data="search.searchData" search-fields="name,subcategoryName" title-field="name,subcategoryName" minlength="1" input-class="search_video_section_input" match-class="highlight" input-changed="search.inputChanged"></div>
+                        <div
+                            class="anguComplete_video clearfix"
+                            ng-keypress="search.keyEventHandler($event)"
+                            angucomplete-alt
+                            id="ex1"
+                            maxlength="50"
+                            pause="100"
+                            selected-object="search.selectedValue"
+                            local-data="search.searchData"
+                            search-fields="name,subcategoryName"
+                            title-field="name,subcategoryName"
+                            minlength="1"
+                            input-class="search_video_section_input"
+                            match-class="highlight"
+                            input-changed="search.inputChanged"></div>
                         <i></i>
                     </div>
                 </section>
