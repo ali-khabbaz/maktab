@@ -4,7 +4,8 @@
 	var showDb = require('../utilities.js').showDb;
 
 	function getSearchResult(req, res) {
-		var query = 'SELECT \
+		var query =
+			'SELECT \
 					  c.name categoryName, \
 					  sc.name subCategoryName, \
 					  a.name articleName, \
@@ -29,8 +30,10 @@
 					AND sam.article_id = a.id \
 					AND s.id = sam1.software_id \
 					AND sam1.article_id = a.id \
-					AND a.name LIKE \'%' + req.body.searchWord + '%\' \
+					AND a.name LIKE \'%' +
+			req.body.searchParam + '%\' \
 					ORDER BY categoryName ASC, subCategoryName ASC';
+
 		showDb(query).then(function (res1) {
 			res.send({
 				'err': null,

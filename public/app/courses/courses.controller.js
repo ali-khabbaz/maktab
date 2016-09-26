@@ -28,7 +28,6 @@
 		main();
 		// morteza
 		function main() {
-			console.log('######', vm.softwareParam, vm.authorParam, vm.resourceParam, vm.levelParam);
 			if(!vm.searchParam) {
 				coursesFactory.getCategoryAndSubCategoriesAndArticles()
 					.success(function (data) {
