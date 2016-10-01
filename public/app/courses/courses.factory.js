@@ -40,9 +40,9 @@
 
 		function getSearchResult(data) {
 			var dfd = $q.defer();
-			if(cache.get('searchWord#' + data.searchWord)) {
-				dfd.resolve([null, cache.get('searchWord#' + data.searchWord),
-					categoryAndSubCategoriesAndArticlesDataReady(cache.get('searchWord#' + data.searchWord))
+			if(cache.get('searchParam#' + data.searchParam)) {
+				dfd.resolve([null, cache.get('searchParam#' + data.searchParam),
+					categoryAndSubCategoriesAndArticlesDataReady(cache.get('searchParam#' + data.searchParam))
 				]);
 			} else {
 				$http({
@@ -50,7 +50,7 @@
 					method: 'POST',
 					data: data
 				}).success(function (res) {
-					cache.put('searchWord#' + data.searchWord, res.data);
+					cache.put('searchParam#' + data.searchParam, res.data);
 					dfd.resolve([null, res.data,
 						categoryAndSubCategoriesAndArticlesDataReady(res.data)
 					]);
@@ -258,8 +258,10 @@
 				i = null;
 			for(i = 0; i < arr.length; i++) {
 				if(temp2.indexOf(arr[i].softwareName) === -1) {
+					arr[i].softwareName = arr[i].softwareName.toLowerCase();
 					temp.push({
-						name: arr[i].softwareName.toLowerCase(),
+						name: arr[i].softwareName,
+						class: arr[i].softwareName.charAt(0),
 						select: false
 					});
 					temp2.push(arr[i].softwareName);

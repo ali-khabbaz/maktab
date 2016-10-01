@@ -1,4 +1,4 @@
-<main ng-cloak="" class="main_block clearfix">
+ <main ng-cloak="" class="main_block clearfix">
     <!-- <img class="main_photo" src="assets/img/course_main.jpg" alt="main"> -->
     <header class="header clearfix">
         <div class="container clearfix">
@@ -33,12 +33,12 @@
 <section ng-cloak class="section_filter_course clearfix">
     <div class="container clearfix" data-ng-controller="coursesController as cc">
         <section class="filter_course_wrapper clearfix">
-            <!-- <div class="sort_filter clearfix">
+            <div class="sort_filter clearfix">
                 <ul class="sort_filter_List">
                     <li class="sort_filter_List_item sort_view">
                         <label for="sort_view">مرتب کردن بر اساس</label>
-                        <select id="sort_view">
-                            <option>آخرین تاریخ ارائه</option>
+                        <select id="sort_view" ng-model="cc.selectedSort" ng-options="info.name for info in cc.sortOptions" ng-change="cc.changeSort()">
+                          <option value="">انتخاب کنید</option>
                         </select>
                     </li>
                     <li class="sort_filter_List_item">
@@ -52,7 +52,7 @@
                     <a class="listbtn "></a>
                     <a class="gridbtn selected"></a>
                 </div>
-            </div> -->
+            </div>
             <div class="filter_course clearfix">
                 <div class="filter_cluster clearfix">
                     <header class="filter_header clearfix">
@@ -63,12 +63,12 @@
                             <!--morteza-->
                             <h4 class="header_courses_accordion" ng-click="cc.accordion($event)">
                                 <span class="icon_accordion"></span>{{::info.categoryName | capitalize}}
-                                <span class="course_num">{{::info.num}}</span>
+                                <!-- <span class="course_num">{{::info.num}}</span> -->
                             </h4>
                             <ul class="list_courses_accordion">
                                 <li data-ng-click="cc.selectSubCategory(el.name)" class="list_courses_item" data-ng-repeat="el in info.subCategories">
                                     <a href="">{{::el.name}}</a>
-                                    <span class="course_num">{{::el.articles.length}}</span>
+                                    <!-- <span class="course_num">{{::el.articles.length}}</span> -->
                                 </li>
                             </ul>
                         </div>
@@ -125,7 +125,7 @@
                 </div>
             </div>
             <div class="course_wrapper" data-ng-if="cc.articles">
-                <!-- <div class="paging clearfix">
+                <div class="paging clearfix">
                     <ul class="light-theme simple-pagination">
                         <li class="active"><span class="current prev">صفحه قبل</span></li>
                         <li class="active"><span class="current">1</span></li>
@@ -138,8 +138,11 @@
                         <li><a href="" class="page-link">16</a></li>
                         <li><a href="" class="page-link next">صفحه بعد</a></li>
                     </ul>
-                </div> -->
-                <!-- <dir-pagination-controls></dir-pagination-controls> -->
+                    <p ng-if="cc.searchParam">
+                      {{cc.articles.length}} آموزش یافت شد
+                    </p>
+                </div>
+                <dir-pagination-controls></dir-pagination-controls>
                 <div class="courses clearfix" data-ng-cloak ng-hide="cc.loadingShow">
                     <div class="loading-container" ng-show="cc.loadingShow">
                         <!--<div class="loader">-->
@@ -152,8 +155,8 @@
                         </div>
                         <!--</div>-->
                     </div>
-                    <article class="course clearfix" ng-repeat="info in cc.articles | filter:cc.filterCourses">
-                        <!-- <tr dir-paginate="s in sandoghYab.sandoghInfo |filter:tableView.typeFilter | itemsPerPage:13 " current-page="tableView.currPage"> -->
+                    <article class="course clearfix" dir-paginate="info in cc.articles | filter:cc.filterCourses | itemsPerPage:9 ">
+                        <!-- <tr dir-paginate="info in cc.articles | filter:cc.filterCourses | itemsPerPage:13 " current-page="tableView.currPage"> -->
                         <a class="clearfix" href="#/video/{{::info.articleId}}">
                             <figure class="course_img clearfix">
                                 <div class="price clearfix">

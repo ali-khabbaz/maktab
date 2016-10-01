@@ -25,6 +25,15 @@
 		vm.levels = null;
 		vm.selectedSoftwares = [];
 		vm.loadingShow = true;
+		vm.changeSort = changeSort;
+		vm.sortOptions = [{
+			name: 'نام',
+			key: 'articleName'
+		}, {
+			name: 'مدت',
+			key: 'articleDuration'
+		}];
+		vm.selectedSort = 0;
 		main();
 		// morteza
 		function main() {
@@ -43,6 +52,10 @@
 						vm.loadingShow = false;
 					});
 			}
+		}
+
+		function changeSort() {
+			console.log('changeSort---', vm.selectedSort);
 		}
 
 		function filterParamsTrigger() {
@@ -83,6 +96,7 @@
 
 		function CategoryAndSubCategoriesAndArticlesSuccess(res) {
 			vm.articles = res.data;
+			console.log('articles---------', vm.articles);
 			vm.categoryAndSubCategoriesAndArticles =
 				coursesFactory.categoryAndSubCategoriesAndArticlesDataReady(res.data);
 			vm.softwares = coursesFactory.extractSoftwares(res.data);
