@@ -15,8 +15,9 @@
 	var commonCss = [
 			"./vendor/jquery-ui/ui/themes/smoothness/jquery-ui.min.css",
 			"./vendor/angucomplete-alt/angucomplete-alt.css",
-			"./assets/css/style.css",
-			"./vendor/angular/angular-csp.css"
+			"./vendor/angular/angular-csp.css",
+			"./vendor/malihu-custom-scrollbar-plugin-master/jquery.mCustomScrollbar.min.css",
+			"./assets/css/style.css"
 		],
 		commonJsBefore = [
 			'./vendor/jquery/dist/jquery.min.js',
@@ -28,7 +29,8 @@
 			'./vendor/satellizer.js',
 			'./vendor/angular-sanitize/angular-sanitize.min.js',
 			'./vendor/angular-utils-pagination/dirPagination.js',
-			'./vendor/jwplayer/jwplayer.js'
+			'./vendor/jwplayer/jwplayer.js',
+			'./vendor/malihu-custom-scrollbar-plugin-master/jquery.mCustomScrollbar.concat.min.js'
 		],
 		commonJsAfter = [
 			'./vendor/angular-utils-pagination/dirPagination.js',
