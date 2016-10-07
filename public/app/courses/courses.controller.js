@@ -95,18 +95,18 @@
 		}
 
 		function CategoryAndSubCategoriesAndArticlesSuccess(res) {
-			vm.articles = res.data;
-			console.log('articles---------', vm.articles);
+			vm.articles = res.data[1];
 			vm.categoryAndSubCategoriesAndArticles =
-				coursesFactory.categoryAndSubCategoriesAndArticlesDataReady(res.data);
-			vm.softwares = coursesFactory.extractSoftwares(res.data);
-			vm.authors = coursesFactory.extractAuthors(res.data);
-			vm.resources = coursesFactory.extractResources(res.data);
-			vm.levels = coursesFactory.extractLevels(res.data);
+				coursesFactory.categoryAndSubCategoriesAndArticlesDataReady(res.data[1]);
+			vm.softwares = coursesFactory.extractSoftwares(res.data[1]);
+			vm.authors = coursesFactory.extractAuthors(res.data[1]);
+			vm.resources = coursesFactory.extractResources(res.data[1]);
+			vm.levels = coursesFactory.extractLevels(res.data[1]);
 			filterParamsTrigger();
 		}
 
 		function getSearchResultSuccess(res) {
+			//console.log('@@@@@@@@@@@@', res);
 			vm.articles = res[1];
 			vm.softwares = coursesFactory.extractSoftwares(res[1]);
 			vm.authors = coursesFactory.extractAuthors(res[1]);

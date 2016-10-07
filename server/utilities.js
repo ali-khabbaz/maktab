@@ -2,8 +2,7 @@
 	'use strict';
 	var q = require('./requires.js').q,
 		crypto = require('./requires.js').crypto,
-		jwt = require('./requires.js').jwt,
-		c = require('./requires.js').c;
+		jwt = require('./requires.js').jwt;
 
 	function showDb(myquery) {
 		var dfd = q.defer(),
@@ -16,6 +15,18 @@
 			}).on('end', function () {});
 		}).on('end', function () {
 			dfd.resolve(result);
+		});
+		return dfd.promise;
+	}
+
+	function showDbNew(c, myquery) {
+		var dfd = q.defer();
+		c.query(myquery, function (err, rows) {
+			if(err) {
+				dfd.resolve([err]);
+			} else {
+				dfd.resolve([null, rows]);
+			}
 		});
 		return dfd.promise;
 	}
@@ -57,13 +68,13 @@
 
 	function decode(token) {
 		var segments = token.split('.');
-		if (segments.length !== 3) {
+		if(segments.length !== 3) {
 			throw new Error('token structure incorrect');
 		}
 
 		var rawSignature = segments[0] + '.' + segments[1];
 
-		if (!verify(rawSignature, 'shh...', segments[2])) {
+		if(!verify(rawSignature, 'shh...', segments[2])) {
 			throw new Error('verification failed');
 		}
 		var payload = JSON.parse(base64Decode(segments[1]));
@@ -95,6 +106,7 @@
 	}
 
 	exports.showDb = showDb;
+	exports.showDbNew = showDbNew;
 	exports.encryptor2 = encryptor2;
 	exports.encode = encode;
 	exports.decode = decode;

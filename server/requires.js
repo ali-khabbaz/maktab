@@ -19,8 +19,10 @@
 		jwt = require('jwt-simple'),
 		sess,
 		passport = require('passport'),
-		localStrategy = require('passport-local').Strategy,
-		c = new Client();
+		localStrategy = require('passport-local').Strategy
+		/*,
+				c = new Client()*/
+	;
 
 
 	exports.app = app;
@@ -36,7 +38,7 @@
 	exports.cluster = cluster;
 	exports.numCPUs = numCPUs;
 	exports.util = util;
-	exports.c = c;
+	exports.Client = Client;
 	exports.bcrypt = bcrypt;
 	exports.crypto = crypto;
 	exports.jwt = jwt;

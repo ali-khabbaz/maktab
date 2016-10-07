@@ -1,12 +1,14 @@
 /*jshint multistr: true */
 (function () {
 	'use strict';
-	var showDb = require('../utilities.js').showDb,
+	var c = require('../../server.js').c,
+		showDbNew = require('../utilities.js').showDbNew,
 		q = require('../requires.js').q;
 
 	function getArticleInfo(req, res) {
 		var funcs = [],
-			query = 'SELECT \
+			query =
+			'SELECT \
 					  v.article_id, \
 					  v.section_id, \
 					  v.video_id, \
@@ -34,13 +36,16 @@
 					     sub_category sc, \
 					     subcategory_article_map sam, \
 					     category c \
-					WHERE v.article_id = \'' + req.body.article_id + '\' \
+					WHERE v.article_id = \'' +
+			req.body.article_id +
+			'\' \
 					AND v.article_id = a.id \
 					AND sam.article_id = a.id \
 					AND c.id = sc.category_id \
 					AND sam.subCategory_id = sc.id';
-		funcs.push(showDb(query));
-		query = 'SELECT \
+		funcs.push(showDbNew(c, query));
+		query =
+			'SELECT \
 				  a.id articleId, \
 				  a.name articleName, \
 				  a.author_name authorName, \
@@ -58,8 +63,9 @@
 				       software_article_map sam \
 				  WHERE a.id = sam.article_id \
 				  AND s.id = sam.software_id \
-				  AND a.id = ' + req.body.article_id + ')';
-		funcs.push(showDb(query));
+				  AND a.id = ' +
+			req.body.article_id + ')';
+		funcs.push(showDbNew(c, query));
 		q.all(funcs).then(function (res1) {
 			res.send({
 				'err': null,

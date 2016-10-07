@@ -50,9 +50,9 @@
 					method: 'POST',
 					data: data
 				}).success(function (res) {
-					cache.put('searchParam#' + data.searchParam, res.data);
-					dfd.resolve([null, res.data,
-						categoryAndSubCategoriesAndArticlesDataReady(res.data)
+					cache.put('searchParam#' + data.searchParam, res.data[1]);
+					dfd.resolve([null, res.data[1],
+						categoryAndSubCategoriesAndArticlesDataReady(res.data[1])
 					]);
 				}).error(function (err) {
 					dfd.resolve([err]);

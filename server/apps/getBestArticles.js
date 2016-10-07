@@ -1,10 +1,13 @@
 /*jshint multistr: true */
 (function () {
 	'use strict';
-	var showDb = require('../utilities.js').showDb;
+	var c = require('../../server.js').c,
+		showDbNew = require('../utilities.js').showDbNew;
+
 
 	function getBestArticles(req, res) {
-		var query = 'SELECT \
+		var query =
+			'SELECT \
 					  a.id articleId, \
 					  a.name articleName, \
 					  a.duration articleDuration, \
@@ -15,7 +18,7 @@
 					  a.`like` articleLike \
 					FROM articles a \
 					WHERE a.firstPage = \'Y\'';
-		showDb(query).then(function (res1) {
+		showDbNew(c, query).then(function (res1) {
 			res.send({
 				'err': null,
 				'data': res1

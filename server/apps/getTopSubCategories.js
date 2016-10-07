@@ -1,7 +1,8 @@
 /*jshint multistr: true */
 (function () {
 	'use strict';
-	var showDb = require('../utilities.js').showDb;
+	var c = require('../../server.js').c,
+		showDbNew = require('../utilities.js').showDbNew;
 
 	function getTopSubCategories(req, res) {
 		var query = 'SELECT \
@@ -9,7 +10,7 @@
 					  sc.name \
 					FROM sub_category sc \
 					WHERE sc.first_page = \'Y\'';
-		showDb(query).then(function (res1) {
+		showDbNew(c, query).then(function (res1) {
 			res.send({
 				'err': null,
 				'data': res1

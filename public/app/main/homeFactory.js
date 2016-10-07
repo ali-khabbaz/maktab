@@ -58,8 +58,9 @@
 				method: 'GET',
 				cache: true
 			}).success(function (res) {
-				for (i = 0; i < res.data[0].length; i++) {
-					temp.push(res.data[0][i]);
+				console.log('search---------', res);
+				for(i = 0; i < res.data[0][1].length; i++) {
+					temp.push(res.data[0][1][i]);
 				}
 				dfd.resolve([null, temp]);
 			}).error(function (err) {
@@ -82,14 +83,14 @@
 
 		function topCategoriesDataReady(data) {
 			var i, temp = [];
-			for (i = 0; i < data.length; i++) {
-				if (temp.length === 0 ||
+			for(i = 0; i < data.length; i++) {
+				if(temp.length === 0 ||
 					data[i].categoryName !== temp[temp.length - 1].categoryName) {
 					temp.push({
 						categoryName: data[i].categoryName,
 						subCategoryNames: [data[i].subCategoryName]
 					});
-				} else if (data[i].categoryName ===
+				} else if(data[i].categoryName ===
 					temp[temp.length - 1].categoryName) {
 					temp[temp.length - 1].subCategoryNames.push(data[i].subCategoryName);
 				}
@@ -103,12 +104,12 @@
 				name: 'Best',
 				articles: best
 			});
-			for (i = 0; i < subCategories.length; i++) {
-				if (!subCategories[i].articles) {
+			for(i = 0; i < subCategories.length; i++) {
+				if(!subCategories[i].articles) {
 					subCategories[i].articles = [];
 				}
-				for (j = 0; j < articles.length; j++) {
-					if (subCategories[i].id === articles[j].subCategoryId) {
+				for(j = 0; j < articles.length; j++) {
+					if(subCategories[i].id === articles[j].subCategoryId) {
 						subCategories[i].articles.push(articles[j]);
 					}
 				}

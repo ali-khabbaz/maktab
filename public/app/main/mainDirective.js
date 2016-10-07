@@ -59,9 +59,9 @@
 			var displaySearching;
 			var displayNoResults;
 			elem.on('mousedown', function (event) {
-				if (event.target.id) {
+				if(event.target.id) {
 					mousedownOn = event.target.id;
-					if (mousedownOn === scope.id + '_dropdown') {
+					if(mousedownOn === scope.id + '_dropdown') {
 						document.body.addEventListener('click', clickoutHandlerForDropdown);
 					}
 				} else {
@@ -71,7 +71,7 @@
 			scope.currentIndex = scope.focusFirst ? 0 : null;
 			scope.searching = false;
 			unbindInitialValue = scope.$watch('initialValue', function (newval) {
-				if (newval) {
+				if(newval) {
 					// remove scope listener
 					unbindInitialValue();
 					// change input
@@ -79,10 +79,10 @@
 				}
 			});
 			scope.$watch('fieldRequired', function (newval, oldval) {
-				if (newval !== oldval) {
-					if (!newval) {
+				if(newval !== oldval) {
+					if(!newval) {
 						ctrl[scope.inputName].$setValidity(requiredClassName, true);
-					} else if (!validState || scope.currentIndex === -1) {
+					} else if(!validState || scope.currentIndex === -1) {
 						handleRequired(false);
 					} else {
 						handleRequired(true);
@@ -90,7 +90,7 @@
 				}
 			});
 			scope.$on('angucomplete-alt:clearInput', function (event, elementId) {
-				if (!elementId || elementId === scope.id) {
+				if(!elementId || elementId === scope.id) {
 					scope.searchStr = null;
 					callOrAssign();
 					handleRequired(false);
@@ -98,23 +98,24 @@
 				}
 			});
 			scope.$on('angucomplete-alt:changeInput', function (event, elementId, newval) {
-				if (!!elementId && elementId === scope.id) {
+				if(!!elementId && elementId === scope.id) {
 					handleInputChange(newval);
 				}
 			});
 
 			function handleInputChange(newval, initial) {
-				if (newval) {
-					if (typeof newval === 'object') {
+				if(newval) {
+					if(typeof newval === 'object') {
 						scope.searchStr = extractTitle(newval);
 						callOrAssign({
 							originalObject: newval
 						});
-					} else if (typeof newval === 'string' && newval.length > 0) {
+					} else if(typeof newval === 'string' && newval.length > 0) {
 						scope.searchStr = newval;
 					} else {
-						if (console && console.error) {
-							console.error('Tried to set ' + (!!initial ? 'initial' : '') + ' value of angucomplete to', newval, 'which is an invalid value');
+						if(console && console.error) {
+							console.error('Tried to set ' + (!!initial ? 'initial' : '') + ' value of angucomplete to', newval,
+								'which is an invalid value');
 						}
 					}
 					handleRequired(true);
@@ -132,12 +133,12 @@
 			}
 
 			function callOrAssign(value) {
-				if (typeof scope.selectedObject === 'function') {
+				if(typeof scope.selectedObject === 'function') {
 					scope.selectedObject(value);
 				} else {
 					scope.selectedObject = value;
 				}
-				if (value) {
+				if(value) {
 					handleRequired(true);
 				} else {
 					handleRequired(false);
@@ -154,7 +155,7 @@
 				callOrAssign({
 					originalObject: str
 				});
-				if (scope.clearSelected) {
+				if(scope.clearSelected) {
 					scope.searchStr = null;
 				}
 				clearResults();
@@ -171,10 +172,10 @@
 
 			function extractValue(obj, key) {
 				var keys, result;
-				if (key) {
+				if(key) {
 					keys = key.split('.');
 					result = obj;
-					for (var i = 0; i < keys.length; i++) {
+					for(var i = 0; i < keys.length; i++) {
 						result = result[keys[i]];
 					}
 				} else {
@@ -188,14 +189,14 @@
 				// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions
 				// Escape user input to be treated as a literal string within a regular expression
 				re = new RegExp(str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'i');
-				if (!target) {
+				if(!target) {
 					return;
 				}
-				if (!target.match || !target.replace) {
+				if(!target.match || !target.replace) {
 					target = target.toString();
 				}
 				matches = target.match(re);
-				if (matches) {
+				if(matches) {
 					result = target.replace(re,
 						'<span class="' + scope.matchClass + '">' + matches[0] + '</span>');
 				} else {
@@ -207,40 +208,40 @@
 			function handleRequired(valid) {
 				scope.notEmpty = valid;
 				validState = scope.searchStr;
-				if (scope.fieldRequired && ctrl && scope.inputName) {
+				if(scope.fieldRequired && ctrl && scope.inputName) {
 					ctrl[scope.inputName].$setValidity(requiredClassName, valid);
 				}
 			}
 
 			function keyupHandler(event) {
 				var which = ie8EventNormalizer(event);
-				if (which === KEY_LF || which === KEY_RT) {
+				if(which === KEY_LF || which === KEY_RT) {
 					// do nothing
 					return;
 				}
-				if (which === KEY_UP || which === KEY_EN) {
+				if(which === KEY_UP || which === KEY_EN) {
 					event.preventDefault();
-				} else if (which === KEY_DW) {
+				} else if(which === KEY_DW) {
 					event.preventDefault();
-					if (!scope.showDropdown && scope.searchStr && scope.searchStr.length >= minlength) {
+					if(!scope.showDropdown && scope.searchStr && scope.searchStr.length >= minlength) {
 						initResults();
 						scope.searching = true;
 						searchTimerComplete(scope.searchStr);
 					}
-				} else if (which === KEY_ES) {
+				} else if(which === KEY_ES) {
 					clearResults();
 					scope.$apply(function () {
 						inputField.val(scope.searchStr);
 					});
 				} else {
-					if (minlength === 0 && !scope.searchStr) {
+					if(minlength === 0 && !scope.searchStr) {
 						return;
 					}
-					if (!scope.searchStr || scope.searchStr === '') {
+					if(!scope.searchStr || scope.searchStr === '') {
 						scope.showDropdown = false;
-					} else if (scope.searchStr.length >= minlength) {
+					} else if(scope.searchStr.length >= minlength) {
 						initResults();
-						if (searchTimer) {
+						if(searchTimer) {
 							$timeout.cancel(searchTimer);
 						}
 						scope.searching = true;
@@ -248,7 +249,7 @@
 							searchTimerComplete(scope.searchStr);
 						}, scope.pause);
 					}
-					if (validState && validState !== scope.searchStr && !scope.clearSelected) {
+					if(validState && validState !== scope.searchStr && !scope.clearSelected) {
 						scope.$apply(function () {
 							callOrAssign();
 						});
@@ -257,9 +258,9 @@
 			}
 
 			function handleOverrideSuggestions(event) {
-				if (scope.overrideSuggestions &&
+				if(scope.overrideSuggestions &&
 					!(scope.selectedObject && scope.selectedObject.originalObject === scope.searchStr)) {
-					if (event) {
+					if(event) {
 						event.preventDefault();
 					}
 					// cancel search timer
@@ -297,7 +298,7 @@
 
 			function updateInputField() {
 				var current = scope.results[scope.currentIndex];
-				if (scope.matchClass) {
+				if(scope.matchClass) {
 					inputField.val(extractTitle(current.originalObject));
 				} else {
 					inputField.val(current.title);
@@ -308,8 +309,8 @@
 				var which = ie8EventNormalizer(event);
 				var row = null;
 				var rowTop = null;
-				if (which === KEY_EN && scope.results) {
-					if (scope.currentIndex >= 0 && scope.currentIndex < scope.results.length) {
+				if(which === KEY_EN && scope.results) {
+					if(scope.currentIndex >= 0 && scope.currentIndex < scope.results.length) {
 						event.preventDefault();
 						scope.selectResult(scope.results[scope.currentIndex]);
 					} else {
@@ -317,47 +318,47 @@
 						clearResults();
 					}
 					scope.$apply();
-				} else if (which === KEY_DW && scope.results) {
+				} else if(which === KEY_DW && scope.results) {
 					event.preventDefault();
-					if ((scope.currentIndex + 1) < scope.results.length && scope.showDropdown) {
+					if((scope.currentIndex + 1) < scope.results.length && scope.showDropdown) {
 						scope.$apply(function () {
 							scope.currentIndex++;
 							updateInputField();
 						});
-						if (isScrollOn) {
+						if(isScrollOn) {
 							row = dropdownRow();
-							if (dropdownHeight() < row.getBoundingClientRect().bottom) {
+							if(dropdownHeight() < row.getBoundingClientRect().bottom) {
 								dropdownScrollTopTo(dropdownRowOffsetHeight(row));
 							}
 						}
 					}
-				} else if (which === KEY_UP && scope.results) {
+				} else if(which === KEY_UP && scope.results) {
 					event.preventDefault();
-					if (scope.currentIndex >= 1) {
+					if(scope.currentIndex >= 1) {
 						scope.$apply(function () {
 							scope.currentIndex--;
 							updateInputField();
 						});
-						if (isScrollOn) {
+						if(isScrollOn) {
 							rowTop = dropdownRowTop();
-							if (rowTop < 0) {
+							if(rowTop < 0) {
 								dropdownScrollTopTo(rowTop - 1);
 							}
 						}
-					} else if (scope.currentIndex === 0) {
+					} else if(scope.currentIndex === 0) {
 						scope.$apply(function () {
 							scope.currentIndex = -1;
 							inputField.val(scope.searchStr);
 						});
 					}
-				} else if (which === KEY_TAB) {
-					if (scope.results && scope.results.length > 0 && scope.showDropdown) {
-						if (scope.currentIndex === -1 && scope.overrideSuggestions) {
+				} else if(which === KEY_TAB) {
+					if(scope.results && scope.results.length > 0 && scope.showDropdown) {
+						if(scope.currentIndex === -1 && scope.overrideSuggestions) {
 							// intentionally not sending event so that it does not
 							// prevent default tab behavior
 							handleOverrideSuggestions();
 						} else {
-							if (scope.currentIndex === -1) {
+							if(scope.currentIndex === -1) {
 								scope.currentIndex = 0;
 							}
 							scope.selectResult(scope.results[scope.currentIndex]);
@@ -367,11 +368,11 @@
 						// no results
 						// intentionally not sending event so that it does not
 						// prevent default tab behavior
-						if (scope.searchStr && scope.searchStr.length > 0) {
+						if(scope.searchStr && scope.searchStr.length > 0) {
 							handleOverrideSuggestions();
 						}
 					}
-				} else if (which === KEY_ES) {
+				} else if(which === KEY_ES) {
 					// This is very specific to IE10/11 #272
 					// without this, IE clears the input text
 					event.preventDefault();
@@ -381,7 +382,7 @@
 			function httpSuccessCallbackGen(str) {
 				return function (responseData, status, headers, config) {
 					// normalize return obejct from promise
-					if (!status && !headers && !config && responseData.data) {
+					if(!status && !headers && !config && responseData.data) {
 						responseData = responseData.data;
 					}
 					scope.searching = false;
@@ -393,24 +394,24 @@
 
 			function httpErrorCallback(errorRes, status, headers, config) {
 				// cancelled/aborted
-				if (status === 0 || status === -1) {
+				if(status === 0 || status === -1) {
 					return;
 				}
 				// normalize return obejct from promise
-				if (!status && !headers && !config) {
+				if(!status && !headers && !config) {
 					status = errorRes.status;
 				}
-				if (scope.remoteUrlErrorCallback) {
+				if(scope.remoteUrlErrorCallback) {
 					scope.remoteUrlErrorCallback(errorRes, status, headers, config);
 				} else {
-					if (console && console.error) {
+					if(console && console.error) {
 						console.error('http error');
 					}
 				}
 			}
 
 			function cancelHttpRequest() {
-				if (httpCanceller) {
+				if(httpCanceller) {
 					httpCanceller.resolve();
 				}
 			}
@@ -418,13 +419,13 @@
 			function getRemoteResults(str) {
 				var params = {},
 					url = scope.remoteUrl + encodeURIComponent(str);
-				if (scope.remoteUrlRequestFormatter) {
+				if(scope.remoteUrlRequestFormatter) {
 					params = {
 						params: scope.remoteUrlRequestFormatter(str)
 					};
 					url = scope.remoteUrl;
 				}
-				if (!!scope.remoteUrlRequestWithCredentials) {
+				if(!!scope.remoteUrlRequestWithCredentials) {
 					params.withCredentials = true;
 				}
 				cancelHttpRequest();
@@ -451,7 +452,7 @@
 			function clearResults() {
 				scope.showDropdown = false;
 				scope.results = [];
-				if (dd) {
+				if(dd) {
 					dd.scrollTop = 0;
 				}
 			}
@@ -466,16 +467,16 @@
 				var i, match, s, value,
 					searchFields = scope.searchFields.split(','),
 					matches = [];
-				if (typeof scope.parseInput() !== 'undefined') {
+				if(typeof scope.parseInput() !== 'undefined') {
 					str = scope.parseInput()(str);
 				}
-				for (i = 0; i < scope.localData.length; i++) {
+				for(i = 0; i < scope.localData.length; i++) {
 					match = false;
-					for (s = 0; s < searchFields.length; s++) {
+					for(s = 0; s < searchFields.length; s++) {
 						value = extractValue(scope.localData[i], searchFields[s]) || '';
 						match = match || (value.toString().toLowerCase().indexOf(str.toString().toLowerCase()) >= 0);
 					}
-					if (match) {
+					if(match) {
 						matches[matches.length] = scope.localData[i];
 					}
 				}
@@ -483,11 +484,11 @@
 			}
 
 			function checkExactMatch(result, obj, str) {
-				if (!str) {
+				if(!str) {
 					return false;
 				}
-				for (var key in obj) {
-					if (obj[key].toLowerCase() === str.toLowerCase()) {
+				for(var key in obj) {
+					if(obj[key].toLowerCase() === str.toLowerCase()) {
 						scope.selectResult(result);
 						return true;
 					}
@@ -497,13 +498,13 @@
 
 			function searchTimerComplete(str) {
 				// Begin the search
-				if (!str || str.length < minlength) {
+				if(!str || str.length < minlength) {
 					return;
 				}
-				if (scope.localData) {
+				if(scope.localData) {
 					scope.$apply(function () {
 						var matches;
-						if (typeof scope.localSearch() !== 'undefined') {
+						if(typeof scope.localSearch() !== 'undefined') {
 							matches = scope.localSearch()(str);
 						} else {
 							matches = getLocalResults(str);
@@ -511,7 +512,7 @@
 						scope.searching = false;
 						processResults(matches, str);
 					});
-				} else if (scope.remoteApiHandler) {
+				} else if(scope.remoteApiHandler) {
 					getRemoteResultsWithCustomHandler(str);
 				} else {
 					getRemoteResults(str);
@@ -520,21 +521,21 @@
 
 			function processResults(responseData, str) {
 				var i, description, image, text, formattedText, formattedDesc;
-				if (responseData && responseData.length > 0) {
+				if(responseData && responseData.length > 0) {
 					scope.results = [];
-					for (i = 0; i < responseData.length; i++) {
-						if (scope.titleField && scope.titleField !== '') {
+					for(i = 0; i < responseData.length; i++) {
+						if(scope.titleField && scope.titleField !== '') {
 							text = formattedText = extractTitle(responseData[i]);
 						}
 						description = '';
-						if (scope.descriptionField) {
+						if(scope.descriptionField) {
 							description = formattedDesc = extractValue(responseData[i], scope.descriptionField);
 						}
 						image = '';
-						if (scope.imageField) {
+						if(scope.imageField) {
 							image = extractValue(responseData[i], scope.imageField);
 						}
-						if (scope.matchClass) {
+						if(scope.matchClass) {
 							formattedText = findMatchString(text, str);
 							formattedDesc = findMatchString(description, str);
 						}
@@ -548,13 +549,13 @@
 				} else {
 					scope.results = [];
 				}
-				if (scope.autoMatch && scope.results.length === 1 &&
+				if(scope.autoMatch && scope.results.length === 1 &&
 					checkExactMatch(scope.results[0], {
 						title: text,
 						desc: description || ''
 					}, scope.searchStr)) {
 					scope.showDropdown = false;
-				} else if (scope.results.length === 0 && !displayNoResults) {
+				} else if(scope.results.length === 0 && !displayNoResults) {
 					scope.showDropdown = false;
 				} else {
 					scope.showDropdown = true;
@@ -562,26 +563,26 @@
 			}
 
 			function showAll() {
-				if (scope.localData) {
+				if(scope.localData) {
 					processResults(scope.localData, '');
-				} else if (scope.remoteApiHandler) {
+				} else if(scope.remoteApiHandler) {
 					getRemoteResultsWithCustomHandler('');
 				} else {
 					getRemoteResults('');
 				}
 			}
 			scope.onFocusHandler = function () {
-				if (scope.focusIn) {
+				if(scope.focusIn) {
 					scope.focusIn();
 				}
-				if (minlength === 0 && (!scope.searchStr || scope.searchStr.length === 0)) {
+				if(minlength === 0 && (!scope.searchStr || scope.searchStr.length === 0)) {
 					scope.currentIndex = scope.focusFirst ? 0 : scope.currentIndex;
 					scope.showDropdown = true;
 					showAll();
 				}
 			};
 			scope.hideResults = function () {
-				if (mousedownOn &&
+				if(mousedownOn &&
 					(mousedownOn === scope.id + '_dropdown' ||
 						mousedownOn.indexOf('angucomplete') >= 0)) {
 					mousedownOn = null;
@@ -589,24 +590,24 @@
 					hideTimer = $timeout(function () {
 						clearResults();
 						scope.$apply(function () {
-							if (scope.searchStr && scope.searchStr.length > 0) {
+							if(scope.searchStr && scope.searchStr.length > 0) {
 								inputField.val(scope.searchStr);
 							}
 						});
 					}, BLUR_TIMEOUT);
 					cancelHttpRequest();
-					if (scope.focusOut) {
+					if(scope.focusOut) {
 						scope.focusOut();
 					}
-					if (scope.overrideSuggestions) {
-						if (scope.searchStr && scope.searchStr.length > 0 && scope.currentIndex === -1) {
+					if(scope.overrideSuggestions) {
+						if(scope.searchStr && scope.searchStr.length > 0 && scope.currentIndex === -1) {
 							handleOverrideSuggestions();
 						}
 					}
 				}
 			};
 			scope.resetHideResults = function () {
-				if (hideTimer) {
+				if(hideTimer) {
 					$timeout.cancel(hideTimer);
 				}
 			};
@@ -616,11 +617,11 @@
 			scope.selectResult = function (result) {
 				// Restore original values
 				scope.$emit('selectResult', result);
-				if (scope.matchClass) {
+				if(scope.matchClass) {
 					result.title = extractTitle(result.originalObject);
 					result.description = extractValue(result.originalObject, scope.descriptionField);
 				}
-				if (scope.clearSelected) {
+				if(scope.clearSelected) {
 					scope.searchStr = null;
 				} else {
 					scope.searchStr = result.title;
@@ -629,42 +630,42 @@
 				clearResults();
 			};
 			scope.inputChangeHandler = function (str) {
-				if (str.length < minlength) {
+				if(str.length < minlength) {
 					cancelHttpRequest();
 					clearResults();
-				} else if (str.length === 0 && minlength === 0) {
+				} else if(str.length === 0 && minlength === 0) {
 					scope.searching = false;
 					showAll();
 				}
-				if (scope.inputChanged) {
+				if(scope.inputChanged) {
 					str = scope.inputChanged(str);
 				}
 				return str;
 			};
 			// check required
-			if (scope.fieldRequiredClass && scope.fieldRequiredClass !== '') {
+			if(scope.fieldRequiredClass && scope.fieldRequiredClass !== '') {
 				requiredClassName = scope.fieldRequiredClass;
 			}
 			// check min length
-			if (scope.minlength && scope.minlength !== '') {
+			if(scope.minlength && scope.minlength !== '') {
 				minlength = parseInt(scope.minlength, 10);
 			}
 			// check pause time
-			if (!scope.pause) {
+			if(!scope.pause) {
 				scope.pause = PAUSE;
 			}
 			// check clearSelected
-			if (!scope.clearSelected) {
+			if(!scope.clearSelected) {
 				scope.clearSelected = false;
 			}
 			// check override suggestions
-			if (!scope.overrideSuggestions) {
+			if(!scope.overrideSuggestions) {
 				scope.overrideSuggestions = false;
 			}
 			// check required field
-			if (scope.fieldRequired && ctrl) {
+			if(scope.fieldRequired && ctrl) {
 				// check initial value, if given, set validitity to true
-				if (scope.initialValue) {
+				if(scope.initialValue) {
 					handleRequired(true);
 				} else {
 					handleRequired(false);
@@ -735,7 +736,7 @@
 			compile: function (tElement) {
 				var startSym = $interpolate.startSymbol();
 				var endSym = $interpolate.endSymbol();
-				if (!(startSym === '{{' && endSym === '}}')) {
+				if(!(startSym === '{{' && endSym === '}}')) {
 					var interpolatedHtml = tElement.html()
 						.replace(/\{\{/g, startSym)
 						.replace(/\}\}/g, endSym);
