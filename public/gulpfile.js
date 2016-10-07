@@ -30,6 +30,7 @@
 			'./vendor/angular-sanitize/angular-sanitize.min.js',
 			'./vendor/angular-utils-pagination/dirPagination.js',
 			'./vendor/jwplayer/jwplayer.js',
+			'./vendor/angularjs-slider/dist/rzslider.min.js',
 			'./vendor/malihu-custom-scrollbar-plugin-master/jquery.mCustomScrollbar.concat.min.js'
 		],
 		commonJsAfter = [

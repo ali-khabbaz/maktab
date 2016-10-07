@@ -48,6 +48,12 @@
                             <option>24</option>
                         </select>
                     </li>
+                    <li class="sort_filter_List_item slider_filter">
+                        {{cc.value}}
+                          <label for="num_view">سطح</label>
+                        <rzslider rz-slider-model="cc.slider_ticks_values.values" rz-slider-options="cc.slider_ticks_values.options"></rzslider>
+                    </li>
+
                 </ul>
                 <div class="sortOption clearfix">
                     <a class="listbtn "></a>
@@ -57,7 +63,8 @@
             <div class="filter_course clearfix">
                 <div class="filter_cluster clearfix">
                     <header class="filter_header clearfix">
-                        <h4>دسته بندی ها<i class="filter_title title_filter_sections"></i></h4>
+                        <h4>دسته بندی ها<i class="filter_title title_filter_sections"></i>
+                        </h4>
                     </header>
                     <main class="filter_main">
                         <div class="courses_accordion" data-ng-repeat="info in cc.categoryAndSubCategoriesAndArticles">
@@ -74,7 +81,8 @@
                         </div>
                     </main>
                     <header class="filter_header clearfix">
-                        <h4>نرم افزارها<i class="filter_title title_filter_soft"></i></h4>
+                        <h4>نرم افزارها<i class="filter_title title_filter_soft"></i>
+                        </h4>
                     </header>
                     <main class="filter_main clearfix">
                         <div class="text_input_search_wrapper">
@@ -91,7 +99,8 @@
                         </ul>
                     </main>
                     <header class="filter_header clearfix">
-                        <h4>مدرسین<i class="filter_title title_filter_teacher"></i></h4>
+                        <h4>مدرسین<i class="filter_title title_filter_teacher"></i>
+                        </h4>
                     </header>
                     <main class="filter_main clearfix">
                         <div class="text_input_search_wrapper">
@@ -108,7 +117,8 @@
                         </ul>
                     </main>
                     <header class="filter_header clearfix">
-                        <h4>منابع<i class="filter_title title_filter_source"></i></h4>
+                        <h4>منابع<i class="filter_title title_filter_source"></i>
+                        </h4>
                     </header>
                     <main class="filter_main clearfix">
                         <p class="check_filter" data-ng-repeat="info in cc.resources">
