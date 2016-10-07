@@ -4,7 +4,7 @@
 		.module('app.courses')
 		.controller('coursesController', coursesController);
 	/* @ngInject */
-	function coursesController(coursesFactory, $routeParams) {
+	function coursesController(coursesFactory, $routeParams, mainViewFactory) {
 		/* jshint validthis: true*/
 		var vm = this;
 		vm.categoryAndSubCategoriesAndArticles = '';
@@ -28,14 +28,22 @@
 		vm.selectedSoftwares = [];
 		vm.loadingShow = true;
 		vm.changeSort = changeSort;
-		vm.sortOptions = [{
+		vm.sortFieldOptions = [{
 			name: 'نام',
 			key: 'articleName'
 		}, {
 			name: 'مدت',
 			key: 'articleDuration'
 		}];
-		vm.selectedSort = 0;
+		vm.sortOrderOptions = [{
+			name: 'صعودی',
+			key: 'asc'
+		}, {
+			name: 'نزولی',
+			key: 'desc'
+		}];
+		vm.selectedSortField = vm.sortFieldOptions[0];
+		vm.selectedSortOrder = vm.sortOrderOptions[0];
 		vm.filterSoftwareInput = null;
 		vm.filterAuthorInput = null;
 		main();
@@ -58,8 +66,8 @@
 			}
 		}
 
-		function changeSort() {
-			console.log('changeSort---', vm.selectedSort);
+		function changeSort(field, order) {
+			vm.articles = mainViewFactory.objectSort(vm.articles, field, order);
 		}
 
 		function filterParamsTrigger() {
@@ -99,7 +107,7 @@
 		}
 
 		function CategoryAndSubCategoriesAndArticlesSuccess(res) {
-			vm.articles = res.data[1];
+			vm.articles = coursesFactory.articlesReady(res.data[1]);
 			vm.categoryAndSubCategoriesAndArticles =
 				coursesFactory.categoryAndSubCategoriesAndArticlesDataReady(res.data[1]);
 			vm.softwares = coursesFactory.extractSoftwares(res.data[1]);
@@ -107,17 +115,19 @@
 			vm.resources = coursesFactory.extractResources(res.data[1]);
 			vm.levels = coursesFactory.extractLevels(res.data[1]);
 			filterParamsTrigger();
+			changeSort(vm.selectedSortField.key, vm.selectedSortOrder.key);
 		}
 
 		function getSearchResultSuccess(res) {
-			//console.log('@@@@@@@@@@@@', res);
-			vm.articles = res[1];
+			vm.articles = coursesFactory.articlesReady(res[1]);
+
 			vm.softwares = coursesFactory.extractSoftwares(res[1]);
 			vm.authors = coursesFactory.extractAuthors(res[1]);
 			vm.resources = coursesFactory.extractResources(res[1]);
 			vm.levels = coursesFactory.extractLevels(res[1]);
 			vm.categoryAndSubCategoriesAndArticles = res[2];
 			filterParamsTrigger();
+			changeSort(vm.selectedSortField.key, vm.selectedSortOrder.key);
 		}
 
 		function accordion(event) {

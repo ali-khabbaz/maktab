@@ -1195,8 +1195,11 @@ div.sort_filter ul.sort_filter_List li.sort_filter_List_item {
     margin-left: 10px;
 }
 
-div.sort_filter ul.sort_filter_List li.sort_filter_List_item.sort_view {
+div.sort_filter ul.sort_filter_List li.sort_filter_List_item.sort_view:first-child {
     width: 44%;
+}
+div.sort_filter ul.sort_filter_List li.sort_filter_List_item.sort_view:nth-child(2) {
+    width: 15%;
 }
 
 div.sort_filter ul.sort_filter_List li.sort_filter_List_item label {

@@ -20,7 +20,7 @@
 	app.use(compression());
 
 
-	var PORT = 8080;
+	var PORT = 80;
 
 	var c = new Client({
 		host: '127.0.0.1',

@@ -16,7 +16,8 @@
 				//getSearchData: getSearchData,
 				removeToken: removeToken,
 				request: request,
-				response: response
+				response: response,
+				objectSort: objectSort
 			},
 			storage = $window.localStorage,
 			cachedToken;
@@ -32,7 +33,7 @@
 		}
 
 		function getToken() {
-			if (!cachedToken) {
+			if(!cachedToken) {
 				cachedToken = storage.getItem('userToken');
 			}
 			return cachedToken;
@@ -43,7 +44,7 @@
 		}
 
 		function setUser(user) {
-			if (isAuthenticated()) {
+			if(isAuthenticated()) {
 				storage.setItem('userInfo', user);
 			}
 		}
@@ -60,7 +61,7 @@
 
 		function request(config) {
 			var token = getToken();
-			if (token) {
+			if(token) {
 				config.headers.authorization = 'ali is just' + token;
 			}
 			return config;
@@ -79,6 +80,27 @@
 				dfd.resolve([err]);
 			});
 			return dfd.promise;
+		}
+
+		function objectSort(data, key, order) {
+			data.sort(function (a, b) {
+				if(a[key] > b[key]) {
+					if(order === 'asc') {
+						return 1;
+					} else if(order === 'desc') {
+						return -1;
+					}
+				} else if(a[key] < b[key]) {
+					if(order === 'asc') {
+						return -1;
+					} else if(order === 'desc') {
+						return 1;
+					}
+				} else {
+					return 0;
+				}
+			});
+			return data;
 		}
 	}
 
