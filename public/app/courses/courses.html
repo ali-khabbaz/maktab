@@ -1,4 +1,4 @@
- <main ng-cloak="" class="main_block clearfix">
+<main ng-cloak="" class="main_block clearfix">
     <!-- <img class="main_photo" src="assets/img/course_main.jpg" alt="main"> -->
     <header class="header clearfix">
         <div class="container clearfix">
@@ -32,13 +32,14 @@
 </main>
 <section ng-cloak class="section_filter_course clearfix">
     <div class="container clearfix" data-ng-controller="coursesController as cc">
+
         <section class="filter_course_wrapper clearfix">
             <div class="sort_filter clearfix">
                 <ul class="sort_filter_List">
                     <li class="sort_filter_List_item sort_view">
                         <label for="sort_view">مرتب کردن بر اساس</label>
                         <select id="sort_view" ng-model="cc.selectedSort" ng-options="info.name for info in cc.sortOptions" ng-change="cc.changeSort()">
-                          <option value="">انتخاب کنید</option>
+                            <option value="">انتخاب کنید</option>
                         </select>
                     </li>
                     <li class="sort_filter_List_item">
@@ -56,11 +57,10 @@
             <div class="filter_course clearfix">
                 <div class="filter_cluster clearfix">
                     <header class="filter_header clearfix">
-                        <h4>دسته بندی ها</h4>
+                        <h4>دسته بندی ها<i class="filter_title title_filter_sections"></i></h4>
                     </header>
                     <main class="filter_main">
                         <div class="courses_accordion" data-ng-repeat="info in cc.categoryAndSubCategoriesAndArticles">
-                            <!--morteza-->
                             <h4 class="header_courses_accordion" ng-click="cc.accordion($event)">
                                 <span class="icon_accordion"></span>{{::info.categoryName | capitalize}}
                                 <!-- <span class="course_num">{{::info.num}}</span> -->
@@ -74,38 +74,41 @@
                         </div>
                     </main>
                     <header class="filter_header clearfix">
-                        <h4>قیمت</h4>
+                        <h4>نرم افزارها<i class="filter_title title_filter_soft"></i></h4>
                     </header>
                     <main class="filter_main clearfix">
-                        <p class="check_filter">
-                            <input class="input_check_filter" id="free" type="checkbox">
-                            <label class="label_check_filter" for="free">رایگان</label>
-                        </p>
-                        <p class="check_filter">
-                            <input class="input_check_filter" id="notFree" type="checkbox">
-                            <label class="label_check_filter" for="notFree">پرداختی</label>
-                        </p>
+                        <div class="text_input_search_wrapper">
+                            <input class="text_input_search">
+                            <i></i>
+                        </div>
+                        <ul class="filter_list" custom-scroll>
+                            <li>
+                                <p class="check_filter clearfix" data-ng-repeat="info in cc.softwares">
+                                    <input class="input_check_filter" id="soft_{{::info.name}}" type="checkbox" data-ng-model="info.select">
+                                    <label class="label_check_filter" for="soft_{{::info.name}}" title="{{info.name}}">{{info.name.length < 26 ? '' : '...'}}{{::info.name | capitalize | limitTo:26}}</label>
+                                </p>
+                            </li>
+                        </ul>
                     </main>
                     <header class="filter_header clearfix">
-                        <h4>نرم افزارها</h4>
+                        <h4>مدرسین<i class="filter_title title_filter_teacher"></i></h4>
                     </header>
                     <main class="filter_main clearfix">
-                        <p class="check_filter" data-ng-repeat="info in cc.softwares">
-                            <input class="input_check_filter" id="soft_{{::info.name}}" type="checkbox" data-ng-model="info.select">
-                            <label class="label_check_filter" for="soft_{{::info.name}}">{{::info.name | capitalize}}</label>
-                        </p>
+                        <div class="text_input_search_wrapper">
+                            <input class="text_input_search">
+                            <i></i>
+                        </div>
+                        <ul class="filter_list" custom-scroll>
+                            <li>
+                                <p class="check_filter clearfix filter_teacher" data-ng-repeat="info in cc.authors">
+                                    <input class="input_check_filter" id="author_{{::info.name}}" type="checkbox" data-ng-model="info.select">
+                                    <label class="label_check_filter" for="author_{{::info.name}}">{{::info.name | capitalize}}</label>
+                                </p>
+                            </li>
+                        </ul>
                     </main>
                     <header class="filter_header clearfix">
-                        <h4>مدرسین</h4>
-                    </header>
-                    <main class="filter_main clearfix">
-                        <p class="check_filter" data-ng-repeat="info in cc.authors">
-                            <input class="input_check_filter" id="author_{{::info.name}}" type="checkbox" data-ng-model="info.select">
-                            <label class="label_check_filter" for="author_{{::info.name}}">{{::info.name | capitalize}}</label>
-                        </p>
-                    </main>
-                    <header class="filter_header clearfix">
-                        <h4>منابع</h4>
+                        <h4>منابع<i class="filter_title title_filter_source"></i></h4>
                     </header>
                     <main class="filter_main clearfix">
                         <p class="check_filter" data-ng-repeat="info in cc.resources">
@@ -125,24 +128,13 @@
                 </div>
             </div>
             <div class="course_wrapper" data-ng-if="cc.articles">
+                <p ng-if="cc.searchParam">
+                    {{cc.articles.length}}
+                    آموزش یافت شد
+                </p>
                 <div class="paging clearfix">
-                    <ul class="light-theme simple-pagination">
-                        <li class="active"><span class="current prev">صفحه قبل</span></li>
-                        <li class="active"><span class="current">1</span></li>
-                        <li><a href="" class="page-link">2</a></li>
-                        <li><a href="" class="page-link">3</a></li>
-                        <li><a href="" class="page-link">4</a></li>
-                        <li><a href="" class="page-link">5</a></li>
-                        <li class="disabled"><span class="ellipse">…</span></li>
-                        <li><a href="" class="page-link">15</a></li>
-                        <li><a href="" class="page-link">16</a></li>
-                        <li><a href="" class="page-link next">صفحه بعد</a></li>
-                    </ul>
-                    <p ng-if="cc.searchParam">
-                      {{cc.articles.length}} آموزش یافت شد
-                    </p>
+                    <dir-pagination-controls></dir-pagination-controls>
                 </div>
-                <dir-pagination-controls></dir-pagination-controls>
                 <div class="courses clearfix" data-ng-cloak ng-hide="cc.loadingShow">
                     <div class="loading-container" ng-show="cc.loadingShow">
                         <!--<div class="loader">-->
@@ -191,27 +183,15 @@
                                 </div>
                                 <div class="pull_left view_wrapper clearfix">
                                     <span class="view icon"></span>
-                                    <p>بازدید
-                                        {{::info.articleViews}}</p>
+                                    <p>بازدید{{::info.articleViews}}</p>
                                 </div>
                             </footer>
                         </a>
                     </article>
                 </div>
-                <!-- <div class="paging bottom_side_video clearfix">
-                    <ul class="light-theme simple-pagination">
-                        <li class="active"><span class="current prev">صفحه قبل</span></li>
-                        <li class="active"><span class="current">1</span></li>
-                        <li><a href="" class="page-link">2</a></li>
-                        <li><a href="" class="page-link">3</a></li>
-                        <li><a href="" class="page-link">4</a></li>
-                        <li><a href="" class="page-link">5</a></li>
-                        <li class="disabled"><span class="ellipse">…</span></li>
-                        <li><a href="" class="page-link">15</a></li>
-                        <li><a href="" class="page-link">16</a></li>
-                        <li><a href="" class="page-link next">صفحه بعد</a></li>
-                    </ul>
-                </div> -->
+                <div class="paging clearfix">
+                    <dir-pagination-controls></dir-pagination-controls>
+                </div>
             </div>
         </section>
     </div>

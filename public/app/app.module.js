@@ -5,6 +5,7 @@
 		'app.filter',
 		'app.main',
 		'app.courses',
-		'app.video'
+		'app.video',
+		'app.directives'
 	]);
 })();
