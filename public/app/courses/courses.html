@@ -78,12 +78,12 @@
                     </header>
                     <main class="filter_main clearfix">
                         <div class="text_input_search_wrapper">
-                            <input class="text_input_search">
+                            <input class="text_input_search" ng-model="cc.filterSoftwareInput">
                             <i></i>
                         </div>
                         <ul class="filter_list" custom-scroll>
                             <li>
-                                <p class="check_filter clearfix" data-ng-repeat="info in cc.softwares">
+                                <p class="check_filter clearfix" data-ng-repeat="info in cc.softwares | filter:cc.filterSoftwares">
                                     <input class="input_check_filter" id="soft_{{::info.name}}" type="checkbox" data-ng-model="info.select">
                                     <label class="label_check_filter" for="soft_{{::info.name}}" title="{{info.name}}">{{info.name.length < 26 ? '' : '...'}}{{::info.name | capitalize | limitTo:26}}</label>
                                 </p>
@@ -95,12 +95,12 @@
                     </header>
                     <main class="filter_main clearfix">
                         <div class="text_input_search_wrapper">
-                            <input class="text_input_search">
+                            <input class="text_input_search" ng-model="cc.filterAuthorInput">
                             <i></i>
                         </div>
                         <ul class="filter_list" custom-scroll>
                             <li>
-                                <p class="check_filter clearfix filter_teacher" data-ng-repeat="info in cc.authors">
+                                <p class="check_filter clearfix filter_teacher" data-ng-repeat="info in cc.authors | filter:cc.filterAuthors">
                                     <input class="input_check_filter" id="author_{{::info.name}}" type="checkbox" data-ng-model="info.select">
                                     <label class="label_check_filter" for="author_{{::info.name}}">{{::info.name | capitalize}}</label>
                                 </p>
@@ -147,7 +147,7 @@
                         </div>
                         <!--</div>-->
                     </div>
-                    <article class="course clearfix" dir-paginate="info in cc.articles | filter:cc.filterCourses | itemsPerPage:9 ">
+                    <article class="course clearfix" dir-paginate="info in cc.articles | filter:cc.filterCourses | itemsPerPage:12 ">
                         <!-- <tr dir-paginate="info in cc.articles | filter:cc.filterCourses | itemsPerPage:13 " current-page="tableView.currPage"> -->
                         <a class="clearfix" href="#/video/{{::info.articleId}}">
                             <figure class="course_img clearfix">
@@ -189,9 +189,9 @@
                         </a>
                     </article>
                 </div>
-                <div class="paging clearfix">
+                <!-- <div class="paging clearfix">
                     <dir-pagination-controls></dir-pagination-controls>
-                </div>
+                </div> -->
             </div>
         </section>
     </div>

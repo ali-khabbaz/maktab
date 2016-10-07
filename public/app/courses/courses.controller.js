@@ -19,6 +19,8 @@
 		vm.resourceParam = $routeParams.resource;
 		vm.levelParam = $routeParams.level;
 		vm.filterCourses = filterCourses;
+		vm.filterSoftwares = filterSoftwares;
+		vm.filterAuthors = filterAuthors;
 		vm.softwares = null;
 		vm.authors = null;
 		vm.resources = null;
@@ -34,6 +36,8 @@
 			key: 'articleDuration'
 		}];
 		vm.selectedSort = 0;
+		vm.filterSoftwareInput = null;
+		vm.filterAuthorInput = null;
 		main();
 		// morteza
 		function main() {
@@ -193,6 +197,20 @@
 			} else {
 				return false;
 			}
+		}
+
+		function filterSoftwares(inp) {
+			if(vm.filterSoftwareInput && inp.name.indexOf(vm.filterSoftwareInput) === -1) {
+				return false;
+			}
+			return true;
+		}
+
+		function filterAuthors(inp) {
+			if(vm.filterAuthorInput && inp.name.indexOf(vm.filterAuthorInput) === -1) {
+				return false;
+			}
+			return true;
 		}
 	}
 }());
