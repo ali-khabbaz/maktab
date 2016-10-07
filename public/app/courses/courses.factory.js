@@ -256,15 +256,24 @@
 			var temp = [],
 				temp2 = [],
 				i = null;
+			arr = objectSort(arr, 'softwareName');
 			for(i = 0; i < arr.length; i++) {
-				if(temp2.indexOf(arr[i].softwareName) === -1) {
-					arr[i].softwareName = arr[i].softwareName.toLowerCase();
+				arr[i].softwareName = arr[i].softwareName.toLowerCase();
+				if(temp[temp.length - 1]) {
+					if(arr[i].softwareName !== temp[temp.length - 1].name) {
+						temp.push({
+							name: arr[i].softwareName,
+							class: arr[i].softwareName.charAt(0),
+							select: false
+						});
+						temp2.push(arr[i].softwareName);
+					}
+				} else {
 					temp.push({
 						name: arr[i].softwareName,
 						class: arr[i].softwareName.charAt(0),
 						select: false
 					});
-					temp2.push(arr[i].softwareName);
 				}
 			}
 			return objectSort(temp, 'name');
