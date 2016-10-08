@@ -38,23 +38,22 @@
                 <ul class="sort_filter_List">
                     <li class="sort_filter_List_item sort_view">
                         <label for="sort_view">مرتب کردن بر اساس</label>
-                        <select id="sort_view" ng-model="cc.selectedSortField" ng-options="info.name for info in cc.sortFieldOptions" ng-change="cc.changeSort(cc.selectedSortField.key,cc.selectedSortOrder.key)">
-                            <!-- <option value="">انتخاب کنید</option> -->
-                        </select>
+                        <ul>
+                          <li class="selcet_view_container">
+                            <select id="sort_view_2" class="sort_direction" ng-model="cc.selectedSortOrder" ng-options="info.name for info in cc.sortOrderOptions" ng-change="cc.changeSort(cc.selectedSortField.key,cc.selectedSortOrder.key)"></select>
+                            <select class="sort_base" id="sort_view" ng-model="cc.selectedSortField" ng-options="info.name for info in cc.sortFieldOptions" ng-change="cc.changeSort(cc.selectedSortField.key,cc.selectedSortOrder.key)">
+                            </select>
+                          </li>
+                        </ul>
                     </li>
-                    <li class="sort_filter_List_item sort_view">
-                        <select id="sort_view_2" ng-model="cc.selectedSortOrder" ng-options="info.name for info in cc.sortOrderOptions" ng-change="cc.changeSort(cc.selectedSortField.key,cc.selectedSortOrder.key)">>
-                        </select>
-                    </li>
-                    <li class="sort_filter_List_item">
+                    <li class="sort_filter_List_item view_num">
                         <label for="num_view">تعداد نمایش</label>
                         <select id="num_view">
                             <option>24</option>
                         </select>
                     </li>
                     <li class="sort_filter_List_item slider_filter">
-                        {{cc.value}}
-                          <label for="num_view">سطح</label>
+                        <label for="num_level">سطح</label>
                         <rzslider rz-slider-model="cc.slider_ticks_values.values" rz-slider-options="cc.slider_ticks_values.options"></rzslider>
                     </li>
 
@@ -168,7 +167,7 @@
                                 <div class="price clearfix">
                                     <p>رایــگان</p>
                                 </div>
-                                <img class="course_img" ng-src="assets/img/articles/{{::info.articleId}}/Main-001.jpg" onerror="this.src='assets/img/defaultImage.png'" width="277" alt="{{info.articleName}}">
+                                <img class="course_img" ng-src="assets/img/articles/{{::info.articleId}}/Main-001.jpg" onerror="this.src='assets/img/defaultImage.png'" width="277" title="{{info.articleName}}" alt="{{info.articleName}}">
                             </figure>
                             <header class="course_header clearfix">
                                 <h4>
@@ -203,9 +202,9 @@
                         </a>
                     </article>
                 </div>
-                <!-- <div class="paging clearfix">
+                <div class="paging clearfix">
                     <dir-pagination-controls></dir-pagination-controls>
-                </div> -->
+                </div>
             </div>
         </section>
     </div>
