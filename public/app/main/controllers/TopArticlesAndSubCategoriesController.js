@@ -17,7 +17,7 @@
 			homeFactory.getArticlesAndSubCategories().then(function (res) {
 				vm.topSubCategories =
 					homeFactory.topSubCategoriesDataReady(
-						res[0].data.data, res[1].data.data, res[2].data.data
+						res[0].data.data[1], res[1].data.data[1][0], res[2].data.data[1]
 					);
 				vm.loadingshow = false;
 			});

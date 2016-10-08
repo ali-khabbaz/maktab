@@ -3,7 +3,7 @@
 
 	var express = require('./server/requires.js').express,
 		app = require('./server/requires.js').app,
-		c = require('./server/requires.js').c,
+		Client = require('./server/requires.js').Client,
 		cluster = require('./server/requires.js').cluster,
 		logger = require('./server/requires.js').logger,
 		path = require('./server/requires.js').path,
@@ -20,13 +20,26 @@
 	app.use(compression());
 
 
-	var PORT = 8080;
+	var PORT = 80;
+
+	var c = new Client({
+		host: '127.0.0.1',
+		user: 'root',
+		password: 'bahbah',
+		db: 'maktab_13950315'
+	});
+
+	exports.c = c;
+
+
+	/*
 	c.connect({
 		host: '127.0.0.1',
 		user: 'root',
 		password: 'bahbah',
 		db: 'maktab_13950315'
 	});
+	*/
 
 	if(cluster.isMaster) {
 		// Fork workers.

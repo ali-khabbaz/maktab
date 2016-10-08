@@ -4,7 +4,7 @@
 		.module('app.courses')
 		.factory('coursesFactory', coursesFactory);
 	/* @ngInject */
-	function coursesFactory($q, $http, $location, $cacheFactory) {
+	function coursesFactory($q, $http, $location, $cacheFactory, mainViewFactory) {
 		var cache = $cacheFactory('dataCacheCourses'),
 			factory = {
 				getBestCourses: getBestCourses,
@@ -19,7 +19,8 @@
 				noFilterSelected: noFilterSelected,
 				extractAuthors: extractAuthors,
 				extractResources: extractResources,
-				extractLevels: extractLevels
+				extractLevels: extractLevels,
+				articlesReady: articlesReady
 			};
 		return factory;
 
@@ -50,9 +51,9 @@
 					method: 'POST',
 					data: data
 				}).success(function (res) {
-					cache.put('searchParam#' + data.searchParam, res.data);
-					dfd.resolve([null, res.data,
-						categoryAndSubCategoriesAndArticlesDataReady(res.data)
+					cache.put('searchParam#' + data.searchParam, res.data[1]);
+					dfd.resolve([null, res.data[1],
+						categoryAndSubCategoriesAndArticlesDataReady(res.data[1])
 					]);
 				}).error(function (err) {
 					dfd.resolve([err]);
@@ -256,18 +257,27 @@
 			var temp = [],
 				temp2 = [],
 				i = null;
+			arr = mainViewFactory.objectSort(arr, 'softwareName');
 			for(i = 0; i < arr.length; i++) {
-				if(temp2.indexOf(arr[i].softwareName) === -1) {
-					arr[i].softwareName = arr[i].softwareName.toLowerCase();
+				arr[i].softwareName = arr[i].softwareName.toLowerCase();
+				if(temp[temp.length - 1]) {
+					if(arr[i].softwareName !== temp[temp.length - 1].name) {
+						temp.push({
+							name: arr[i].softwareName,
+							class: arr[i].softwareName.charAt(0),
+							select: false
+						});
+						temp2.push(arr[i].softwareName);
+					}
+				} else {
 					temp.push({
 						name: arr[i].softwareName,
 						class: arr[i].softwareName.charAt(0),
 						select: false
 					});
-					temp2.push(arr[i].softwareName);
 				}
 			}
-			return objectSort(temp, 'name');
+			return mainViewFactory.objectSort(temp, 'name');
 		}
 
 		function extractAuthors(arr) {
@@ -296,7 +306,7 @@
 					temp2.push(arr[i].articleAuthor);
 				}
 			}
-			return objectSort(temp, 'name');
+			return mainViewFactory.objectSort(temp, 'name');
 		}
 
 		function extractResources(arr) {
@@ -312,7 +322,7 @@
 					temp2.push(arr[i].articleResource);
 				}
 			}
-			return objectSort(temp, 'name');
+			return mainViewFactory.objectSort(temp, 'name');
 		}
 
 		function extractLevels(arr) {
@@ -330,20 +340,7 @@
 					}
 				}
 			}
-			return objectSort(temp, 'name');
-		}
-
-		function objectSort(data, key) {
-			data.sort(function (a, b) {
-				if(a[key] > b[key]) {
-					return 1;
-				} else if(a[key] < b[key]) {
-					return -1;
-				} else {
-					return 0;
-				}
-			});
-			return data;
+			return mainViewFactory.objectSort(temp, 'name');
 		}
 
 		function noFilterSelected(filter) {
@@ -356,6 +353,14 @@
 				}
 			}
 			return key;
+		}
+
+		function articlesReady(articles) {
+			for(var i = 0; i < articles.length; i++) {
+				articles[i].articleDuration = +articles[i].articleDuration;
+				articles[i].articleName = articles[i].articleName.toLowerCase();
+			}
+			return articles;
 		}
 	}
 }());

@@ -1,12 +1,14 @@
 /*jshint multistr: true */
 (function () {
 	'use strict';
-	var showDb = require('../utilities.js').showDb,
+	var c = require('../../server.js').c,
+		showDbNew = require('../utilities.js').showDbNew,
 		q = require('../requires.js').q;
 
 	function getSearchData(req, res) {
 		var funcs = [],
-			query = 'SELECT \
+			query =
+			'SELECT \
 					  c.name categoryName, \
 					  c.id, \
 					  sc.name subcategoryName, \
@@ -19,7 +21,7 @@
 				  a.name, \
 				  a.id \
 				FROM articles a';
-		funcs.push(showDb(query));
+		funcs.push(showDbNew(c, query));
 		q.all(funcs).then(function (res1) {
 			res.send({
 				'err': null,

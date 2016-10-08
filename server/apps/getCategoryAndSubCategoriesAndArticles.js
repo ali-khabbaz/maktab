@@ -1,7 +1,8 @@
 /*jshint multistr: true */
 (function () {
 	'use strict';
-	var showDb = require('../utilities.js').showDb;
+	var c = require('../../server.js').c,
+		showDbNew = require('../utilities.js').showDbNew;
 
 	function getCategoryAndSubCategoriesAndArticles(req, res) {
 		var query =
@@ -34,7 +35,7 @@
 			  AND sam1.article_id = a.id) table1 \
 			GROUP BY subCategoryName, \
 					articleName';
-		showDb(query).then(function (res1) {
+		showDbNew(c, query).then(function (res1) {
 			res.send({
 				'err': null,
 				'data': res1
