@@ -31,7 +31,7 @@
 		vm.sortFieldOptions = [{
 			name: 'نام',
 			key: 'articleName'
-		}, {
+        }, {
 			name: 'مدت',
 			key: 'articleDuration'
 		}];
@@ -47,6 +47,21 @@
 		vm.filterSoftwareInput = null;
 		vm.filterAuthorInput = null;
 		main();
+		vm.value = 2;
+		vm.slider_ticks_values = {
+			values: 'advanced',
+			options: {
+				rightToLeft: true,
+				readOnly: false,
+				disabled: false,
+				showTicks: false,
+				showTicksValues: true,
+				stepsArray: 'all,beginner,intermediate,advanced'.split(','),
+				onEnd: function (id, value) {
+					console.log('value', value);
+				}
+			}
+		};
 		// morteza
 		function main() {
 			if(!vm.searchParam) {

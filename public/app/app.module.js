@@ -6,6 +6,7 @@
 		'app.main',
 		'app.courses',
 		'app.video',
+		'rzModule',
 		'app.directives'
 	]);
 })();

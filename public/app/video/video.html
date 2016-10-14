@@ -58,7 +58,7 @@
                         <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
                     </p>
                 </video> -->
-                <video id="my-video2"></video>
+                <video id="my-video2" title="{{vc.articleInfo.name}}" ></video>
                 <!-- <figure class="video_figure clearfix">
                     <img src="assets/img/video.jpg" align="photoShopTraining">
                     <a href="" class="icon_play"></a>
@@ -179,7 +179,9 @@
                         <li class="similar_courses_item clearfix" data-ng-repeat="info in vc.similarArticles">
                             <a class="similar_courses_item_link clearfix" href="#/video/{{::info.articleId}}">
                                 <figure class="similar_course_figure">
-                                    <img src="assets/img/articles/{{::info.articleId}}/Main-001.jpg" width="142" alt="systemLearning">
+                                    <img ng-src="assets/img/articles/{{::info.articleId}}/Main-001.jpg"
+                                    onerror="this.src='assets/img/defaultImage.png'"
+                                    width="142" alt="{{info.articleName}}" title="{{info.articleName}}">
                                 </figure>
                                 <div class="similar_course_details">
                                     <p>{{::info.articleName}}</p>
