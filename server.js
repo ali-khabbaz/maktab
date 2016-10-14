@@ -26,7 +26,7 @@
 		host: '127.0.0.1',
 		user: 'root',
 		password: 'bahbah',
-		db: 'maktab_13950315'
+		db: '13950630'
 	});
 
 	exports.c = c;
