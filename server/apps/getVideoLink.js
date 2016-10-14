@@ -5,7 +5,6 @@
 		q = require('../requires.js').q;
 
 	function getVideoLink(req, res) {
-		console.log('getVideoLink----', req.body);
 		request({
 				uri: req.body.link,
 				headers: {
@@ -15,12 +14,9 @@
 			},
 			function (error, response, body) {
 				res.send({
-					link: response.socket._httpMessage._header.split('referer: ')[1]
-						.split('host')[0]
+					link: response.request.uri.href
 				});
 				return;
-				// console.log(response.socket._httpMessage._header.split('referer: ')[1]
-				// 	.split('host')[0]);
 			});
 	}
 	exports.getVideoLink = getVideoLink;

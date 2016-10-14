@@ -60,12 +60,13 @@
 						}
 						jwPlayer.setup({
 							file: res.link.trim(),
+							autostart: false,
 							image: "assets/img/articles/" + vm.parameter.artId + "/Main.jpg",
 							title: vm.articleVideos[sectionId - 1].videos[videoId - 1].videoName,
 							"height": 480,
 							"width": 800
 						});
-						jwplayer().play();
+						//jwplayer().play();
 						// $('html,body').animate({
 						// 	scrollTop: 0
 						// }, 'slow');
