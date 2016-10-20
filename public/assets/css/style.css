@@ -272,7 +272,7 @@ main.main_block {
 }
 
 div.main_bg {
-    background: url('../img/mainBg.png');
+    background: url('../img/mainBg1.jpg');
     height: 600px;
     background-size: 100%;
 }
@@ -1233,7 +1233,7 @@ div.sort_filter ul.sort_filter_List li.sort_filter_List_item.view_num label {
 
 div.sort_filter ul.sort_filter_List li.sort_filter_List_item.slider_filter label {
     margin-left: 10px;
-  }
+}
 
 div.sort_filter ul.sort_filter_List li.sort_filter_List_item.view_num select {
     width: 37%;
@@ -2077,4 +2077,13 @@ section.search_video_section .angucomplete-dropdown {
     transform: translate(50%, 0);
     font-size: 10px;
     color: #878787;
+}
+
+@media (min-device-width: 1400px) and (max-device-width: 1700px) {
+    /*body {
+        background-color: lightgreen;
+    }*/
+    div.main_bg {
+        height: 770px;
+    }
 }
