@@ -273,7 +273,7 @@ main.main_block {
 
 div.main_bg {
     background: url('../img/mainBg1.jpg');
-    height: 600px;
+    height: 100vh;
     background-size: 100%;
 }
 
