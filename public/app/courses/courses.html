@@ -54,7 +54,7 @@
                     </li>
                     <li class="sort_filter_List_item slider_filter">
                         <label for="num_level">سطح</label>
-                        <rzslider rz-slider-model="cc.slider_ticks_values.values" rz-slider-options="cc.slider_ticks_values.options"></rzslider>
+                        <rzslider rz-slider-on-change="cc.levelSliderChange()" rz-slider-model="cc.slider_ticks_values.values" rz-slider-options="cc.slider_ticks_values.options" ></rzslider>
                     </li>
 
                 </ul>
@@ -129,7 +129,7 @@
                             <label class="label_check_filter" for="resource_{{::info.name}}">{{::info.name | capitalize}}</label>
                         </p>
                     </main>
-                    <header class="filter_header clearfix">
+                    <!-- <header class="filter_header clearfix">
                         <h4>سطوح</h4>
                     </header>
                     <main class="filter_main clearfix">
@@ -137,7 +137,7 @@
                             <input class="input_check_filter" id="level_{{::info.name}}" type="checkbox" data-ng-model="info.select">
                             <label class="label_check_filter" for="level_{{::info.name}}">{{::info.name | capitalize}}</label>
                         </p>
-                    </main>
+                    </main> -->
                 </div>
             </div>
             <div class="course_wrapper" data-ng-if="cc.articles">
