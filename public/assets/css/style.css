@@ -273,7 +273,7 @@ main.main_block {
 
 div.main_bg {
     background: url('../img/mainBg1.jpg');
-    height: 600px;
+    height: 100vh;
     background-size: 100%;
 }
 
@@ -1184,7 +1184,7 @@ section.filter_course_wrapper div.sort_filter {
 
 div.sort_filter ul.sort_filter_List {
     float: right;
-    width: 65%;
+    width: 69%;
     margin-right: 24%;
 }
 
@@ -1205,7 +1205,7 @@ div.sort_filter ul.sort_filter_List li.sort_filter_List_item.view_num {
 }
 
 div.sort_filter ul.sort_filter_List li.sort_filter_List_item.slider_filter {
-    width: 30%;
+    width: 35%;
 }
 
 div.sort_filter ul.sort_filter_List li.sort_filter_List_item label {
@@ -1936,7 +1936,7 @@ section.search_video_section .angucomplete-dropdown {
 .rzslider {
     position: relative;
     display: inline-block;
-    width: 80%;
+    width: 86%;
     height: 4px;
     margin: 10px 0 30px 0;
     vertical-align: middle;

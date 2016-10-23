@@ -47,18 +47,31 @@
 		vm.filterSoftwareInput = null;
 		vm.filterAuthorInput = null;
 		main();
-		vm.value = 2;
+		//'beginner,intermediate,advanced,all'.split(',')
 		vm.slider_ticks_values = {
-			values: 'advanced',
+			values: 0,
 			options: {
 				rightToLeft: true,
 				readOnly: false,
 				disabled: false,
 				showTicks: false,
 				showTicksValues: true,
-				stepsArray: 'all,beginner,intermediate,advanced'.split(','),
-				onEnd: function (id, value) {
-					console.log('value', value);
+				stepsArray: 'beginner,intermediate,advanced,all levels,no level'.split(','),
+				onEnd: function (a, b, c, d) {
+					var i = 0;
+					for(i = 0; i < vm.levels.length; i++) {
+						vm.levels[i].select = false;
+					}
+					if(b === 'intermediate') {
+						vm.levels[2].select = true;
+					} else if(b === 'advanced') {
+						vm.levels[3].select = true;
+					} else if(b === 'all levels') {
+						vm.levels[1].select = true;
+					} else if(b === 'no level') {
+						vm.levels[0].select = true;
+					}
+					console.log('levels----------', b, vm.levels);
 				}
 			}
 		};

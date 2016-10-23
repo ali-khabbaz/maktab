@@ -17,7 +17,8 @@
 				removeToken: removeToken,
 				request: request,
 				response: response,
-				objectSort: objectSort
+				objectSort: objectSort,
+				randomNumber: randomNumber
 			},
 			storage = $window.localStorage,
 			cachedToken;
@@ -102,6 +103,10 @@
 			});
 			return data;
 		}
+	}
+
+	function randomNumber(a, b) {
+		return Math.floor(Math.random() * b) + a;
 	}
 
 	/*app.config(['$httpProvider', function ($httpProvider) {
