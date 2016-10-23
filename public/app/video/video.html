@@ -67,9 +67,12 @@
                     <header class="section_header content_header clearfix">
                         <h4>توضیحات</h4>
                     </header>
-                    <div class="course_main_intro">
-                        <p>
-                            {{vc.articleInfo.descBig}}
+                    <div class="course_main_intro_wrapper">
+                        <p class="course_main_intro">
+                            {{vc.articleInfo.descBig| limitTo:500}}
+                            <a class="show_more clearfix" href='' ng-click='vc.more($event)' ng-if='vc.articleInfo.descBig.length > 500'>
+                              <span>...</span>show more
+                            </a>
                         </p>
                     </div>
                     <header class="section_header content_header clearfix">

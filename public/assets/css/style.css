@@ -27,7 +27,17 @@
     url('../fonts/IRANSans-web.woff2') format('woff2'), /* Chrome36+, Opera24+*/
     url('../fonts/IRANSans-web.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
     url('../fonts/IRANSans-web.ttf') format('ttf');
-    font-weight: 500;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'iran';
+    src: url('../fonts/IRANSans-light-web.eot');
+    src: url('../fonts/IRANSans-light-web.eot?#iefix') format('eot'), /* IE6–8 */
+    url('../fonts/IRANSans-light-web.woff2') format('woff2'), /* Chrome36+, Opera24+*/
+    url('../fonts/IRANSans-light-web.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    url('../fonts/IRANSans-light-web.ttf') format('ttf');
+    font-weight: 300;
 }
 
 * {
@@ -915,6 +925,7 @@ header.filter_header i.filter_title.title_filter_source {
 }
 
 div.courses_accordion h4.header_courses_accordion {
+    background: #fcfcfc;
     color: #787878;
     padding: 10px 0;
     cursor: pointer;
@@ -1578,16 +1589,36 @@ section.course_content {
     margin-top: 29px;
 }
 
-section.course_content div.course_main_intro, section.course_content section.section_course {
+section.course_content div.course_main_intro_wrapper, section.course_content section.section_course {
     padding: 0 20px;
 }
 
-section.course_content div.course_main_intro p {
+section.course_content div.course_main_intro_wrapper p.course_main_intro {
+    position: relative;
     font-size: 12px;
     line-height: 36px;
     color: #4e4e4e;
     text-align: left;
     direction: ltr;
+}
+
+p.course_main_intro a.show_more {
+    display: block;
+    position: absolute;
+    font-size: 13px;
+    color: #1e88e5;
+    bottom: 0;
+    width: 100%;
+    padding-top: 27px;
+    font-weight: lighter;
+    background: linear-gradient(rgba(250,250,250,0), rgba(250,250,250,0.95), #f7f7f7);
+}
+
+p.course_main_intro a.show_more span{
+  display: inline-block;
+    float: left;
+    margin-right: 3px;
+    font-size: 15px;
 }
 
 section.course_content header.content_header h4 {

@@ -25,6 +25,7 @@
 		vm.selectVideo = selectVideo;
 		vm.accordion = accordion;
 		vm.similarArticles = null;
+		vm.more = more;
 		main();
 
 		function main() {
@@ -110,6 +111,10 @@
 				parent.addClass('active');
 				parent.siblings('article').slideDown();
 			}
+		}
+
+		function more(event) {
+			$(event.target).slideUp(900);
 		}
 	}
 }());
