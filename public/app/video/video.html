@@ -58,7 +58,7 @@
                         <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
                     </p>
                 </video> -->
-                <video id="my-video2" title="{{vc.articleInfo.name}}" ></video>
+                <video id="my-video2" title="{{vc.articleInfo.name}}"></video>
                 <!-- <figure class="video_figure clearfix">
                     <img src="assets/img/video.jpg" align="photoShopTraining">
                     <a href="" class="icon_play"></a>
@@ -67,11 +67,12 @@
                     <header class="section_header content_header clearfix">
                         <h4>توضیحات</h4>
                     </header>
-                    <div class="course_main_intro_wrapper">
+                    <div class="course_main_intro_wrapper" custom-scroll>
                         <p class="course_main_intro">
-                            {{vc.articleInfo.descBig| limitTo:500}}
-                            <a class="show_more clearfix" href='' ng-click='vc.more($event)' ng-if='vc.articleInfo.descBig.length > 500'>
-                              <span>...</span>show more
+                            {{vc.articleInfo.descBig}}
+                            <a class="show_more clearfix" ng-click='vc.more($event)' ng-if='vc.articleInfo.descBig.length > 500'>
+                                <span href="#">نمایش بیشتر</span>
+                                <span>...</span>
                             </a>
                         </p>
                     </div>
@@ -182,9 +183,7 @@
                         <li class="similar_courses_item clearfix" data-ng-repeat="info in vc.similarArticles">
                             <a class="similar_courses_item_link clearfix" href="#/video/{{::info.articleId}}">
                                 <figure class="similar_course_figure">
-                                    <img ng-src="assets/img/articles/{{::info.articleId}}/Main-001.jpg"
-                                    onerror="this.src='assets/img/defaultImage.png'"
-                                    width="142" alt="{{info.articleName}}" title="{{info.articleName}}">
+                                    <img ng-src="assets/img/articles/{{::info.articleId}}/Main-001.jpg" onerror="this.src='assets/img/defaultImage.png'" width="142" alt="{{info.articleName}}" title="{{info.articleName}}">
                                 </figure>
                                 <div class="similar_course_details">
                                     <p>{{::info.articleName}}</p>

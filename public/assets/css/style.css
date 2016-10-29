@@ -1589,8 +1589,14 @@ section.course_content {
     margin-top: 29px;
 }
 
-section.course_content div.course_main_intro_wrapper, section.course_content section.section_course {
+section.course_content section.section_course {
     padding: 0 20px;
+}
+
+section.course_content div.course_main_intro_wrapper {
+    margin: 0 20px;
+    height: 160px;
+    overflow: auto;
 }
 
 section.course_content div.course_main_intro_wrapper p.course_main_intro {
@@ -1600,9 +1606,10 @@ section.course_content div.course_main_intro_wrapper p.course_main_intro {
     color: #4e4e4e;
     text-align: left;
     direction: ltr;
+    padding: 0 16px;
 }
 
-p.course_main_intro a.show_more {
+p.course_main_intro a.show_more{
     display: block;
     position: absolute;
     font-size: 13px;
@@ -1611,11 +1618,12 @@ p.course_main_intro a.show_more {
     width: 100%;
     padding-top: 27px;
     font-weight: lighter;
-    background: linear-gradient(rgba(250,250,250,0), rgba(250,250,250,0.95), #f7f7f7);
+    background: linear-gradient(rgba(250, 250, 250, 0), rgba(250, 250, 250, 0.95), #f7f7f7);
 }
 
-p.course_main_intro a.show_more span{
-  display: inline-block;
+
+p.course_main_intro div.show_more span {
+    display: inline-block;
     float: left;
     margin-right: 3px;
     font-size: 15px;
@@ -1845,7 +1853,7 @@ section.search_video_section div {
 }
 
 section.search_video_section i {
-    width: 32px;
+    width: 29px;
     height: 32px;
     display: inline-block;
     float: right;
