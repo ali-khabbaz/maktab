@@ -2,11 +2,12 @@
   'use strict';
   angular.module('app.directives').directive('customScroll', function () {
     return {
-      restrict: 'AE',
+      restrict: 'AEC',
       replace: 'true',
       link: function (scope, elem, attrs) {
         elem.mCustomScrollbar({
-          theme: "minimal-dark"
+          theme: "minimal-dark",
+          keyboard:{ enable: true }
         });
       }
     };

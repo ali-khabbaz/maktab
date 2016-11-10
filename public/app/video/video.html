@@ -63,58 +63,68 @@
                     <img src="assets/img/video.jpg" align="photoShopTraining">
                     <a href="" class="icon_play"></a>
                 </figure> -->
-                <section class="course_content clearfix" data-ng-if="vc.articleVideos">
-                    <header class="section_header content_header clearfix">
-                        <h4>توضیحات</h4>
-                    </header>
-                    <div class="course_main_intro_wrapper" custom-scroll>
-                        <p class="course_main_intro">
-                            {{vc.articleInfo.descBig}}
+                <div class="course_detailes_wrapper clearfix">
+                  <section class="course_comment clearfix"  data-ng-if="vc.articleVideos">
+                      <header class="section_header content_header clearfix">
+                          <h4><i></i>
+                            توضیحات
+                          </h4>
+                      </header>
+                      <div class="course_comment_wrapper clearfix" custom-scroll>
+                        <div class="course_main_intro_wrapper clearfix">
+                            <p class="course_main_intro">
+                                {{vc.articleInfo.descBig}}
+                            </p>
                             <a class="show_more clearfix" ng-click='vc.more($event)' ng-if='vc.articleInfo.descBig.length > 500'>
-                                <span href="#">نمایش بیشتر</span>
-                                <span>...</span>
+                                <span href="#"  ng-if='vc.articleInfo.descBig.length > 500'>نمایش بیشتر</span>
+                                <span  ng-if='vc.articleInfo.descBig.length > 500'>...</span>
                             </a>
-                        </p>
-                    </div>
-                    <header class="section_header content_header clearfix">
-                        <h4>قسمت ها</h4>
-                    </header>
-                    <section class="section_course" data-ng-repeat="info in vc.articleVideos" data-ng-if="info">
-                        <header class="section_course_header" ng-class="{ 'active': $index==0}" ng-click="vc.accordion($event)">
-                            <span class="icon_accordion"></span>
-                            <h5>بخش
-                                {{vc.count[info.sectionId-1]}}:</h5>
-                            <h5>{{info.sectionName}}</h5>
-                        </header>
-                        <article class="section_course_accordion" data-ng-repeat="el in info.videos">
-                            <header class="header_lecture_course clearfix">
-                                <div class="title_lecture_course clearfix">
-                                    <!--  <span class="section_course_num">{{}}</span> -->
-                                    <span class="icon_video"></span>
-                                    <p class="subject_section_course">
-                                        <span>قسمت
-                                            {{vc.count[el.videoId-1]}}</span>
-                                        <bdi>{{el.videoName}}</bdi>
-                                    </p>
-                                    <!--<span class="type_section_course">ویدئو</span>-->
-                                </div>
-                                <div class="preview_section_course_accordion clearfix">
-                                    <p class="time_course_container">
-                                        <span class="time_num">{{el.duration}}
-                                            دقیقه</span>
-                                        <span class="icon_time"></span>
-                                    </p>
-                                    <p class="video_preview" ng-class="{ 'video_preview_active': info.sectionId == vc.selectedSection && el.videoId == vc.selectedVideo  }" data-ng-click="vc.selectVideo(info.sectionId,el.videoId)">نمایش</p>
-                                </div>
-                            </header>
-                            <!--<main class="main_section_course_accordion">-->
-                            <!--<p>-->
-                            <!--این قسمت درباره اصول اولیه فتوشاپ ونحوه رسم شگل های اصلی است در این قسمت نحوه ایجاد کردن فضای کاری مخصوص به خود را فرا می گیرید و از نحوه ی کار با ابزارهای اصلی فتوشاپ و میانبرهای آن آموزش داده می شود-->
-                            <!--</p>-->
-                            <!--</main>-->
-                        </article>
-                    </section>
-                </section>
+                        </div>
+                      </div>
+                  </section>
+                  <section class="courses_wrapper clearfix">
+                      <header class="section_header content_header clearfix">
+                          <h4><i></i>
+                            قسمت ها
+                          </h4>
+                      </header>
+                      <section class="section_course" data-ng-repeat="info in vc.articleVideos" data-ng-if="info">
+                          <header class="section_course_header" ng-class="{ 'active': $index==0}" ng-click="vc.accordion($event)">
+                              <span class="icon_accordion"></span>
+                              <h5>بخش
+                                  {{vc.count[info.sectionId-1]}}:</h5>
+                              <h5>{{info.sectionName}}</h5>
+                          </header>
+                          <article class="section_course_accordion" data-ng-repeat="el in info.videos">
+                              <header class="header_lecture_course clearfix">
+                                  <div class="title_lecture_course clearfix">
+                                      <!--  <span class="section_course_num">{{}}</span> -->
+                                      <span class="icon_video"></span>
+                                      <p class="subject_section_course">
+                                          <span>قسمت
+                                              {{vc.count[el.videoId-1]}}</span>
+                                          <bdi>{{el.videoName}}</bdi>
+                                      </p>
+                                      <!--<span class="type_section_course">ویدئو</span>-->
+                                  </div>
+                                  <div class="preview_section_course_accordion clearfix">
+                                      <p class="time_course_container">
+                                          <span class="time_num">{{el.duration}}
+                                              دقیقه</span>
+                                          <span class="icon_time"></span>
+                                      </p>
+                                      <p class="video_preview" ng-class="{ 'video_preview_active': info.sectionId == vc.selectedSection && el.videoId == vc.selectedVideo  }" data-ng-click="vc.selectVideo(info.sectionId,el.videoId)">نمایش</p>
+                                  </div>
+                              </header>
+                              <!--<main class="main_section_course_accordion">-->
+                              <!--<p>-->
+                              <!--این قسمت درباره اصول اولیه فتوشاپ ونحوه رسم شگل های اصلی است در این قسمت نحوه ایجاد کردن فضای کاری مخصوص به خود را فرا می گیرید و از نحوه ی کار با ابزارهای اصلی فتوشاپ و میانبرهای آن آموزش داده می شود-->
+                              <!--</p>-->
+                              <!--</main>-->
+                          </article>
+                      </section>
+                  </section>
+                </div>
             </div>
             <aside class="aside_wrapper">
                 <section class="video_course_details">
@@ -183,11 +193,11 @@
                         <li class="similar_courses_item clearfix" data-ng-repeat="info in vc.similarArticles">
                             <a class="similar_courses_item_link clearfix" href="#/video/{{::info.articleId}}">
                                 <figure class="similar_course_figure">
-                                    <img ng-src="assets/img/articles/{{::info.articleId}}/Main-001.jpg" onerror="this.src='assets/img/defaultImage.png'" width="142" alt="{{info.articleName}}" title="{{info.articleName}}">
+                                    <img ng-src="assets/img/articles/{{::info.articleId}}/Main-001.jpg" onerror="this.src='assets/img/defaultImage.png'" width="115" alt="{{info.articleName}}" title="{{info.articleName}}">
                                 </figure>
                                 <div class="similar_course_details">
-                                    <p>{{::info.articleName}}</p>
-                                    <p>{{::info.authorName}}</p>
+                                    <p>{{::info.articleName< 24 ? '' : '...'}}{{::info.articleName|limitTo:24}}</p>
+                                    <p>{{::info.authorName< 24 ? '' : '...'}}{{::info.authorName|limitTo:24}}</p>
                                     <p class="course_rating">
                                         <span class="star_full"></span>
                                         <span class="star_full"></span>

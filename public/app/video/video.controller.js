@@ -114,7 +114,12 @@
 		}
 
 		function more(event) {
-			$(event.target).slideUp(900);
+			var target = null;
+			if($(event.target).is('span')) {
+				target = $(event.target).parent();
+			}
+			target.closest('.course_main_intro_wrapper').css('max-height', 'none');
+			target.slideUp(1000);
 		}
 	}
 }());
