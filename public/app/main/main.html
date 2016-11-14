@@ -99,9 +99,12 @@
     <div class="container clearfix" data-ng-if="taas.topSubCategories[0].articles">
         <div class="tabs_wrapper clearfix">
             <ul class="tabs_list clearfix">
-                <!-- <li ng-click="taas.changeTab('Best')"><a data-ng-class="{'active' : taas.tab === 'Best'}" href="">محبوب ترین درس ها</a></li> -->
+<!--
+                 <li ng-click="taas.changeTab('Best')"><a data-ng-class="{'active' : taas.tab === 'Best'}" href="">محبوب ترین درس ها</a></li>
+                <li><a href="">طراحی</a></li>
+-->
                 <li ng-click="taas.changeTab(info.name)" data-ng-repeat="info in taas.topSubCategories">
-                    <a data-ng-class="{'active' : taas.tab === info.name}" href="">{{info.name}}</a>
+                    <a data-ng-class="{'active' : taas.tab === info.name}" data-hover="{{info.name}}" href="">{{info.name}}</a>
                 </li>
             </ul>
         </div>
