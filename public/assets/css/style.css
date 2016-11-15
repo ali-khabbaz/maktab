@@ -9,14 +9,7 @@
     url('../fonts/Lato-Regular.ttf') format('ttf');
     font-weight: normal;
 }
-@font-face {
-    font-family: yekan;
-    src: url(../fonts/Yekan.eot);
-    src: url(../fonts/Yekan.eot?#iefix) format('embedded-opentype'), /* IE6–8 */
-    url(../fonts/Yekan.woff) format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
-    url(../fonts/Yekan.ttf) format('ttf');
-    font-weight: normal;
-}
+
 @font-face {
     font-family: 'lato';
     src: url('../fonts/Lato-Bold.eot');
@@ -29,7 +22,7 @@
 @font-face {
     font-family: 'roboto';
     src: url('../fonts/Roboto-Condensed-webfont.eot');
-    src: url('../fonts/Roboto-Condensed-webfont?#iefix') format('eot'), /* IE6–8 */
+    src: url('../fonts/Roboto-Condensed-webfont.eot?#iefix') format('eot'), /* IE6–8 */
     url('../fonts/Roboto-Condensed-webfont.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
     url('../fonts/Roboto-Condensed-webfont.ttf') format('ttf');
     font-weight: normal;
@@ -37,7 +30,7 @@
 @font-face {
     font-family: 'roboto';
     src: url('../fonts/Roboto-Medium-webfont.eot');
-    src: url('../fonts/Roboto-Medium-webfont?#iefix') format('eot'), /* IE6–8 */
+    src: url('../fonts/Roboto-Medium-webfont.eot?#iefix') format('eot'), /* IE6–8 */
     url('../fonts/Roboto-Medium-webfont.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
     url('../fonts/Roboto-Medium-webfont.ttf') format('ttf');
     font-weight: 500;
@@ -45,7 +38,7 @@
 @font-face {
     font-family: 'roboto';
     src: url('../fonts/Roboto-Bold-webfont.eot');
-    src: url('../fonts/Roboto-Bold-webfont?#iefix') format('eot'), /* IE6–8 */
+    src: url('../fonts/Roboto-Bold-webfont.eot?#iefix') format('eot'), /* IE6–8 */
     url('../fonts/Roboto-Bold-webfont.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
     url('../fonts/Roboto-Bold-webfont.ttf') format('ttf');
     font-weight: bold;
@@ -250,26 +243,80 @@ button {
     float: right;
 }
 .tabs_list li a {
+    position: relative;
     color: #777;
     font-size: 14px;
     float: right;
     padding: 20px 20px;
     font-weight: 500;
 }
-.tabs_list li:first-child a {
-    padding: 20px 15px 20px 20px;
+.tabs_list li a:after{
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    right: 0;
+    background: #00c853;
+    height: 0;
+    -webkit-transition: height .4s;
+    -o-transition: height .4s;
+    transition: height .4s;
 }
-.tabs_list li a.active {
-    color: #494949;
-    border-bottom: 2px solid #00c853;
+/*
+.tabs_list li a:before{
+    content: '';
+    position: absolute;
+    top: 0.67em;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    -webkit-transition: .4s,opacity .6s;
+    -moz-transition: .4s,opacity .6s;
+    -o-transition: .4s,opacity .6s;
+    transition: .4s,opacity .6s;
 }
-.tabs_list li a.active:hover {
-    color: #494949;
-    border-bottom: 2px solid #00c853;
+.tabs_list li a:hover:before {
+    content: attr(data-hover);
+    -webkit-transform: translate(-150%,0);
+    -moz-transform: translate(-150%,0);
+    -ms-transform: translate(-150%,0);
+    -o-transform: translate(-150%,0);
+    transform: translate(-150%,0);
 }
+.tabs_list li a:before{
+    opacity: 1;
+    -webkit-transform: translate(0,0);
+    -moz-transform: translate(0,0);
+    -ms-transform: translate(0,0);
+    -o-transform: translate(0,0);
+    transform: translate(0,0);
+    -webkit-transition-delay: .4s;
+    -moz-transition-delay: .4s;
+    -o-transition-delay: .4s;
+    transition-delay: .4s;
+}
+*/
 .tabs_list li a:hover {
     color: #00c853;
 }
+.tabs_list li a:hover:after{
+    height: 4px;
+}
+.tabs_list li:first-child a {
+    padding: 20px 5px 20px 20px;
+}
+.tabs_list li a.active {
+    color: #00c853;
+    font-weight: 500;
+}
+.tabs_list li a.active:after{
+    height: 4px;
+}
+/*.tabs_list li a.active:hover {
+    color: #494949;
+    border-bottom: 2px solid #00c853;
+}*/
 
 /**************** homePage **********************/
 
@@ -694,9 +741,10 @@ section.special_offer_courses_list a.special_offer_link:hover {
 /********************** Courses ************************/
 
 div.course_bg {
-    background: url('../img/courseBg.png');
-    height: 270px;
+    background: url(../img/courseBg.png);
+    height: 230px;
     background-size: 100%;
+    background-repeat: no-repeat;
 }
 section.courses {
     margin: 40px 0;
@@ -731,6 +779,12 @@ article.course:last-child {
 }
 figure.course_img {
     position: relative;
+    min-height: 210px;
+    background: #d2d3d8; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#d2d3d8, #fefefe); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#d2d3d8, #fefefe); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#d2d3d8, #fefefe); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#d2d3d8, #fefefe); /* Standard syntax (must be last) */
 }
 figure.course_img img {
     float: right;
@@ -986,7 +1040,7 @@ header.filter_header i.filter_title.title_filter_source {
 }
 div.courses_accordion h4.header_courses_accordion {
     background: #fcfcfc;
-    color: #787878;
+    color: #7c7c7c;
     padding: 10px 0;
     cursor: pointer;
     z-index: 100;
@@ -1031,7 +1085,7 @@ main.filter_main ul.filter_list {
     height: 250px;
     padding: 5px;
     margin: 10px 0;
-    background-color: #e8f4ff;
+    background-color: #eae9ff;
     overflow-y: auto;
 }
 main.filter_main p.check_filter {
@@ -1184,7 +1238,7 @@ input.input_check_filter[type="checkbox"]:checked+label::before {
 main.filter_main p.check_filter label.label_check_filter {
     font-family: "roboto", "iran";
     float: right;
-    color: #787878;
+    color: #444;
     line-height: 19px;
 }
 div.courses_accordion ul.list_courses_accordion {
@@ -1301,7 +1355,7 @@ section.filter_course_wrapper div.courses article.course {
     width: 30.7%;
     position: relative;
     margin: 15px 0 5px 25px;
-    /*transition: -webkit-box-shadow .5s,-moz-box-shadow .5s,box-shadow .5s;*/
+    transition: all .7s,all .7s,all .7s;
     -webkit-box-shadow: -2px 3px 4px 0 rgba(0, 0, 0, 0.16);
     -moz-box-shadow: -2px 3px 4px 0 rgba(0, 0, 0, 0.16);
     box-shadow: -2px 3px 4px 0 rgba(0, 0, 0, 0.16);
@@ -1778,7 +1832,7 @@ li.similar_courses_item div.similar_course_details {
     padding-top: 14px;
 }
 div.similar_course_details p {
-    font-family: "lato", "iran";
+    font-family: "lato", "iran",Tahoma,sans-serif;
     color: #3f4853;
     white-space: nowrap;
     font-size: 14px;
@@ -1888,14 +1942,14 @@ main.filter_main .mCS-autoHide>.mCustomScrollBox~.mCSB_scrollTools {
 }
 main.filter_main .mCS-minimal-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
     background-color: #000;
-    background-color: rgba(30, 136, 229, .4);
+    background-color: rgba(71, 85, 92, .4);
     filter: "alpha(opacity=20)";
     -ms-filter: "alpha(opacity=20)";
 }
 main.filter_main .mCS-minimal-dark.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar,
 main.filter_main .mCS-minimal-dark.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar {
     background-color: #000;
-    background-color: rgba(30, 136, 229, .9);
+    background-color: rgba(71, 85, 92, .9);
     filter: "alpha(opacity=50)";
     -ms-filter: "alpha(opacity=50)"
 }
@@ -1993,9 +2047,9 @@ div.course_main_intro_wrapper .mCS-minimal-dark.mCSB_scrollTools .mCSB_dragger:a
     width: 15px;
     height: 15px;
     outline: none;
-    -webkit-box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.3);
-    -moz-box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.3);
-    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.3);
 }
 .rzslider span {
     position: absolute;
