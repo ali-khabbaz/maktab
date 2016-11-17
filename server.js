@@ -107,7 +107,6 @@
 					message: err
 				});
 			});
-
 		});
 
 		var register_strategy = new localStrategy(strategy_opts, function (email, password, done) {
