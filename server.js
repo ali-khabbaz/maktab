@@ -13,6 +13,7 @@
 		request = require('./server/requires.js').request,
 		showDb = require('./server/utilities.js').showDb,
 		createToken = require('./server/utilities.js').createToken,
+		setCharset = require('./server/utilities.js').setCharset,
 		passport = require('./server/requires.js').passport,
 		localStrategy = require('./server/requires.js').localStrategy;
 
@@ -28,6 +29,7 @@
 		password: 'bahbah',
 		db: '13950630'
 	});
+	setCharset(c);
 
 	exports.c = c;
 

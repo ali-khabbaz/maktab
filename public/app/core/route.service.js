@@ -8,7 +8,6 @@
 
 	function routeServiceConfig() {
 		/*jshint validthis: true */
-		console.log('routeServiceConfig-------');
 		this.config = {
 			// These are the properties we need to set
 			// $routeProvider: undefined
@@ -23,7 +22,6 @@
 
 	/* @ngInject */
 	function routeService($location, $rootScope, $route, $filter, routeServiceConfig) {
-		console.log('routeService');
 		var service = {
 			configureRoutes: configureRoutes,
 			configureMenu: configureMenu,
@@ -43,7 +41,6 @@
 
 		// ////////////////////////////////////////////////////
 		function configureRoutes(routes) {
-			console.log('configureRoutes---', routes);
 			routes.forEach(function (route) {
 				var deps;
 				if (typeof route.config.deps !== 'undefined' && route.config.deps.length !== 0) {

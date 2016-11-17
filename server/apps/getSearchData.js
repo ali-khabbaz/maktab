@@ -3,9 +3,11 @@
 	'use strict';
 	var c = require('../../server.js').c,
 		showDbNew = require('../utilities.js').showDbNew,
+		setCharset = require('../utilities.js').setCharset,
 		q = require('../requires.js').q;
 
 	function getSearchData(req, res) {
+		setCharset(c);
 		var funcs = [],
 			query =
 			'SELECT \

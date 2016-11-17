@@ -2,11 +2,9 @@
 (function () {
 	'use strict';
 	var c = require('../../server.js').c,
-		setCharset = require('../utilities.js').setCharset,
 		showDbNew = require('../utilities.js').showDbNew;
 
 	function getTopSubCategories(req, res) {
-		setCharset(c);
 		var query = 'SELECT \
 					  sc.id, \
 					  sc.name, \

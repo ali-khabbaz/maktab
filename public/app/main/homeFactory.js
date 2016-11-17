@@ -35,30 +35,12 @@
 				dfd = $q.defer(),
 				temp = [],
 				i;
-			/*if (cache.get('search')) {
-				dfd.resolve([null, searchData]);
-			} else {
-				$http({
-					url: url,
-					method: 'POST'
-				}).success(function (res) {
-					for (i = 0; i < res.data[0].length; i++) {
-						temp.push(res.data[0][i]);
-					}
-					searchData = temp;
-					cache.put('search', searchData);
-					dfd.resolve([null, searchData]);
-				}).error(function (err) {
-					dfd.resolve([err]);
-				});
-			}*/
 
 			$http({
 				url: url,
 				method: 'GET',
 				cache: true
 			}).success(function (res) {
-				console.log('search---------', res);
 				for (i = 0; i < res.data[0][1].length; i++) {
 					temp.push(res.data[0][1][i]);
 				}
