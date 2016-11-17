@@ -99,10 +99,10 @@
 		}
 
 		function topSubCategoriesDataReady(subCategories, articles, best) {
-			console.log('%%%%%%%%%%', subCategories);
 			var i, j;
 			subCategories.unshift({
 				name: 'Best',
+				perisan_name: 'بهترین ها',
 				articles: best
 			});
 			for (i = 0; i < subCategories.length; i++) {

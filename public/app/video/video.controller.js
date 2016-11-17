@@ -25,6 +25,7 @@
 		vm.selectVideo = selectVideo;
 		vm.accordion = accordion;
 		vm.similarArticles = null;
+		vm.more = more;
 		main();
 
 		function main() {
@@ -110,6 +111,15 @@
 				parent.addClass('active');
 				parent.siblings('article').slideDown();
 			}
+		}
+
+		function more(event) {
+			var target = null;
+			if($(event.target).is('span')) {
+				target = $(event.target).parent();
+			}
+			target.closest('.course_main_intro_wrapper').css('max-height', 'none');
+			target.slideUp(1000);
 		}
 	}
 }());

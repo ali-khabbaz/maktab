@@ -22,7 +22,7 @@
 	function showDbNew(c, myquery) {
 		var dfd = q.defer();
 		c.query(myquery, function (err, rows) {
-			if(err) {
+			if (err) {
 				dfd.resolve([err]);
 			} else {
 				dfd.resolve([null, rows]);
@@ -68,13 +68,13 @@
 
 	function decode(token) {
 		var segments = token.split('.');
-		if(segments.length !== 3) {
+		if (segments.length !== 3) {
 			throw new Error('token structure incorrect');
 		}
 
 		var rawSignature = segments[0] + '.' + segments[1];
 
-		if(!verify(rawSignature, 'shh...', segments[2])) {
+		if (!verify(rawSignature, 'shh...', segments[2])) {
 			throw new Error('verification failed');
 		}
 		var payload = JSON.parse(base64Decode(segments[1]));
@@ -105,10 +105,15 @@
 		return jwt.encode(payload, 'shh...');
 	}
 
+	function setCharset(c) {
+		c.query('SET NAMES \'utf8\'', function (err, rows) {});
+	}
+
 	exports.showDb = showDb;
 	exports.showDbNew = showDbNew;
 	exports.encryptor2 = encryptor2;
 	exports.encode = encode;
 	exports.decode = decode;
 	exports.createToken = createToken;
+	exports.setCharset = setCharset;
 }());

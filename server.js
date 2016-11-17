@@ -41,9 +41,9 @@
 	});
 	*/
 
-	if(cluster.isMaster) {
+	if (cluster.isMaster) {
 		// Fork workers.
-		for(var i = 0; i < numCPUs; i++) {
+		for (var i = 0; i < numCPUs; i++) {
 			cluster.fork();
 		}
 		cluster.on('exit', function (worker) {
@@ -67,7 +67,7 @@
 
 		passport.serializeUser(function (user, done) {
 			console.log('serializeeee', user);
-			if(user) {
+			if (user) {
 				done(null, user.id);
 			} else {
 				done(null, false, {
@@ -89,7 +89,7 @@
 			showDb("SELECT email , ID FROM users WHERE email = '" + email + "' AND " +
 				"password = '" + password + "' ").then(function (result) {
 				console.log('result is', result);
-				if(result.length === 0) {
+				if (result.length === 0) {
 					console.log('not user');
 					return done(null, false, {
 						message: 'wrong email or password'
@@ -224,14 +224,14 @@
 					"headers": headers,
 					"json": true
 				}, function (err_2, response_2, profile) {
-					if(!profile.code) {
+					if (!profile.code) {
 						profile.sub = +profile.sub;
 						console.log('profile', profile);
 						var query = "SELECT ID FROM users WHERE email = '" + profile.email + "' AND " +
 							"google_id = '" + profile.sub + "' ";
 
 						showDb(query).then(function (res_2) {
-							if(!res_2.length) {
+							if (!res_2.length) {
 								console.log('creating user');
 								query =
 									"INSERT INTO users (google_id , email, gender, name, first_name , last_name " +

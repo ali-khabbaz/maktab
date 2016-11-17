@@ -19,7 +19,6 @@
 					homeFactory.topSubCategoriesDataReady(
 						res[0].data.data[1], res[1].data.data[1][0], res[2].data.data[1]
 					);
-				console.log('persian----------', vm.topSubCategories);
 				vm.loadingshow = false;
 			});
 		}
