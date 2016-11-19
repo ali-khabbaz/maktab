@@ -8,7 +8,7 @@
 		var query = 'SELECT \
 					  sc.id, \
 					  sc.name, \
-					  sc.perisan_name \
+					  sc.persian_name \
 					FROM sub_category sc \
 					WHERE sc.first_page = \'Y\'';
 		showDbNew(c, query).then(function (res1) {

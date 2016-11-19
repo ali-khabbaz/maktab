@@ -15,6 +15,7 @@
 
 		function main() {
 			homeFactory.getArticlesAndSubCategories().then(function (res) {
+				console.log('**********', res[0].data.data[1]);
 				vm.topSubCategories =
 					homeFactory.topSubCategoriesDataReady(
 						res[0].data.data[1], res[1].data.data[1][0], res[2].data.data[1]

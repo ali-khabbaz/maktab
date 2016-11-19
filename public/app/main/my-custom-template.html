@@ -1,9 +1,9 @@
 <div class="angucomplete-holder" ng-class="{'angucomplete-dropdown-visible': showDropdown}">
     <input ng-model="searchStr" field-tabindex="25" ng-disabled="disableInput" type="text"
            placeholder="جستجوی عنوان آموزشی" class="main_search form-control-small ng-dirty ng-valid-parse ng-touched"
-           autocapitalize="off" autocorrect="off" autocomplete="off" ng-change="inputChangeHandler(searchStr)">
+           autocapitalize="off" autocorrect="off" autocomplete="off" ng-change="inputChangeHandler(searchStr)" ng-focus="onFocusHandler()" ng-blur="hideResults($event)">
     <!--ng-focus="onFocusHandler() ng-blur="hideResults($event)""-->
-    <div class="angucomplete-dropdown main_search ng-show" custom-scroll><!--ng-show="showDropdown"-->
+    <div class="angucomplete-dropdown main_search ng-show" ng-show="showDropdown" custom-scroll>
         <div class="angucomplete-searching ng-binding ng-hide" ng-show="searching" ng-bind="textSearching">در حال جستجو
             ...
         </div>
@@ -17,7 +17,7 @@
              ng-class="{'angucomplete-selected-row': results.length == currentIndex}">
             <div class="angucomplete-row clearfix" ng-repeat="result in results" ng-click="selectResult(result)"
                  ng-mouseenter="hoverRow($index)" ng-class="{'angucomplete-selected-row': $index == currentIndex}">
-                <figure class="angucomplete-img clearfix"><img src="assets/img/course_small_1.jpg"/></figure>
+                <figure class="angucomplete-img clearfix"><img ng-src="assets/img/articles/{{result.originalObject.id}}/Main-001.jpg" onerror="this.src='assets/img/defaultImage.png'"/></figure>
                 <div class="angucomplete-title clearfix"><i></i>
                     <p ng-if="matchClass" class="clearfix" ng-bind-html="result.title"></p>
                     <p class="search_course_rating clearfix">

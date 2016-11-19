@@ -84,7 +84,7 @@
 			var i, j;
 			subCategories.unshift({
 				name: 'Best',
-				perisan_name: 'بهترین ها',
+				persian_name: 'بهترین ها',
 				articles: best
 			});
 			for (i = 0; i < subCategories.length; i++) {
