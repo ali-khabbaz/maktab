@@ -41,7 +41,7 @@
 
 		function getSearchResult(data) {
 			var dfd = $q.defer();
-			if(cache.get('searchParam#' + data.searchParam)) {
+			if (cache.get('searchParam#' + data.searchParam)) {
 				dfd.resolve([null, cache.get('searchParam#' + data.searchParam),
 					categoryAndSubCategoriesAndArticlesDataReady(cache.get('searchParam#' + data.searchParam))
 				]);
@@ -68,8 +68,8 @@
 				i, data = {};
 			$http.post(url).success(function (res) {
 				res = res.data;
-				for(i = 0; i < res.length; i++) {
-					if(!data[res[i].id]) {
+				for (i = 0; i < res.length; i++) {
+					if (!data[res[i].id]) {
 						data[res[i].id] = {
 							name: '',
 							subCategories: []
@@ -93,11 +93,11 @@
 				found = false;
 			$http.post(url).success(function (res) {
 				res = res.data;
-				for(i = 0; i < res.length; i++) {
+				for (i = 0; i < res.length; i++) {
 					temp = {};
 					found = false;
-					for(j = 0; j < data.length; j++) {
-						if(data[j].categoryName === res[i].name) {
+					for (j = 0; j < data.length; j++) {
+						if (data[j].categoryName === res[i].name) {
 							found = true;
 							data[j].videos.push({
 								name: res[i].articleName,
@@ -109,7 +109,7 @@
 							});
 						}
 					}
-					if(!found) {
+					if (!found) {
 						data.push({
 							categoryName: res[i].name,
 							videos: [{
@@ -159,14 +159,14 @@
 				a.subCategoryName = a.subCategoryName.toLowerCase();
 				b.categoryName = b.categoryName.toLowerCase();
 				b.subCategoryName = b.subCategoryName.toLowerCase();
-				if(a.categoryName > b.categoryName) {
+				if (a.categoryName > b.categoryName) {
 					return 1;
-				} else if(a.categoryName < b.categoryName) {
+				} else if (a.categoryName < b.categoryName) {
 					return -1;
 				} else {
-					if(a.subCategoryName > b.subCategoryName) {
+					if (a.subCategoryName > b.subCategoryName) {
 						return 1;
-					} else if(a.subCategoryName < b.subCategoryName) {
+					} else if (a.subCategoryName < b.subCategoryName) {
 						return -1;
 					} else {
 						return 0;
@@ -179,15 +179,18 @@
 		function categoryAndSubCategoriesAndArticlesDataReady(data) {
 			var i, j, temp = [];
 			data = sortArticlesCategoryAndSubCategory(data);
-			for(i = 0; i < data.length; i++) {
-				if(temp.length === 0 ||
+			for (i = 0; i < data.length; i++) {
+				if (temp.length === 0 ||
 					data[i].categoryName !== temp[temp.length - 1].categoryName) {
 					temp.push({
 						categoryName: data[i].categoryName,
+						categoryPersianName: data[i].categoryPersianName,
 						subCategories: [{
 							name: data[i].subCategoryName,
+							persianName: data[i].subCategoryPersianName,
 							articles: [{
 								name: data[i].articleName,
+								persianName: data[i].articlePersianName,
 								id: data[i].articleId,
 								duration: data[i].articleDuration,
 								insertDate: data[i].articleInsertDate,
@@ -200,11 +203,12 @@
 							}]
 						}]
 					});
-				} else if(data[i].categoryName === temp[temp.length - 1].categoryName) {
-					if(data[i].subCategoryName ===
+				} else if (data[i].categoryName === temp[temp.length - 1].categoryName) {
+					if (data[i].subCategoryName ===
 						temp[temp.length - 1].subCategories[temp[temp.length - 1].subCategories.length - 1].name) {
 						temp[temp.length - 1].subCategories[temp[temp.length - 1].subCategories.length - 1].articles.push({
 							name: data[i].articleName,
+							persianName: data[i].articlePersianName,
 							id: data[i].articleId,
 							duration: data[i].articleDuration,
 							insertDate: data[i].articleInsertDate,
@@ -218,8 +222,10 @@
 					} else {
 						temp[temp.length - 1].subCategories.push({
 							name: data[i].subCategoryName,
+							persianName: data[i].subCategoryPersianName,
 							articles: [{
 								name: data[i].articleName,
+								persianName: data[i].articlePersianName,
 								id: data[i].articleId,
 								duration: data[i].articleDuration,
 								insertDate: data[i].articleInsertDate,
@@ -234,9 +240,9 @@
 					}
 				}
 			}
-			for(i = 0; i < temp.length; i++) {
+			for (i = 0; i < temp.length; i++) {
 				temp[i].num = 0;
-				for(j = 0; j < temp[i].subCategories.length; j++) {
+				for (j = 0; j < temp[i].subCategories.length; j++) {
 					temp[i].num += temp[i].subCategories[j].articles.length;
 				}
 			}
@@ -245,8 +251,8 @@
 
 		function filterArticlesSubCategory(data, subCategoryName) {
 			var i, temp = [];
-			for(i = 0; i < data.length; i++) {
-				if(data[i].subCategoryName === subCategoryName) {
+			for (i = 0; i < data.length; i++) {
+				if (data[i].subCategoryName === subCategoryName) {
 					temp.push(data[i]);
 				}
 			}
@@ -255,21 +261,17 @@
 
 		function extractSoftwares(arr) {
 			var temp = [],
-				temp2 = [],
-				i = null;
-			arr = mainViewFactory.objectSort(arr, 'softwareName');
-			for(i = 0; i < arr.length; i++) {
-				arr[i].softwareName = arr[i].softwareName.toLowerCase();
-				if(temp[temp.length - 1]) {
-					if(arr[i].softwareName !== temp[temp.length - 1].name) {
-						temp.push({
-							name: arr[i].softwareName,
-							class: arr[i].softwareName.charAt(0),
-							select: false
-						});
-						temp2.push(arr[i].softwareName);
+				key = [],
+				i = null,
+				j = null;
+			for (i = 0; i < arr.length; i++) {
+				key = true;
+				for (j = 0; j < temp.length; j++) {
+					if (arr[i].softwareName === temp[j].name) {
+						key = false;
 					}
-				} else {
+				}
+				if (key) {
 					temp.push({
 						name: arr[i].softwareName,
 						class: arr[i].softwareName.charAt(0),
@@ -285,9 +287,9 @@
 				temp2 = [],
 				temp3 = null,
 				i = null;
-			for(i = 0; i < arr.length; i++) {
-				if(temp2.indexOf(arr[i].articleAuthor) === -1) {
-					if(arr[i].articleAuthor.toLowerCase().indexOf(' and ') > -1) {
+			for (i = 0; i < arr.length; i++) {
+				if (temp2.indexOf(arr[i].articleAuthor) === -1) {
+					if (arr[i].articleAuthor.toLowerCase().indexOf(' and ') > -1) {
 						temp3 = arr[i].articleAuthor.toLowerCase().split(' and ');
 						temp.push({
 							name: temp3[0],
@@ -313,8 +315,8 @@
 			var temp = [],
 				temp2 = [],
 				i = null;
-			for(i = 0; i < arr.length; i++) {
-				if(temp2.indexOf(arr[i].articleResource) === -1) {
+			for (i = 0; i < arr.length; i++) {
+				if (temp2.indexOf(arr[i].articleResource) === -1) {
 					temp.push({
 						name: arr[i].articleResource.toLowerCase(),
 						select: false
@@ -329,9 +331,9 @@
 			var temp = [],
 				temp2 = [],
 				i = null;
-			for(i = 0; i < arr.length; i++) {
-				if(temp2.indexOf(arr[i].articleLevel) === -1) {
-					if(arr[i].articleLevel) {
+			for (i = 0; i < arr.length; i++) {
+				if (temp2.indexOf(arr[i].articleLevel) === -1) {
+					if (arr[i].articleLevel) {
 						temp.push({
 							name: arr[i].articleLevel.toLowerCase(),
 							select: false
@@ -346,8 +348,8 @@
 		function noFilterSelected(filter) {
 			var i = null,
 				key = true;
-			for(i = 0; i < filter.length; i++) {
-				if(filter[i].select) {
+			for (i = 0; i < filter.length; i++) {
+				if (filter[i].select) {
 					key = false;
 					return key;
 				}
@@ -356,7 +358,7 @@
 		}
 
 		function articlesReady(articles) {
-			for(var i = 0; i < articles.length; i++) {
+			for (var i = 0; i < articles.length; i++) {
 				articles[i].articleDuration = +articles[i].articleDuration;
 				articles[i].articleName = articles[i].articleName.toLowerCase();
 			}

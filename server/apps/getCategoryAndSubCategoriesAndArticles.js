@@ -10,8 +10,11 @@
 			  * \
 			FROM (SELECT \
 			    c.name categoryName, \
+			    c.persian_name categoryPersianName, \
 			    sc.name subCategoryName, \
+			    sc.persian_name subCategoryPersianName, \
 			    a.name articleName, \
+			    a.persian_name articlePersianName, \
 			    a.id articleId, \
 			    a.duration articleDuration, \
 			    a.insert_date articleInsertDate, \

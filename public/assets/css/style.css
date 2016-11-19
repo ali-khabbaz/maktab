@@ -442,7 +442,7 @@ div.main_context div.search_block input.main_search {
     width: 500px;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
-    padding: 10px 9px 9px 10px;
+    padding: 14px 9px 14px 10px;
     font-size: 14px;
     float: right;
     color: #1e88e5;
@@ -1355,7 +1355,7 @@ section.filter_course_wrapper div.courses article.course {
     width: 30.7%;
     position: relative;
     margin: 15px 0 5px 25px;
-    transition: all .7s,all .7s,all .7s;
+    /* transition: all .7s,all .7s,all .7s; */
     -webkit-box-shadow: -2px 3px 4px 0 rgba(0, 0, 0, 0.16);
     -moz-box-shadow: -2px 3px 4px 0 rgba(0, 0, 0, 0.16);
     box-shadow: -2px 3px 4px 0 rgba(0, 0, 0, 0.16);

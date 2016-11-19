@@ -7,7 +7,8 @@
 	function getTopSubCategories(req, res) {
 		var query = 'SELECT \
 					  sc.id, \
-					  sc.name \
+					  sc.name, \
+					  sc.persian_name \
 					FROM sub_category sc \
 					WHERE sc.first_page = \'Y\'';
 		showDbNew(c, query).then(function (res1) {
