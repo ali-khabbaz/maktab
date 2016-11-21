@@ -38,11 +38,15 @@
                     <li class="sort_filter_List_item sort_view">
                         <label for="sort_view">مرتب کردن بر اساس</label>
                         <ul>
-                          <li class="selcet_view_container">
-                            <select id="sort_view_2" class="sort_direction" ng-model="cc.selectedSortOrder" ng-options="info.name for info in cc.sortOrderOptions" ng-change="cc.changeSort(cc.selectedSortField.key,cc.selectedSortOrder.key)"></select>
-                            <select class="sort_base" id="sort_view" ng-model="cc.selectedSortField" ng-options="info.name for info in cc.sortFieldOptions" ng-change="cc.changeSort(cc.selectedSortField.key,cc.selectedSortOrder.key)">
-                            </select>
-                          </li>
+                            <li class="selcet_view_container">
+                                <select id="sort_view_2" class="sort_direction" ng-model="cc.selectedSortOrder"
+                                        ng-options="info.name for info in cc.sortOrderOptions"
+                                        ng-change="cc.changeSort(cc.selectedSortField.key,cc.selectedSortOrder.key)"></select>
+                                <select class="sort_base" id="sort_view" ng-model="cc.selectedSortField"
+                                        ng-options="info.name for info in cc.sortFieldOptions"
+                                        ng-change="cc.changeSort(cc.selectedSortField.key,cc.selectedSortOrder.key)">
+                                </select>
+                            </li>
                         </ul>
                     </li>
                     <li class="sort_filter_List_item view_num">
@@ -52,8 +56,10 @@
                         </select>
                     </li>
                     <li class="sort_filter_List_item slider_filter">
-                        <label for="num_level">سطح</label>
-                        <rzslider rz-slider-on-change="cc.levelSliderChange()" rz-slider-model="cc.slider_ticks_values.values" rz-slider-options="cc.slider_ticks_values.options" ></rzslider>
+                        <label >سطح</label>
+                        <rzslider rz-slider-on-change="cc.levelSliderChange()"
+                                  rz-slider-model="cc.slider_ticks_values.values"
+                                  rz-slider-options="cc.slider_ticks_values.options"></rzslider>
                     </li>
 
                 </ul>
@@ -75,7 +81,8 @@
                                 <!-- <span class="course_num">{{::info.num}}</span> -->
                             </h4>
                             <ul class="list_courses_accordion">
-                                <li data-ng-click="cc.selectSubCategory(el.name)" class="list_courses_item" data-ng-repeat="el in info.subCategories">
+                                <li data-ng-click="cc.selectSubCategory(el.name)" class="list_courses_item"
+                                    data-ng-repeat="el in info.subCategories">
                                     <a href="">{{::el.name}}</a>
                                     <!-- <span class="course_num">{{::el.articles.length}}</span> -->
                                 </li>
@@ -93,9 +100,12 @@
                         </div>
                         <ul class="filter_list" custom-scroll>
                             <li>
-                                <p class="check_filter clearfix" data-ng-repeat="info in cc.softwares | filter:cc.filterSoftwares">
-                                    <input class="input_check_filter" id="soft_{{::info.name}}" type="checkbox" data-ng-model="info.select">
-                                    <label class="label_check_filter" for="soft_{{::info.name}}" title="{{info.name}}">{{info.name.length < 26 ? '' : '...'}}{{::info.name | capitalize | limitTo:26}}</label>
+                                <p class="check_filter clearfix"
+                                   data-ng-repeat="info in cc.softwares | filter:cc.filterSoftwares">
+                                    <input class="input_check_filter" id="soft_{{::info.name}}" type="checkbox"
+                                           data-ng-model="info.select">
+                                    <label class="label_check_filter" for="soft_{{::info.name}}" title="{{info.name}}">{{info.name.length
+                                        < 26 ? '' : '...'}}{{::info.name | capitalize | limitTo:26}}</label>
                                 </p>
                             </li>
                         </ul>
@@ -111,9 +121,12 @@
                         </div>
                         <ul class="filter_list" custom-scroll>
                             <li>
-                                <p class="check_filter clearfix filter_teacher" data-ng-repeat="info in cc.authors | filter:cc.filterAuthors">
-                                    <input class="input_check_filter" id="author_{{::info.name}}" type="checkbox" data-ng-model="info.select">
-                                    <label class="label_check_filter" for="author_{{::info.name}}">{{::info.name | capitalize}}</label>
+                                <p class="check_filter clearfix filter_teacher"
+                                   data-ng-repeat="info in cc.authors | filter:cc.filterAuthors">
+                                    <input class="input_check_filter" id="author_{{::info.name}}" type="checkbox"
+                                           data-ng-model="info.select">
+                                    <label class="label_check_filter" for="author_{{::info.name}}">{{::info.name |
+                                        capitalize}}</label>
                                 </p>
                             </li>
                         </ul>
@@ -124,8 +137,10 @@
                     </header>
                     <main class="filter_main clearfix">
                         <p class="check_filter" data-ng-repeat="info in cc.resources">
-                            <input class="input_check_filter" id="resource_{{::info.name}}" type="checkbox" data-ng-model="info.select">
-                            <label class="label_check_filter" for="resource_{{::info.name}}">{{::info.name | capitalize}}</label>
+                            <input class="input_check_filter" id="resource_{{::info.name}}" type="checkbox"
+                                   data-ng-model="info.select">
+                            <label class="label_check_filter" for="resource_{{::info.name}}">{{::info.name |
+                                capitalize}}</label>
                         </p>
                     </main>
                     <!-- <header class="filter_header clearfix">
@@ -159,14 +174,17 @@
                         </div>
                         <!--</div>-->
                     </div>
-                    <article class="course clearfix" dir-paginate="info in cc.articles | filter:cc.filterCourses | itemsPerPage:12 ">
+                    <article class="course clearfix"
+                             dir-paginate="info in cc.articles | filter:cc.filterCourses | itemsPerPage:12 ">
                         <!-- <tr dir-paginate="info in cc.articles | filter:cc.filterCourses | itemsPerPage:13 " current-page="tableView.currPage"> -->
                         <a class="clearfix" href="#/video/{{::info.articleId}}">
                             <figure class="course_img clearfix">
                                 <div class="price clearfix">
                                     <p>رایــگان</p>
                                 </div>
-                                <img class="course_img" ng-src="assets/img/articles/{{::info.articleId}}/Main-001.jpg" onerror="this.src='assets/img/defaultImage.png'" width="277" title="{{info.articleName}}" alt="{{info.articleName}}">
+                                <img class="course_img" ng-src="assets/img/articles/{{::info.articleId}}/Main-001.jpg"
+                                     onerror="this.src='assets/img/defaultImage.png'" width="277"
+                                     title="{{info.articleName}}" alt="{{info.articleName}}">
                             </figure>
                             <header class="course_header clearfix">
                                 <h4>

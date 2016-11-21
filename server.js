@@ -21,13 +21,13 @@
 	app.use(compression());
 
 
-	var PORT = 80;
+	var PORT = 8080;
 
 	var c = new Client({
 		host: '127.0.0.1',
 		user: 'root',
 		password: 'bahbah',
-		db: '13950630'
+		db: 'maktab'
 	});
 	setCharset(c);
 
