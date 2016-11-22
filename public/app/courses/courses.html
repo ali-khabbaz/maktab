@@ -56,7 +56,7 @@
                         </select>
                     </li>
                     <li class="sort_filter_List_item slider_filter">
-                        <label >سطح</label>
+                        <label>سطح</label>
                         <rzslider rz-slider-on-change="cc.levelSliderChange()"
                                   rz-slider-model="cc.slider_ticks_values.values"
                                   rz-slider-options="cc.slider_ticks_values.options"></rzslider>
@@ -155,11 +155,22 @@
                 </div>
             </div>
             <div class="course_wrapper" data-ng-if="cc.articles">
-                <p ng-if="cc.searchParam">
-                    {{cc.articles.length}}
-                    آموزش یافت شد
-                </p>
                 <div class="paging clearfix">
+                    <div class="search_result_container">
+                        <div class="search_result" ng-if="cc.searchParam">
+                            <p class="header_search_result">جستجوی آموزش <i></i></p>
+                            <p class="subject_search_result">ang</p>
+                            <span> « </span>
+                            <p class="search_count">
+                                {{cc.articles.length}}
+                                آموزش یافت شد.
+
+                            </p>
+                            <span> » </span>
+                        </div>
+                    </div>
+                    <div class="search_container clearfix"><input class="search_courses" type="text"
+                                                                  placeholder="جستجو ..."/><i></i></div>
                     <dir-pagination-controls></dir-pagination-controls>
                 </div>
                 <div class="courses clearfix" data-ng-cloak ng-hide="cc.loadingShow">
