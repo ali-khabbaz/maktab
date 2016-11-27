@@ -60,7 +60,7 @@
     font-family: 'iran';
     src: url('../fonts/IRANSans-light-web.eot');
     src: url('../fonts/IRANSans-light-web.eot?#iefix') format('eot'), /* IE6–8 */ url('../fonts/IRANSans-light-web.woff2') format('woff2'), /* Chrome36+, Opera24+*/ url('../fonts/IRANSans-light-web.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/ url('../fonts/IRANSans-light-web.ttf') format('ttf');
-    font-weight: 300;
+    font-weight: lighter;
 }
 
 * {
@@ -355,11 +355,12 @@ button {
 }
 
 .menu li a {
-    color: #252525;
-    font-size: 14px;
+    color: #4d4d4d;
+    font-size: 16px;
     float: right;
     padding: 5px 20px;
     transition: all .3s;
+    font-weight: 500;
 }
 
 .menu li a:hover {
@@ -386,9 +387,9 @@ button {
 }
 
 .navBar {
-    width: 85%;
+    width: 80%;
     float: right;
-    margin-top: 25px;
+    margin-top: 35px;
 }
 
 .logo img {
@@ -499,6 +500,10 @@ div.main_context div.search_block a.main_button {
     max-height: 200px;
 }
 
+.angucomplete-row {
+    margin-bottom: 0;
+}
+
 .angucomplete-dropdown.main_search {
     padding: 0;
 }
@@ -547,12 +552,12 @@ div.angucomplete-row.main_search, div.angucomplete-row.main_search div.angucompl
     padding: 0;
 }
 
-div.angucomplete-row.main_search div.angucomplete-row:nth-child(2n) {
-    background-color: #efefef;
+div.angucomplete-row.main_search div.angucomplete-row:nth-child(odd) {
+    background-color: #e6f0ff;
 }
 
 div.angucomplete-row.main_search div.angucomplete-row.angucomplete-selected-row {
-    background-color: #97a8bc;
+    background-color: #8290a0;
     color: #fff;
 }
 
@@ -621,30 +626,30 @@ footer.main_footer span {
     display: inline-block;
     float: left;
     height: 45px;
-    margin-right: 8%;
+    margin-right: 8.2%;
     padding: 50px 0;
 }
 
 footer.main_footer span.coursera_logo {
     background: url(../icons/site_logo.png) -4px center no-repeat;
     width: 197px;
-    margin-left: 3%;
+    margin-left: 2%;
 }
 
 footer.main_footer span.udemy_logo {
     background: url(../icons/site_logo.png) -207px center no-repeat;
-    width: 150px;
+    width: 147px;
 }
 
 footer.main_footer span.lynda_logo {
-    background: url(../icons/site_logo.png) -362px center no-repeat;
-    width: 230px;
+    background: url(../icons/site_logo.png) -355px center no-repeat;
+    width: 232px;
 }
 
 footer.main_footer span.pluralsight_logo {
-    background: url(../icons/site_logo.png) -603px center no-repeat;
-    width: 220px;
-    margin-right: 3%;
+    background: url(../icons/site_logo.png) -595px center no-repeat;
+    width: 292px;
+    margin-right: 1%;
 }
 
 /******** categories_main_page *******/
