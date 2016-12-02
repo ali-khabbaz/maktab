@@ -3,63 +3,87 @@
 @font-face {
     font-family: 'lato';
     src: url('../fonts/Lato-Regular.eot');
-    src: url('../fonts/Lato-Regular.eot?#iefix') format('eot'), /* IE6–8 */ url('../fonts/Lato-Regular.woff2') format('woff2'), /* Chrome36+, Opera24+*/ url('../fonts/Lato-Regular.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/ url('../fonts/Lato-Regular.ttf') format('ttf');
+    src: url('../fonts/Lato-Regular.eot?#iefix') format('eot'), /* IE6–8 */
+    url('../fonts/Lato-Regular.woff2') format('woff2'), /* Chrome36+, Opera24+*/
+    url('../fonts/Lato-Regular.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    url('../fonts/Lato-Regular.ttf') format('ttf');
     font-weight: normal;
 }
 
 @font-face {
     font-family: 'lato';
     src: url('../fonts/Lato-Bold.eot');
-    src: url('../fonts/Lato-Bold.eot?#iefix') format('eot'), /* IE6–8 */ url('../fonts/Lato-Bold.woff2') format('woff2'), /* Chrome36+, Opera24+*/ url('../fonts/Lato-Bold.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/ url('../fonts/Lato-Bold.ttf') format('ttf');
+    src: url('../fonts/Lato-Bold.eot?#iefix') format('eot'), /* IE6–8 */
+    url('../fonts/Lato-Bold.woff2') format('woff2'), /* Chrome36+, Opera24+*/
+    url('../fonts/Lato-Bold.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    url('../fonts/Lato-Bold.ttf') format('ttf');
     font-weight: bold;
 }
 
 @font-face {
     font-family: 'roboto';
     src: url('../fonts/Roboto-Condensed-webfont.eot');
-    src: url('../fonts/Roboto-Condensed-webfont.eot?#iefix') format('eot'), /* IE6–8 */ url('../fonts/Roboto-Condensed-webfont.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/ url('../fonts/Roboto-Condensed-webfont.ttf') format('ttf');
+    src: url('../fonts/Roboto-Condensed-webfont.eot?#iefix') format('eot'), /* IE6–8 */
+    url('../fonts/Roboto-Condensed-webfont.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    url('../fonts/Roboto-Condensed-webfont.ttf') format('ttf');
     font-weight: normal;
 }
 
 @font-face {
     font-family: 'roboto';
     src: url('../fonts/Roboto-Medium-webfont.eot');
-    src: url('../fonts/Roboto-Medium-webfont.eot?#iefix') format('eot'), /* IE6–8 */ url('../fonts/Roboto-Medium-webfont.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/ url('../fonts/Roboto-Medium-webfont.ttf') format('ttf');
+    src: url('../fonts/Roboto-Medium-webfont.eot?#iefix') format('eot'), /* IE6–8 */
+    url('../fonts/Roboto-Medium-webfont.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    url('../fonts/Roboto-Medium-webfont.ttf') format('ttf');
     font-weight: 500;
 }
 
 @font-face {
     font-family: 'roboto';
     src: url('../fonts/Roboto-Bold-webfont.eot');
-    src: url('../fonts/Roboto-Bold-webfont.eot?#iefix') format('eot'), /* IE6–8 */ url('../fonts/Roboto-Bold-webfont.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/ url('../fonts/Roboto-Bold-webfont.ttf') format('ttf');
+    src: url('../fonts/Roboto-Bold-webfont.eot?#iefix') format('eot'), /* IE6–8 */
+    url('../fonts/Roboto-Bold-webfont.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    url('../fonts/Roboto-Bold-webfont.ttf') format('ttf');
     font-weight: bold;
 }
 
 @font-face {
     font-family: 'iran';
     src: url('../fonts/IRANSans-Bold-web.eot');
-    src: url('../fonts/IRANSans-Bold-web.eot?#iefix') format('eot'), /* IE6–8 */ url('../fonts/IRANSans-Bold-web.woff2') format('woff2'), /* Chrome36+, Opera24+*/ url('../fonts/IRANSans-Bold-web.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/ url('../fonts/IRANSans-Bold-web.ttf') format('ttf');
+    src: url('../fonts/IRANSans-Bold-web.eot?#iefix') format('eot'), /* IE6–8 */
+    url('../fonts/IRANSans-Bold-web.woff2') format('woff2'), /* Chrome36+, Opera24+*/
+    url('../fonts/IRANSans-Bold-web.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    url('../fonts/IRANSans-Bold-web.ttf') format('ttf');
     font-weight: bold;
 }
 
 @font-face {
     font-family: 'iran';
     src: url('../fonts/IRANSans-Medium-web.eot');
-    src: url('../fonts/IRANSans-Medium-web.eot?#iefix') format('eot'), /* IE6–8 */ url('../fonts/IRANSans-Medium-web.woff2') format('woff2'), /* Chrome36+, Opera24+*/ url('../fonts/IRANSans-Medium-web.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/ url('../fonts/IRANSans-Medium-web.ttf') format('ttf');
+    src: url('../fonts/IRANSans-Medium-web.eot?#iefix') format('eot'), /* IE6–8 */
+    url('../fonts/IRANSans-Medium-web.woff2') format('woff2'), /* Chrome36+, Opera24+*/
+    url('../fonts/IRANSans-Medium-web.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    url('../fonts/IRANSans-Medium-web.ttf') format('ttf');
     font-weight: 500;
 }
 
 @font-face {
     font-family: 'iran';
     src: url('../fonts/IRANSans-web.eot');
-    src: url('../fonts/IRANSans-web.eot?#iefix') format('eot'), /* IE6–8 */ url('../fonts/IRANSans-web.woff2') format('woff2'), /* Chrome36+, Opera24+*/ url('../fonts/IRANSans-web.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/ url('../fonts/IRANSans-web.ttf') format('ttf');
+    src: url('../fonts/IRANSans-web.eot?#iefix') format('eot'), /* IE6–8 */
+    url('../fonts/IRANSans-web.woff2') format('woff2'), /* Chrome36+, Opera24+*/
+    url('../fonts/IRANSans-web.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    url('../fonts/IRANSans-web.ttf') format('ttf');
     font-weight: normal;
 }
 
 @font-face {
     font-family: 'iran';
     src: url('../fonts/IRANSans-light-web.eot');
-    src: url('../fonts/IRANSans-light-web.eot?#iefix') format('eot'), /* IE6–8 */ url('../fonts/IRANSans-light-web.woff2') format('woff2'), /* Chrome36+, Opera24+*/ url('../fonts/IRANSans-light-web.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/ url('../fonts/IRANSans-light-web.ttf') format('ttf');
+    src: url('../fonts/IRANSans-light-web.eot?#iefix') format('eot'), /* IE6–8 */
+    url('../fonts/IRANSans-light-web.woff2') format('woff2'), /* Chrome36+, Opera24+*/
+    url('../fonts/IRANSans-light-web.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    url('../fonts/IRANSans-light-web.ttf') format('ttf');
     font-weight: lighter;
 }
 
@@ -174,6 +198,7 @@ section {
 a {
     text-decoration: none;
     color: #000;
+    cursor: pointer;
 }
 
 ul {
@@ -202,6 +227,7 @@ ul li {
 .ng-cloak {
     display: none !important;
 }
+
 
 /***************** GlobalStyle *******************/
 
@@ -267,6 +293,7 @@ button {
     transition: height .4s;
 }
 
+
 /*
 .tabs_list li a:before{
     content: '';
@@ -302,6 +329,7 @@ button {
     transition-delay: .4s;
 }
 */
+
 .tabs_list li a:hover {
     color: #00c853;
 }
@@ -323,12 +351,15 @@ button {
     height: 4px;
 }
 
+
 /*.tabs_list li a.active:hover {
     color: #494949;
     border-bottom: 2px solid #00c853;
 }*/
 
+
 /**************** homePage **********************/
+
 
 /******** navBar ********/
 
@@ -355,19 +386,30 @@ button {
 }
 
 .menu li a {
+    position: relative;
     color: #4d4d4d;
     font-size: 16px;
     float: right;
-    padding: 5px 20px;
+    padding: 5px 20px 7px 20px;
     transition: all .3s;
     font-weight: 500;
 }
 
-.menu li a:hover {
-    color: #fff;
-    border-top-left-radius: 3px;
-    border-top-right-radius: 3px;
-    background-color: rgba(0, 200, 83, .6);
+.menu li a:after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    background: #00c853;
+    height: 0;
+    -webkit-transition: height .4s;
+    -o-transition: height .4s;
+    transition: height .4s;
+}
+
+.menu li a:hover:after {
+    height: 4px;
 }
 
 .menu li a.active {
@@ -375,6 +417,7 @@ button {
     border-top-right-radius: 3px;
     background-color: #00c853;
     color: #fff;
+    border-radius: 19px;
 }
 
 .register_menu li {
@@ -387,7 +430,7 @@ button {
 }
 
 .navBar {
-    width: 80%;
+    width: 83%;
     float: right;
     margin-top: 35px;
 }
@@ -397,23 +440,23 @@ button {
 }
 
 header.header {
-    background: rgba(255, 255, 255, .4);
+    background: rgba(255, 255, 255, .7);
     position: absolute;
     top: 0;
     width: 100%;
 }
 
 ul.register_menu li a {
-    color: #fff;
     font-size: 14px;
     padding: 5px 0;
+    font-weight: 500;
 }
 
-ul.register_menu li a.nav_register:hover {
+ul.register_menu li a.nav_register {
     color: #00c853;
 }
 
-ul.register_menu li a.nav_logIn:hover {
+ul.register_menu li a.nav_logIn {
     color: #1e88e5;
 }
 
@@ -435,6 +478,7 @@ ul.register_menu li a.nav_logIn span {
     background: url('../icons/icons.png') -159px -18px;
 }
 
+
 /******** Main ********/
 
 main.main_block {
@@ -446,6 +490,7 @@ div.main_bg {
     height: 100vh;
     background-size: 100%;
 }
+
 
 /*img.main_photo {
     width: 100%;
@@ -492,7 +537,9 @@ div.main_context div.search_block a.main_button {
     color: #fff;
 }
 
+
 /************angucomplete*******************/
+
 .angucomplete-dropdown {
     width: 100%;
     margin-top: 44px;
@@ -520,18 +567,21 @@ div.angucomplete-row.main_search figure img {
     margin: 5px;
 }
 
-div.angucomplete-row.main_search div.angucomplete-title {
+div.angucomplete-row.main_search div.course_assets {
     float: right;
     width: 85%;
 }
 
-div.angucomplete-row.main_search div.angucomplete-title p {
+div.angucomplete-row.main_search div.angucomplete_title p {
     font-family: "roboto", "iran", Tahoma;
     float: right;
     margin: 7px 3px 0 0;
 }
 
-div.angucomplete-row.main_search div.angucomplete-title > i, div.teacher i {
+div.angucomplete-row.main_search div.angucomplete_title > i,
+div.teacher i,
+div.link i,
+div.time i {
     width: 24px;
     height: 24px;
     display: inline-block;
@@ -539,21 +589,24 @@ div.angucomplete-row.main_search div.angucomplete-title > i, div.teacher i {
     float: right;
 }
 
-div.angucomplete-row.main_search div.angucomplete-title > i {
+div.angucomplete-row.main_search div.angucomplete_title > i {
     background: url(../icons/icons.png) -126px -126px;
 }
 
-div.teacher {
+div.teacher,
+div.link,
+div.time {
     float: right;
     margin-right: 5px;
 }
 
-div.angucomplete-row.main_search, div.angucomplete-row.main_search div.angucomplete-row {
+div.angucomplete-row.main_search,
+div.angucomplete-row.main_search div.angucomplete-row {
     padding: 0;
 }
 
 div.angucomplete-row.main_search div.angucomplete-row:nth-child(odd) {
-    background-color: #e6f0ff;
+    background-color: #eeeff1;
 }
 
 div.angucomplete-row.main_search div.angucomplete-row.angucomplete-selected-row {
@@ -581,23 +634,42 @@ div.teacher i {
     background: url(../icons/icons.png) -179px -126px;
     width: 16px;
     height: 16px;
-    margin: 2px 0 0 0;
+    margin: 0 0 0 1px;
 }
 
-div.teacher p {
+div.link i {
+    background: url(../icons/icons.png) -230px -128px;
+    width: 13px;
+    height: 16px;
+    margin: 2px 0 0 3px;
+}
+
+div.time i {
+    background: url(../icons/icons.png) -249px -128px;
+    width: 13px;
+    height: 15px;
+    margin: 2px 0 0 2px;
+}
+
+div.teacher p,
+div.link p,
+div.time p {
     font-family: "roboto", "iran", Tahoma, sans-serif;
     color: #636363;
+    margin-top: 5px;
+    float: right;
 }
-
-p.description {
-    color: #999;
+div.time p{
+    margin-top: 1px;
 }
 
 div.angucomplete-row.main_search div.angucomplete-row.angucomplete-selected-row p.description {
     color: #fff;
 }
 
+
 /*-----------------*/
+
 div.main_context div.search_block a.main_button span {
     width: 24px;
     height: 24px;
@@ -651,6 +723,7 @@ footer.main_footer span.pluralsight_logo {
     width: 292px;
     margin-right: 1%;
 }
+
 
 /******** categories_main_page *******/
 
@@ -739,6 +812,7 @@ li.category_list_item a span {
     margin-left: 2px;
 }
 
+
 /********************TopCategories**********************/
 
 section.special_offer_courses_list {
@@ -758,8 +832,7 @@ section.special_offer_courses_list a.special_offer_link {
     box-shadow: -2px 3px 4px 0 rgba(0, 0, 0, 0.16);
 }
 
-section.special_offer_courses_list article.special_offer_course_item {
-}
+section.special_offer_courses_list article.special_offer_course_item {}
 
 section.special_offer_courses_list article.angular_learning_item {
     background-image: url('../img/angularTrainingBG.png');
@@ -832,6 +905,7 @@ section.special_offer_courses_list a.special_offer_link:hover {
     box-shadow: -2px 4px 11px 2px rgba(0, 0, 0, 0.40);
 }
 
+
 /********************** Courses ************************/
 
 div.course_bg {
@@ -881,11 +955,16 @@ article.course:last-child {
 figure.course_img {
     position: relative;
     min-height: 210px;
-    background: #d2d3d8; /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(#d2d3d8, #fefefe); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(#d2d3d8, #fefefe); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(#d2d3d8, #fefefe); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(#d2d3d8, #fefefe); /* Standard syntax (must be last) */
+    background: #d2d3d8;
+    /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#d2d3d8, #fefefe);
+    /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#d2d3d8, #fefefe);
+    /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#d2d3d8, #fefefe);
+    /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#d2d3d8, #fefefe);
+    /* Standard syntax (must be last) */
 }
 
 figure.course_img img {
@@ -990,6 +1069,7 @@ div.view_wrapper {
     margin-left: 10px;
 }
 
+
 /******** RssEmail *********/
 
 section.rss_email {
@@ -1054,6 +1134,7 @@ div.rss_email_register a {
     border-bottom-right-radius: 5px;
 }
 
+
 /********* Footer **********/
 
 footer.footer_page {
@@ -1105,6 +1186,7 @@ p.footer_context {
 div.footer_left_side figure.footer_logo {
     float: left;
 }
+
 
 /******************* FilterCourse **************************/
 
@@ -1277,81 +1359,120 @@ input.input_check_filter[type="checkbox"]:checked + label::before {
     background: url(../icons/icons.png) -469px -61px;
 }
 
+
 /**********CheckBoxTemplate************/
+
 
 /*main.filter_main p.check_filter input.input_check_filter:before{*/
 
+
 /*border: 2px solid #ccc;*/
 
+
 /*content: "";*/
+
 
 /*cursor: pointer;*/
 
+
 /*display: block;*/
+
 
 /*height: 15px;*/
 
+
 /*position: absolute;*/
+
 
 /*-moz-transition: all 0.3s ease-in-out;*/
 
+
 /*-o-transition: all 0.3s ease-in-out;*/
+
 
 /*-webkit-transition: all 0.3s ease-in-out;*/
 
+
 /*transition: all 0.3s ease-in-out;*/
 
+
 /*width: 15px;*/
+
 
 /*z-index: 1;*/
 
+
 /*}*/
+
 
 /*main.filter_main p.check_filter input.input_check_filter:after{*/
 
+
 /*background: #fff;*/
+
 
 /*content: "";*/
 
+
 /*display: block;*/
+
 
 /*height: 15px;*/
 
+
 /*position: absolute;*/
+
 
 /*top: 0;*/
 
+
 /*width: 15px;*/
+
 
 /*z-index: 0;*/
 
+
 /*}*/
 
+
 /*main.filter_main p.check_filter input.input_check_filter:checked:before {*/
+
 
 /*border-color: #009688;*/
 
+
 /*}*/
+
 
 /*main.filter_main p.check_filter input.input_check_filter:checked:before {*/
 
+
 /*border-top-style: none;*/
+
 
 /*border-right-style: none;*/
 
+
 /*height: 10px;*/
+
 
 /*-moz-transform: rotate(-45deg);*/
 
+
 /*-ms-transform: rotate(-45deg);*/
+
 
 /*-o-transform: rotate(-45deg);*/
 
+
 /*-webkit-transform: rotate(-45deg);*/
+
 
 /*transform: rotate(-45deg);*/
 
+
 /*}*/
+
 
 /********************************/
 
@@ -1516,6 +1637,7 @@ section.filter_course_wrapper div.courses {
     min-height: 1300px;
 }
 
+
 /*SortView*/
 
 div.sort_filter div.sortOption {
@@ -1559,6 +1681,7 @@ section.filter_course_wrapper div.course_wrapper .paging.bottom_side_video {
     position: relative;
     bottom: 0;
 }
+
 
 /****Paging****/
 
@@ -1631,11 +1754,16 @@ div.search_container input.search_courses {
     padding: 3px 5px;
     width: 140px;
     color: #4c5765;
-    background: #e7e7e7; /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(#e7e7e7, #fdfdfd); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(#e7e7e7, #fdfdfd); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(#e7e7e7, #fdfdfd); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(#e7e7e7, #fdfdfd); /* Standard syntax */
+    background: #e7e7e7;
+    /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#e7e7e7, #fdfdfd);
+    /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#e7e7e7, #fdfdfd);
+    /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#e7e7e7, #fdfdfd);
+    /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#e7e7e7, #fdfdfd);
+    /* Standard syntax */
     transition: width .8s;
 }
 
@@ -1684,7 +1812,8 @@ div.search_result_container {
     float: right;
 }
 
-div.search_result_container p, div.search_result_container div.search_result {
+div.search_result_container p,
+div.search_result_container div.search_result {
     line-height: 2.5;
     color: #373f49;
     float: right;
@@ -1724,6 +1853,7 @@ p.header_search_result i {
 div.search_result_container p.search_count {
     color: #373f49;
 }
+
 
 /********************** VideoCourses ************************/
 
@@ -1786,6 +1916,7 @@ p.video_course_title_detail.views span.view_value {
     margin-right: 7px;
 }
 
+
 /***Video***/
 
 section.intro_course {
@@ -1796,6 +1927,7 @@ section.intro_course {
 div.video_course_wrapper {
     width: 68.4%;
     float: right;
+    min-height: 800px;
 }
 
 figure.video_figure img {
@@ -1818,6 +1950,7 @@ figure.video_figure a.icon_play {
     height: 80px;
     background: url("../icons/icons.png") -101px -47px;
 }
+
 
 /*****aside*****/
 
@@ -1921,6 +2054,7 @@ li.list_course_download_details_item button.download_link_course span.icon {
     float: right;
 }
 
+
 /************CourseContent**************/
 
 div.course_detailes_wrapper {
@@ -1961,10 +2095,15 @@ div.course_comment_wrapper a.show_more {
     font-size: 13px;
     color: #1e88e5;
     bottom: 0;
+    right: 0;
     width: 100%;
     padding: 27px 0 15px 0;
     font-weight: lighter;
     background: linear-gradient(rgba(250, 250, 250, 0), rgba(250, 250, 250, 0.95), #f7f7f7);
+}
+
+div.course_comment_wrapper a.show_more span{
+    margin-right: 10px;
 }
 
 section.course_comment header.content_header h4 {
@@ -2000,6 +2139,7 @@ section.section_course header.section_course_header h5 {
     margin-left: 4px;
     display: inline-block;
 }
+
 
 /***********courseAccordion**************/
 
@@ -2107,6 +2247,7 @@ section.section_course article.section_course_accordion:last-child header.header
     border-bottom: 1px solid #eee;
 }
 
+
 /*mainAccordion*/
 
 article.section_course_accordion main.main_section_course_accordion {
@@ -2120,6 +2261,7 @@ article.section_course_accordion main.main_section_course_accordion {
     border-top: none;
 }
 
+
 /*activeAccordion*/
 
 article.section_course_accordion header.header_lecture_course.active {
@@ -2130,6 +2272,7 @@ article.section_course_accordion header.header_lecture_course.active {
 header.section_course_header.active span.icon_accordion {
     background: url("../icons/icons.png") -369px -57px;
 }
+
 
 /*******SimilarCourses*********/
 
@@ -2179,6 +2322,7 @@ a.similar_courses_item_link:hover div.similar_course_details p {
     color: #0b71cb;
 }
 
+
 /*******SearchVideo*******/
 
 section.search_video_section input.search_video_section_input {
@@ -2213,6 +2357,7 @@ section.search_video_section .angucomplete-dropdown {
     width: 800px;
     height: 480px;
 }
+
 
 /*****************loadingBars******************/
 
@@ -2277,6 +2422,7 @@ section.search_video_section .angucomplete-dropdown {
     }
 }
 
+
 /*customScroll*/
 
 main.filter_main .mCS-autoHide > .mCustomScrollBox > .mCSB_scrollTools,
@@ -2322,6 +2468,7 @@ div.course_main_intro_wrapper .mCS-minimal-dark.mCSB_scrollTools .mCSB_dragger:a
     filter: "alpha(opacity=50)";
     -ms-filter: "alpha(opacity=50)"
 }
+
 
 /*rzSlider*/
 
