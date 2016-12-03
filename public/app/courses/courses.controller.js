@@ -163,9 +163,9 @@
 				$(event.target).siblings('ul').slideUp();
 			} else {
 				$('.courses_accordion h4').removeClass('active');
-				$('.courses_accordion ul').slideUp(700);
+				$('.courses_accordion ul').slideUp();
 				$(event.target).addClass('active');
-				$(event.target).siblings('ul').slideDown(700);
+				$(event.target).siblings('ul').slideDown();
 			}
 		}
 

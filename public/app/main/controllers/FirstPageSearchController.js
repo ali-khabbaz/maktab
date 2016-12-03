@@ -25,6 +25,7 @@
 					console.log('getSearchDataErrrrrrrr', res[0]);
 				} else {
 					vm.searchData = res[1];
+					console.log('vm.searchData', vm.searchData);
 				}
 			});
 		}

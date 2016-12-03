@@ -1,4 +1,5 @@
 /node_modules
 /public/vendor
 /public/views/index.ejs
-/idea/
+/.idea
+

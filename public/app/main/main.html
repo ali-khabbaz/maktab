@@ -11,11 +11,14 @@
                     <li>
                         <a href="#/courses">شاخه های درسی</a>
                     </li>
+                    <li>
+                        <a href="#/courses">درباره ما</a>
+                    </li>
                 </ul>
-                <!-- <ul class="register_menu pull_left">
+                 <ul class="register_menu pull_left">
                     <li><a class="nav_register" href=""><span></span>عضویت</a></li>
                     <li><a class="nav_logIn" href=""><span></span>ورود</a></li>
-                </ul> -->
+                </ul>
             </nav>
             <div class="logo pull_left">
                 <a href=""><img src="assets/icons/logo.png"></a>
@@ -26,7 +29,12 @@
         <div class="main_context">
             <div class="search_block">
                 <div data-ng-if="search.searchData" class="anguComplete_wrapper clearfix">
-                    <div class="clearfix" ng-keypress="search.keyEventHandler($event)" angucomplete-alt id="ex1" placeholder="جستجوی عنوان آموزشی" maxlength="50" pause="100" selected-object="search.selectedValue" local-data="search.searchData" search-fields="name,subcategoryName" title-field="name,subcategoryName" minlength="1" input-class="main_search" match-class="highlight" template-url="app/main/my-custom-template.html" input-changed="search.inputChanged"></div>
+                    <div class="clearfix" ng-keypress="search.keyEventHandler($event)" angucomplete-alt id="ex1"
+                         placeholder="جستجوی عنوان آموزشی" maxlength="50" pause="100"
+                         selected-object="search.selectedValue" local-data="search.searchData"
+                         search-fields="name,subcategoryName,persian_name" title-field="name,subcategoryName"
+                         minlength="1" input-class="main_search" match-class="highlight"
+                         template-url="app/main/my-custom-template.html" input-changed="search.inputChanged"></div>
                 </div>
                 <a class="main_button">
                     <span></span>جستجو</a>
@@ -54,7 +62,8 @@
                 </header>
                 <figure class="special_offer_figure">
                     <img class="ribbon" alt="ribbon" src="assets/img/ribbon.png">
-                    <img class="animation_learning" alt="android_training" title="android_training" src="assets/img/androidTraining.png">
+                    <img class="animation_learning" alt="android_training" title="android_training"
+                         src="assets/img/androidTraining.png">
                 </figure>
             </article>
         </a>
@@ -65,7 +74,8 @@
                 </header>
                 <figure class="special_offer_figure">
                     <img class="ribbon" alt="ribbon" src="assets/img/ribbon.png">
-                    <img class="photoshop_learning" alt="photoshop_learning" title="photoshop_learning" src="assets/img/photoshopTraining.png">
+                    <img class="photoshop_learning" alt="photoshop_learning" title="photoshop_learning"
+                         src="assets/img/photoshopTraining.png">
                 </figure>
             </article>
         </a>
@@ -78,7 +88,8 @@
                 </header>
                 <figure class="special_offer_figure">
                     <img class="ribbon" alt="ribbon" src="assets/img/ribbon.png">
-                    <img class="angular_learning" alt="angular_learning" title="angular_learning" src="assets/img/angularTraining.png">
+                    <img class="angular_learning" alt="angular_learning" title="angular_learning"
+                         src="assets/img/angularTraining.png">
                 </figure>
             </article>
         </a>
@@ -89,7 +100,8 @@
                 </header>
                 <figure class="special_offer_figure">
                     <img class="ribbon" alt="ribbon" src="assets/img/ribbon.png">
-                    <img class="office_learning" alt="office_learning" title="office_learning" src="assets/img/officeTraining1.png">
+                    <img class="office_learning" alt="office_learning" title="office_learning"
+                         src="assets/img/officeTraining1.png">
                 </figure>
             </article>
         </a>
@@ -99,16 +111,17 @@
     <div class="container clearfix" data-ng-if="taas.topSubCategories[0].articles">
         <div class="tabs_wrapper clearfix">
             <ul class="tabs_list clearfix">
-<!--
-                 <li ng-click="taas.changeTab('Best')"><a data-ng-class="{'active' : taas.tab === 'Best'}" href="">محبوب ترین درس ها</a></li>
-                <li><a href="">طراحی</a></li>
--->
+                <!--
+                                 <li ng-click="taas.changeTab('Best')"><a data-ng-class="{'active' : taas.tab === 'Best'}" href="">محبوب ترین درس ها</a></li>
+                                <li><a href="">طراحی</a></li>
+                -->
                 <li ng-click="taas.changeTab(info.name)" data-ng-repeat="info in taas.topSubCategories">
                     <a data-ng-class="{'active' : taas.tab === info.name}" data-hover="{{info.name}}" href="">{{info.persian_name}}</a>
                 </li>
             </ul>
         </div>
-        <section data-ng-repeat="info in taas.topSubCategories" class="course_wrapper clearfix" data-ng-show="taas.tab === info.name ">
+        <section data-ng-repeat="info in taas.topSubCategories" class="course_wrapper clearfix"
+                 data-ng-show="taas.tab === info.name ">
             <div class="loading-container" ng-if="taas.loadingshow">
                 <!--<div class="loader">-->
                 <div class="loading-bars">
@@ -127,7 +140,9 @@
                             <p>رایــگان</p>
                         </div>
                         <!-- <img class="course_img" src="assets/img/course_small.jpg" alt="softLearning"> -->
-                        <img class="course_img" ng-src="assets/img/articles/{{el.articleId}}/Main-001.jpg" onerror="this.src='assets/img/defaultImage.png'" width="277" alt="{{el.articleName}}" title="{{el.articleName}}">
+                        <img class="course_img" ng-src="assets/img/articles/{{el.articleId}}/Main-001.jpg"
+                             onerror="this.src='assets/img/defaultImage.png'" width="277" alt="{{el.articleName}}"
+                             title="{{el.articleName}}">
                     </figure>
                     <header class="course_header clearfix">
                         <h4>

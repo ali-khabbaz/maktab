@@ -27,7 +27,7 @@
 		host: '127.0.0.1',
 		user: 'root',
 		password: 'bahbah',
-		db: 'maktab_13950901'
+		db: 'maktab'
 	});
 	setCharset(c);
 
