@@ -185,6 +185,34 @@
                         </ul>
                     </main>
                 </section>
+                <section class="search_video_section clearfix" ng-controller="FirstPageSearchController as search">
+                    <header class="section_header clearfix">
+                        <h4>جستجو</h4>
+                    </header>
+                    <!-- <div>
+                        <input type="text" class="search_video_section_input"><span></span>
+                    </div> -->
+                    <!--morteza-->
+                    <div data-ng-if="search.searchData" class="anguComplete_wrapper clearfix">
+                        <div
+                            class="anguComplete_video clearfix"
+                            ng-keypress="search.keyEventHandler($event)"
+                            angucomplete-alt
+                            id="ex1"
+                            maxlength="50"
+                            pause="100"
+                            selected-object="search.selectedValue"
+                            local-data="search.searchData"
+                            template-url="app/main/my-custom-template.html"
+                            search-fields="name,subcategoryName"
+                            title-field="name,subcategoryName"
+                            minlength="1"
+                            input-class="search_video_section_input"
+                            match-class="highlight"
+                            input-changed="search.inputChanged"></div>
+                        <i></i>
+                    </div>
+                </section>
                 <section class="similar_courses">
                     <header class="section_header clearfix">
                         <h4>درس های مشابه</h4>
@@ -246,33 +274,7 @@
                         </li> -->
                     </ul>
                 </section>
-                <section class="search_video_section clearfix" ng-controller="FirstPageSearchController as search">
-                    <header class="section_header clearfix">
-                        <h4>جستجو</h4>
-                    </header>
-                    <!-- <div>
-                        <input type="text" class="search_video_section_input"><span></span>
-                    </div> -->
-                    <!--morteza-->
-                    <div data-ng-if="search.searchData" class="anguComplete_wrapper clearfix">
-                        <div
-                            class="anguComplete_video clearfix"
-                            ng-keypress="search.keyEventHandler($event)"
-                            angucomplete-alt
-                            id="ex1"
-                            maxlength="50"
-                            pause="100"
-                            selected-object="search.selectedValue"
-                            local-data="search.searchData"
-                            search-fields="name,subcategoryName"
-                            title-field="name,subcategoryName"
-                            minlength="1"
-                            input-class="search_video_section_input"
-                            match-class="highlight"
-                            input-changed="search.inputChanged"></div>
-                        <i></i>
-                    </div>
-                </section>
+
             </aside>
         </div>
     </section>
