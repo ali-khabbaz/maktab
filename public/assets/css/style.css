@@ -1034,7 +1034,7 @@ div.rss_email_register {
 
 input.email_input_rss {
     background-color: #fff;
-    width: 70%;
+    width: 60%;
     color: #47555c;
     float: left;
     padding: 10px 10px;
@@ -1045,8 +1045,7 @@ input.email_input_rss {
 
 div.rss_email_register a {
     float: left;
-    line-height: 20px;
-    padding: 11px 34px;
+    padding: 4px 35px 4px;
     background-color: #00c853;
     color: #fff;
     font-size: 17px;
@@ -1195,13 +1194,12 @@ div.courses_accordion h4.header_courses_accordion {
     border-bottom: 1px solid #f2f2f2;
     border-top: 1px solid #f2f2f2;
     margin-top: 2px;
-    transition: all .7s;
 }
 
 div.courses_accordion h4.header_courses_accordion span.icon_accordion {
     display: block;
     float: right;
-    background: url("../icons/icons.png") -452px -18px;
+    background: url("../icons/icons.png") -452px -21px;
     width: 25px;
     height: 25px;
 }
@@ -1364,6 +1362,9 @@ main.filter_main p.check_filter label.label_check_filter {
 
 div.courses_accordion ul.list_courses_accordion {
     display: none;
+    background-color: #e8f4ff;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
 div.courses_accordion ul.list_courses_accordion li.list_courses_item {
@@ -1385,22 +1386,15 @@ div.courses_accordion ul.list_courses_accordion li.list_courses_item a {
     color: #394c5c
 }
 
-div.courses_accordion h4.header_courses_accordion.active {
+div.courses_accordion h4.header_courses_accordion.open {
     background-color: #9cd0fd;
     color: #fff;
     border-radius: 5px;
-    transition: all .7s;
+    transition: background-color .5s;
 }
 
-div.courses_accordion h4.header_courses_accordion.active + ul.list_courses_accordion {
-    background-color: #e8f4ff;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-    margin-top: -2px;
-}
-
-div.courses_accordion h4.header_courses_accordion.active span.icon_accordion {
-    background: url("../icons/icons.png") -470px -18px;
+div.courses_accordion h4.header_courses_accordion.open span.icon_accordion {
+    background: url("../icons/icons.png") -470px -21px;
 }
 
 div.courses_accordion h4.header_courses_accordion:hover {
@@ -1453,12 +1447,13 @@ div.sort_filter ul.sort_filter_List li.sort_filter_List_item label {
 }
 
 div.sort_filter ul.sort_filter_List li.sort_filter_List_item select {
-    font-family: "iran";
+    font-family: "lato", "roboto", "iran", tahoma, sans-serif;
     border: 1px solid #dadada;
     color: #a4a4a4;
     float: right;
     font-size: 11px;
     padding: 3px 4px;
+    height: 25px;
 }
 
 div.sort_filter ul.sort_filter_List li.sort_filter_List_item.sort_view label {
@@ -2488,4 +2483,8 @@ div.course_main_intro_wrapper .mCS-minimal-dark.mCSB_scrollTools .mCSB_dragger:a
     div.main_bg {
         height: 770px;
     }
+}
+/*jwPlayer*/
+.jwlogo{
+    display: none;
 }
