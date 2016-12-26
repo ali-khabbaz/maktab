@@ -49,13 +49,24 @@
     <section class="intro_course clearfix">
         <div class="container clearfix">
             <div class="video_course_wrapper clearfix" data-ng-show="vc.videoAddress">
-                <video id="my-video2" title="{{vc.articleInfo.name}}"></video>
+                <div class="video_wrapper clearfix">
+                    <div class="loading-container" ng-show="vc.loadingShow">
+                        <div class="loading-bars">
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                        </div>
+                    </div>
+                    <video id="my-video2" title="{{vc.articleInfo.name}}"></video>
+                </div>
                 <div class="course_detailes_wrapper clearfix">
                     <section class="course_comment clearfix" data-ng-if="vc.articleVideos">
                         <header class="section_header content_header clearfix">
                             <h4 class="course_comments">
-                            <i></i>
-                            توضیحات
+                                <i></i>
+                                توضیحات
                             </h4>
                         </header>
                         <div class="course_comment_wrapper clearfix" custom-scroll>
@@ -63,10 +74,11 @@
                                 <p class="course_main_intro">
                                     {{vc.articleInfo.descBig}}
                                 </p>
-                                <a class="show_more clearfix" ng-click='vc.more($event)' ng-if='vc.articleInfo.descBig.length > 630'>
-                                <span ng-if='vc.articleInfo.descBig.length > 630'>نمایش بیشتر</span>
-                                <span  ng-if='vc.articleInfo.descBig.length > 630'>...</span>
-                            </a>
+                                <a class="show_more clearfix" ng-click='vc.more($event)'
+                                   ng-if='vc.articleInfo.descBig.length > 630'>
+                                    <span ng-if='vc.articleInfo.descBig.length > 630'>نمایش بیشتر</span>
+                                    <span ng-if='vc.articleInfo.descBig.length > 630'>...</span>
+                                </a>
                             </div>
                         </div>
                     </section>
@@ -78,10 +90,11 @@
                             </h4>
                         </header>
                         <section class="section_course" data-ng-repeat="info in vc.articleVideos" data-ng-if="info">
-                            <header class="section_course_header" ng-class="{ 'active': $index==0}" ng-click="vc.accordion($event)">
+                            <header class="section_course_header" ng-class="{ 'active': $index==0}"
+                                    ng-click="vc.accordion($event)">
                                 <span class="icon_accordion"></span>
                                 <h5>بخش
-                                  {{vc.count[info.sectionId-1]}}:</h5>
+                                    {{vc.count[info.sectionId-1]}}:</h5>
                                 <h5>{{info.sectionName}}</h5>
                             </header>
                             <article class="section_course_accordion" data-ng-repeat="el in info.videos">
@@ -102,7 +115,9 @@
                                               دقیقه</span>
                                             <span class="icon_time"></span>
                                         </p>
-                                        <p class="video_preview" ng-class="{ 'video_preview_active': info.sectionId == vc.selectedSection && el.videoId == vc.selectedVideo  }" data-ng-click="vc.selectVideo(info.sectionId,el.videoId)">نمایش</p>
+                                        <p class="video_preview"
+                                           ng-class="{ 'video_preview_active': info.sectionId == vc.selectedSection && el.videoId == vc.selectedVideo  }"
+                                           data-ng-click="vc.selectVideo(info.sectionId,el.videoId)">نمایش</p>
                                     </div>
                                 </header>
                                 <!--<main class="main_section_course_accordion">-->
@@ -119,8 +134,8 @@
                 <section class="video_course_details">
                     <header class="section_header clearfix">
                         <h4>
-                        <i></i>
-                        جزئیات
+                            <i></i>
+                            جزئیات
                         </h4>
                     </header>
                     <main class="main_details_course clearfix">
@@ -191,21 +206,21 @@
                     <!--morteza-->
                     <div data-ng-if="search.searchData" class="anguComplete_wrapper clearfix">
                         <div
-                            class="anguComplete_video clearfix"
-                            ng-keypress="search.keyEventHandler($event)"
-                            angucomplete-alt
-                            id="ex1"
-                            maxlength="50"
-                            pause="100"
-                            selected-object="search.selectedValue"
-                            local-data="search.searchData"
-                            template-url="app/main/my-custom-template.html"
-                            search-fields="name,subcategoryName"
-                            title-field="name,subcategoryName"
-                            minlength="1"
-                            input-class="search_video_section_input"
-                            match-class="highlight"
-                            input-changed="search.inputChanged"></div>
+                                class="anguComplete_video clearfix"
+                                ng-keypress="search.keyEventHandler($event)"
+                                angucomplete-alt
+                                id="ex1"
+                                maxlength="50"
+                                pause="100"
+                                selected-object="search.selectedValue"
+                                local-data="search.searchData"
+                                template-url="app/main/my-custom-template.html"
+                                search-fields="name,subcategoryName"
+                                title-field="name,subcategoryName"
+                                minlength="1"
+                                input-class="search_video_section_input"
+                                match-class="highlight"
+                                input-changed="search.inputChanged"></div>
                         <i></i>
                     </div>
                 </section>
@@ -217,20 +232,22 @@
                         <li class="similar_courses_item clearfix" data-ng-repeat="info in vc.similarArticles">
                             <a class="similar_courses_item_link clearfix" href="#/video/{{::info.articleId}}">
                                 <figure class="similar_course_figure">
-                                    <img ng-src="assets/img/articles/{{::info.articleId}}/Main-001.jpg" onerror="this.src='assets/img/defaultImage.png'" width="115" alt="{{info.articleName}}" title="{{info.articleName}}">
+                                    <img ng-src="assets/img/articles/{{::info.articleId}}/Main-001.jpg"
+                                         onerror="this.src='assets/img/defaultImage.png'" width="115"
+                                         alt="{{info.articleName}}" title="{{info.articleName}}">
                                 </figure>
                                 <div class="similar_course_details">
                                     <p>{{::info.articleName
                                         < 24 ? '' : '...'}}{{::info.articleName|limitTo:24}}</p>
-                                            <p>{{::info.authorName
-                                                < 24 ? '' : '...'}}{{::info.authorName|limitTo:24}}</p>
-                                                    <p class="course_rating">
-                                                        <span class="star_full"></span>
-                                                        <span class="star_full"></span>
-                                                        <span class="star_full"></span>
-                                                        <span class="star_full"></span>
-                                                        <span class="star_blank"></span>
-                                                    </p>
+                                    <p>{{::info.authorName
+                                        < 24 ? '' : '...'}}{{::info.authorName|limitTo:24}}</p>
+                                    <p class="course_rating">
+                                        <span class="star_full"></span>
+                                        <span class="star_full"></span>
+                                        <span class="star_full"></span>
+                                        <span class="star_full"></span>
+                                        <span class="star_blank"></span>
+                                    </p>
                                 </div>
                             </a>
                         </li>
@@ -281,7 +298,11 @@
                     </div> -->
                     <!--morteza-->
                     <div data-ng-if="search.searchData" class="anguComplete_wrapper clearfix">
-                        <div class="anguComplete_video clearfix" ng-keypress="search.keyEventHandler($event)" angucomplete-alt id="ex1" maxlength="50" pause="100" selected-object="search.selectedValue" local-data="search.searchData" search-fields="name,subcategoryName" title-field="name,subcategoryName" minlength="1" input-class="search_video_section_input" match-class="highlight" input-changed="search.inputChanged"></div>
+                        <div class="anguComplete_video clearfix" ng-keypress="search.keyEventHandler($event)"
+                             angucomplete-alt id="ex1" maxlength="50" pause="100" selected-object="search.selectedValue"
+                             local-data="search.searchData" search-fields="name,subcategoryName"
+                             title-field="name,subcategoryName" minlength="1" input-class="search_video_section_input"
+                             match-class="highlight" input-changed="search.inputChanged"></div>
                         <i></i>
                     </div>
                 </section>

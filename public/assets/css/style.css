@@ -1920,11 +1920,16 @@ section.intro_course {
 }
 
 div.video_course_wrapper {
-    width: 68.4%;
+    width: 66.8%;
     float: right;
-    min-height: 800px;
 }
 
+div.video_wrapper {
+    background: rgba(0, 0, 0, .8);
+    width: 100%;
+    float: right;
+    height: 480px;
+}
 figure.video_figure img {
     float: right;
 }
@@ -2055,6 +2060,8 @@ li.list_course_download_details_item button.download_link_course span.icon {
 div.course_detailes_wrapper {
     background-color: #fff;
     margin-top: 29px;
+    width: 100%;
+    float: right;
 }
 
 section.course_comment section.section_course {
@@ -2357,7 +2364,7 @@ section.search_video_section .angucomplete-dropdown {
 /*****************loadingBars******************/
 
 .loading-container {
-    height: 600px;
+    height: 100%;
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
@@ -2635,3 +2642,4 @@ div.course_main_intro_wrapper .mCS-minimal-dark.mCSB_scrollTools .mCSB_dragger:a
 .jwlogo{
     display: none;
 }
+
