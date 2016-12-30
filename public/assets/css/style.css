@@ -2328,27 +2328,11 @@ a.similar_courses_item_link:hover div.similar_course_details p {
 /*******SearchVideo*******/
 
 section.search_video_section input.search_video_section_input {
-    background: #f5f5f5;
+    background:#f5f5f5 url(../icons/search_icon.png) 2% 50% no-repeat;
     border: 1px solid #ccc;
     padding: 10px 9px;
     width: 100%;
     color: #3f4853;
-}
-
-section.search_video_section div {
-    position: relative;
-}
-
-section.search_video_section i {
-    width: 29px;
-    height: 32px;
-    display: inline-block;
-    float: right;
-    margin: 2px 2px 0 0;
-    background: url("../icons/icons.png") -394px -58px;
-    position: absolute;
-    left: 6px;
-    top: 3px;
 }
 
 section.search_video_section .angucomplete-dropdown {
@@ -2360,6 +2344,15 @@ section.search_video_section .angucomplete-dropdown {
     height: 480px;
 }
 
+div.angucomplete-row.video_search figure {
+    float: right;
+    width: 22%;
+}
+
+div.angucomplete-row.video_search div.course_assets {
+    float: right;
+    width: 77%;
+}
 
 /*****************loadingBars******************/
 

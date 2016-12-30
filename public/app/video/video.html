@@ -200,28 +200,16 @@
                     <header class="section_header clearfix">
                         <h4>جستجو</h4>
                     </header>
-                    <!-- <div>
-                        <input type="text" class="search_video_section_input"><span></span>
-                    </div> -->
-                    <!--morteza-->
                     <div data-ng-if="search.searchData" class="anguComplete_wrapper clearfix">
-                        <div
-                                class="anguComplete_video clearfix"
-                                ng-keypress="search.keyEventHandler($event)"
-                                angucomplete-alt
-                                id="ex1"
-                                maxlength="50"
-                                pause="100"
-                                selected-object="search.selectedValue"
-                                local-data="search.searchData"
-                                template-url="app/main/my-custom-template.html"
-                                search-fields="name,subcategoryName"
-                                title-field="name,subcategoryName"
-                                minlength="1"
-                                input-class="search_video_section_input"
-                                match-class="highlight"
-                                input-changed="search.inputChanged"></div>
-                        <i></i>
+                        <div class="anguComplete_video clearfix" ng-keypress="search.keyEventHandler($event)"
+                             angucomplete-alt id="ex1" maxlength="50" pause="100" selected-object="search.selectedValue"
+                             local-data="search.searchData" search-fields="name,subcategoryName"
+                             template-url="app/video/video-search-template.html"
+                             title-field="name,subcategoryName"
+                             minlength="1"
+                             input-class="search_video_section_input"
+                             match-class="highlight" input-changed="search.inputChanged"></div>
+                        <i class="search_video_icon"></i>
                     </div>
                 </section>
                 <section class="similar_courses">
@@ -251,61 +239,9 @@
                                 </div>
                             </a>
                         </li>
-                        <!-- <li class="similar_courses_item clearfix">
-                            <a class="similar_courses_item_link clearfix" href="">
-                                <figure class="similar_course_figure">
-                                    <img src="assets/img/similar_course.jpg" alt="systemLearning">
-                                </figure>
-                                <div class="similar_course_details">
-                                    <p>یادگیری سیستم عامل</p>
-                                    <p>joie teribiani</p>
-                                    <p class="course_rating">
-                                        <span class="star_full"></span>
-                                        <span class="star_full"></span>
-                                        <span class="star_full"></span>
-                                        <span class="star_full"></span>
-                                        <span class="star_blank"></span>
-                                    </p>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="similar_courses_item clearfix">
-                            <a class="similar_courses_item_link clearfix" href="">
-                                <figure class="similar_course_figure">
-                                    <img src="assets/img/similar_course_1.jpg" alt="systemLearning">
-                                </figure>
-                                <div class="similar_course_details">
-                                    <p>یادگیری سیستم عامل</p>
-                                    <p>joie teribiani</p>
-                                    <p class="course_rating">
-                                        <span class="star_full"></span>
-                                        <span class="star_full"></span>
-                                        <span class="star_full"></span>
-                                        <span class="star_full"></span>
-                                        <span class="star_blank"></span>
-                                    </p>
-                                </div>
-                            </a>
-                        </li> -->
                     </ul>
                 </section>
-                <section class="search_video_section clearfix" ng-controller="FirstPageSearchController as search">
-                    <header class="section_header clearfix">
-                        <h4>جستجو</h4>
-                    </header>
-                    <!-- <div>
-                        <input type="text" class="search_video_section_input"><span></span>
-                    </div> -->
-                    <!--morteza-->
-                    <div data-ng-if="search.searchData" class="anguComplete_wrapper clearfix">
-                        <div class="anguComplete_video clearfix" ng-keypress="search.keyEventHandler($event)"
-                             angucomplete-alt id="ex1" maxlength="50" pause="100" selected-object="search.selectedValue"
-                             local-data="search.searchData" search-fields="name,subcategoryName"
-                             title-field="name,subcategoryName" minlength="1" input-class="search_video_section_input"
-                             match-class="highlight" input-changed="search.inputChanged"></div>
-                        <i></i>
-                    </div>
-                </section>
+
             </aside>
         </div>
     </section>
