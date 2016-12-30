@@ -158,14 +158,14 @@
 		}
 
 		function accordion(event) {
-			if ($(event.target).hasClass('active')) {
-				$(event.target).removeClass('active');
-				$(event.target).siblings('ul').slideUp();
+			if ($(event.target).hasClass('open')) {
+				$(event.target).removeClass('open');
+				$(event.target).siblings('ul').slideUp(500);
 			} else {
-				$('.courses_accordion h4').removeClass('active');
-				$('.courses_accordion ul').slideUp();
-				$(event.target).addClass('active');
-				$(event.target).siblings('ul').slideDown();
+				$('.courses_accordion h4').removeClass('open');
+				$('.courses_accordion ul').slideUp(500);
+				$(event.target).addClass('open');
+				$(event.target).siblings('ul').slideDown(500);
 			}
 		}
 

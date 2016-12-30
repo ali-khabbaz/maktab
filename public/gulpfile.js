@@ -15,6 +15,7 @@
     var commonCss = [
             "./vendor/jquery-ui/ui/themes/smoothness/jquery-ui.min.css",
             "./vendor/angucomplete-alt/angucomplete-alt.css",
+            "./assets/css/style.css",
             "./vendor/angular/angular-csp.css",
             "./vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css",
             "./assets/css/style.css"
