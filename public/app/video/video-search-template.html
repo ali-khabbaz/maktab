@@ -1,16 +1,25 @@
 <div class="angucomplete-holder" ng-class="{'angucomplete-dropdown-visible': showDropdown}">
-    <input ng-model="searchStr" field-tabindex="25" ng-disabled="disableInput" type="text" placeholder="جستجوی عنوان آموزشی" class="search_video_section_input ng-dirty ng-valid-parse ng-touched" autocapitalize="off" autocorrect="off" autocomplete="off" ng-change="inputChangeHandler(searchStr)" ng-focus="onFocusHandler()" ng-blur="hideResults($event)">
+    <input ng-model="searchStr" field-tabindex="25" ng-disabled="disableInput" type="text"
+           placeholder="عنوان آموزشی" class="search_video_section_input ng-dirty ng-valid-parse ng-touched"
+           autocapitalize="off" autocorrect="off" autocomplete="off" ng-change="inputChangeHandler(searchStr)"
+           ng-focus="onFocusHandler()" ng-blur="hideResults($event)">
     <div class="angucomplete-dropdown video_search_container main_search clearfix" custom-scroll ng-show="showDropdown">
         <div class="angucomplete-searching ng-binding ng-hide" ng-show="searching">
             در حال جستجو ...
         </div>
-        <div class="angucomplete-searching ng-binding" ng-show="!searching &amp;&amp; (!results || results.length == 0)" ng-bind="textNoResults">نتیجه ای یافت نشد!!!
+        <div class="angucomplete-searching ng-binding" ng-show="!searching &amp;&amp; (!results || results.length == 0)"
+             ng-bind="textNoResults">نتیجه ای یافت نشد!!!
         </div>
         <!-- ngRepeat: result in results -->
-        <div class="main_search video_search angucomplete-row clearfix" ng-click="selectResult({title: searchStr, originalObject: { name: searchStr, custom: true }})" ng-mouseenter="hoverRow(results.length)">
+        <div class="main_search video_search angucomplete-row clearfix"
+             ng-click="selectResult({title: searchStr, originalObject: { name: searchStr, custom: true }})"
+             ng-mouseenter="hoverRow(results.length)">
             <!--ng-class="{'angucomplete-selected-row': results.length == currentIndex}"-->
-            <div class="angucomplete-row clearfix" ng-repeat="result in results" ng-click="selectResult(result)" ng-mouseenter="hoverRow($index)" ng-class="{'angucomplete-selected-row': $index == currentIndex}">
-                <figure class="angucomplete-img clearfix"><img ng-src="assets/img/articles/{{result.originalObject.id}}/Main-001.jpg" onerror="this.src='assets/img/defaultImage.png'" /></figure>
+            <div class="angucomplete-row clearfix" ng-repeat="result in results" ng-click="selectResult(result)"
+                 ng-mouseenter="hoverRow($index)" ng-class="{'angucomplete-selected-row': $index == currentIndex}">
+                <figure class="angucomplete-img clearfix"><img
+                        ng-src="assets/img/articles/{{result.originalObject.id}}/Main-001.jpg"
+                        onerror="this.src='assets/img/defaultImage.png'"/></figure>
                 <div class="course_assets clearfix">
                     <div class="angucomplete_title clearfix"><i></i>
                         <p ng-if="matchClass" class="clearfix" ng-bind-html="result.title"></p>

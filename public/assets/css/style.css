@@ -3,87 +3,63 @@
 @font-face {
     font-family: 'lato';
     src: url('../fonts/Lato-Regular.eot');
-    src: url('../fonts/Lato-Regular.eot?#iefix') format('eot'), /* IE6–8 */
-    url('../fonts/Lato-Regular.woff2') format('woff2'), /* Chrome36+, Opera24+*/
-    url('../fonts/Lato-Regular.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
-    url('../fonts/Lato-Regular.ttf') format('ttf');
+    src: url('../fonts/Lato-Regular.eot?#iefix') format('eot'), /* IE6–8 */ url('../fonts/Lato-Regular.woff2') format('woff2'), /* Chrome36+, Opera24+*/ url('../fonts/Lato-Regular.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/ url('../fonts/Lato-Regular.ttf') format('ttf');
     font-weight: normal;
 }
 
 @font-face {
     font-family: 'lato';
     src: url('../fonts/Lato-Bold.eot');
-    src: url('../fonts/Lato-Bold.eot?#iefix') format('eot'), /* IE6–8 */
-    url('../fonts/Lato-Bold.woff2') format('woff2'), /* Chrome36+, Opera24+*/
-    url('../fonts/Lato-Bold.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
-    url('../fonts/Lato-Bold.ttf') format('ttf');
+    src: url('../fonts/Lato-Bold.eot?#iefix') format('eot'), /* IE6–8 */ url('../fonts/Lato-Bold.woff2') format('woff2'), /* Chrome36+, Opera24+*/ url('../fonts/Lato-Bold.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/ url('../fonts/Lato-Bold.ttf') format('ttf');
     font-weight: bold;
 }
 
 @font-face {
     font-family: 'roboto';
     src: url('../fonts/Roboto-Condensed-webfont.eot');
-    src: url('../fonts/Roboto-Condensed-webfont.eot?#iefix') format('eot'), /* IE6–8 */
-    url('../fonts/Roboto-Condensed-webfont.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
-    url('../fonts/Roboto-Condensed-webfont.ttf') format('ttf');
+    src: url('../fonts/Roboto-Condensed-webfont.eot?#iefix') format('eot'), /* IE6–8 */ url('../fonts/Roboto-Condensed-webfont.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/ url('../fonts/Roboto-Condensed-webfont.ttf') format('ttf');
     font-weight: normal;
 }
 
 @font-face {
     font-family: 'roboto';
     src: url('../fonts/Roboto-Medium-webfont.eot');
-    src: url('../fonts/Roboto-Medium-webfont.eot?#iefix') format('eot'), /* IE6–8 */
-    url('../fonts/Roboto-Medium-webfont.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
-    url('../fonts/Roboto-Medium-webfont.ttf') format('ttf');
+    src: url('../fonts/Roboto-Medium-webfont.eot?#iefix') format('eot'), /* IE6–8 */ url('../fonts/Roboto-Medium-webfont.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/ url('../fonts/Roboto-Medium-webfont.ttf') format('ttf');
     font-weight: 500;
 }
 
 @font-face {
     font-family: 'roboto';
     src: url('../fonts/Roboto-Bold-webfont.eot');
-    src: url('../fonts/Roboto-Bold-webfont.eot?#iefix') format('eot'), /* IE6–8 */
-    url('../fonts/Roboto-Bold-webfont.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
-    url('../fonts/Roboto-Bold-webfont.ttf') format('ttf');
+    src: url('../fonts/Roboto-Bold-webfont.eot?#iefix') format('eot'), /* IE6–8 */ url('../fonts/Roboto-Bold-webfont.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/ url('../fonts/Roboto-Bold-webfont.ttf') format('ttf');
     font-weight: bold;
 }
 
 @font-face {
     font-family: 'iran';
     src: url('../fonts/IRANSans-Bold-web.eot');
-    src: url('../fonts/IRANSans-Bold-web.eot?#iefix') format('eot'), /* IE6–8 */
-    url('../fonts/IRANSans-Bold-web.woff2') format('woff2'), /* Chrome36+, Opera24+*/
-    url('../fonts/IRANSans-Bold-web.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
-    url('../fonts/IRANSans-Bold-web.ttf') format('ttf');
+    src: url('../fonts/IRANSans-Bold-web.eot?#iefix') format('eot'), /* IE6–8 */ url('../fonts/IRANSans-Bold-web.woff2') format('woff2'), /* Chrome36+, Opera24+*/ url('../fonts/IRANSans-Bold-web.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/ url('../fonts/IRANSans-Bold-web.ttf') format('ttf');
     font-weight: bold;
 }
 
 @font-face {
     font-family: 'iran';
     src: url('../fonts/IRANSans-Medium-web.eot');
-    src: url('../fonts/IRANSans-Medium-web.eot?#iefix') format('eot'), /* IE6–8 */
-    url('../fonts/IRANSans-Medium-web.woff2') format('woff2'), /* Chrome36+, Opera24+*/
-    url('../fonts/IRANSans-Medium-web.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
-    url('../fonts/IRANSans-Medium-web.ttf') format('ttf');
+    src: url('../fonts/IRANSans-Medium-web.eot?#iefix') format('eot'), /* IE6–8 */ url('../fonts/IRANSans-Medium-web.woff2') format('woff2'), /* Chrome36+, Opera24+*/ url('../fonts/IRANSans-Medium-web.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/ url('../fonts/IRANSans-Medium-web.ttf') format('ttf');
     font-weight: 500;
 }
 
 @font-face {
     font-family: 'iran';
     src: url('../fonts/IRANSans-web.eot');
-    src: url('../fonts/IRANSans-web.eot?#iefix') format('eot'), /* IE6–8 */
-    url('../fonts/IRANSans-web.woff2') format('woff2'), /* Chrome36+, Opera24+*/
-    url('../fonts/IRANSans-web.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
-    url('../fonts/IRANSans-web.ttf') format('ttf');
+    src: url('../fonts/IRANSans-web.eot?#iefix') format('eot'), /* IE6–8 */ url('../fonts/IRANSans-web.woff2') format('woff2'), /* Chrome36+, Opera24+*/ url('../fonts/IRANSans-web.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/ url('../fonts/IRANSans-web.ttf') format('ttf');
     font-weight: normal;
 }
 
 @font-face {
     font-family: 'iran';
     src: url('../fonts/IRANSans-light-web.eot');
-    src: url('../fonts/IRANSans-light-web.eot?#iefix') format('eot'), /* IE6–8 */
-    url('../fonts/IRANSans-light-web.woff2') format('woff2'), /* Chrome36+, Opera24+*/
-    url('../fonts/IRANSans-light-web.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
-    url('../fonts/IRANSans-light-web.ttf') format('ttf');
+    src: url('../fonts/IRANSans-light-web.eot?#iefix') format('eot'), /* IE6–8 */ url('../fonts/IRANSans-light-web.woff2') format('woff2'), /* Chrome36+, Opera24+*/ url('../fonts/IRANSans-light-web.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/ url('../fonts/IRANSans-light-web.ttf') format('ttf');
     font-weight: lighter;
 }
 
@@ -228,7 +204,6 @@ ul li {
     display: none !important;
 }
 
-
 /***************** GlobalStyle *******************/
 
 body {
@@ -293,7 +268,6 @@ button {
     transition: height .4s;
 }
 
-
 /*
 .tabs_list li a:before{
     content: '';
@@ -351,15 +325,12 @@ button {
     height: 4px;
 }
 
-
 /*.tabs_list li a.active:hover {
     color: #494949;
     border-bottom: 2px solid #00c853;
 }*/
 
-
 /**************** homePage **********************/
-
 
 /******** navBar ********/
 
@@ -478,7 +449,6 @@ ul.register_menu li a.nav_logIn span {
     background: url('../icons/icons.png') -159px -18px;
 }
 
-
 /******** Main ********/
 
 main.main_block {
@@ -490,7 +460,6 @@ div.main_bg {
     height: 100vh;
     background-size: 100%;
 }
-
 
 /*img.main_photo {
     width: 100%;
@@ -536,7 +505,6 @@ div.main_context div.search_block a.main_button {
     padding: 7px 31px;
     color: #fff;
 }
-
 
 /************angucomplete*******************/
 
@@ -659,14 +627,14 @@ div.time p {
     margin-top: 5px;
     float: right;
 }
-div.time p{
+
+div.time p {
     margin-top: 1px;
 }
 
 div.angucomplete-row.main_search div.angucomplete-row.angucomplete-selected-row p.description {
     color: #fff;
 }
-
 
 /*-----------------*/
 
@@ -723,7 +691,6 @@ footer.main_footer span.pluralsight_logo {
     width: 292px;
     margin-right: 1%;
 }
-
 
 /******** categories_main_page *******/
 
@@ -812,7 +779,6 @@ li.category_list_item a span {
     margin-left: 2px;
 }
 
-
 /********************TopCategories**********************/
 
 section.special_offer_courses_list {
@@ -832,7 +798,8 @@ section.special_offer_courses_list a.special_offer_link {
     box-shadow: -2px 3px 4px 0 rgba(0, 0, 0, 0.16);
 }
 
-section.special_offer_courses_list article.special_offer_course_item {}
+section.special_offer_courses_list article.special_offer_course_item {
+}
 
 section.special_offer_courses_list article.angular_learning_item {
     background-image: url('../img/angularTrainingBG.png');
@@ -904,7 +871,6 @@ section.special_offer_courses_list a.special_offer_link:hover {
     -moz-box-shadow: -2px 4px 11px 2px rgba(0, 0, 0, 0.40);
     box-shadow: -2px 4px 11px 2px rgba(0, 0, 0, 0.40);
 }
-
 
 /********************** Courses ************************/
 
@@ -1069,7 +1035,6 @@ div.view_wrapper {
     margin-left: 10px;
 }
 
-
 /******** RssEmail *********/
 
 section.rss_email {
@@ -1133,7 +1098,6 @@ div.rss_email_register a {
     border-bottom-right-radius: 5px;
 }
 
-
 /********* Footer **********/
 
 footer.footer_page {
@@ -1185,7 +1149,6 @@ p.footer_context {
 div.footer_left_side figure.footer_logo {
     float: left;
 }
-
 
 /******************* FilterCourse **************************/
 
@@ -1357,120 +1320,114 @@ input.input_check_filter[type="checkbox"]:checked + label::before {
     background: url(../icons/icons.png) -469px -61px;
 }
 
+h4.course_comments .course_comments_icon {
+    width: 20px;
+    height: 22px;
+    display: inline-block;
+    margin: 0 0 2px 5px;
+    float: right;
+    background: url(../icons/icons.png) -274px -123px;
+}
+
+h4.course_comments .course_comments_icon,
+h4.course_parts .parts_icon,
+h4.details_header .details_icon {
+    width: 20px;
+    height: 24px;
+    display: inline-block;
+    margin: 1px 0 2px 5px;
+    float: right;
+
+}
+
+h4.course_comments .course_comments_icon {
+    background: url(../icons/icons.png) -267px -124px;
+}
+
+h4.course_parts .parts_icon {
+    background: url(../icons/icons.png) -317px -123px;
+}
+
+h4.details_header .details_icon {
+    background: url(../icons/icons.png) -289px -123px;
+    width: 22px;
+}
 
 /**********CheckBoxTemplate************/
 
-
 /*main.filter_main p.check_filter input.input_check_filter:before{*/
-
 
 /*border: 2px solid #ccc;*/
 
-
 /*content: "";*/
-
 
 /*cursor: pointer;*/
 
-
 /*display: block;*/
-
 
 /*height: 15px;*/
 
-
 /*position: absolute;*/
-
 
 /*-moz-transition: all 0.3s ease-in-out;*/
 
-
 /*-o-transition: all 0.3s ease-in-out;*/
-
 
 /*-webkit-transition: all 0.3s ease-in-out;*/
 
-
 /*transition: all 0.3s ease-in-out;*/
 
-
 /*width: 15px;*/
-
 
 /*z-index: 1;*/
 
-
 /*}*/
-
 
 /*main.filter_main p.check_filter input.input_check_filter:after{*/
 
-
 /*background: #fff;*/
-
 
 /*content: "";*/
 
-
 /*display: block;*/
-
 
 /*height: 15px;*/
 
-
 /*position: absolute;*/
-
 
 /*top: 0;*/
 
-
 /*width: 15px;*/
-
 
 /*z-index: 0;*/
 
-
 /*}*/
 
-
 /*main.filter_main p.check_filter input.input_check_filter:checked:before {*/
-
 
 /*border-color: #009688;*/
 
-
 /*}*/
-
 
 /*main.filter_main p.check_filter input.input_check_filter:checked:before {*/
 
-
 /*border-top-style: none;*/
-
 
 /*border-right-style: none;*/
 
-
 /*height: 10px;*/
-
 
 /*-moz-transform: rotate(-45deg);*/
 
-
 /*-ms-transform: rotate(-45deg);*/
-
 
 /*-o-transform: rotate(-45deg);*/
 
-
 /*-webkit-transform: rotate(-45deg);*/
-
 
 /*transform: rotate(-45deg);*/
 
-
 /*}*/
-
 
 /********************************/
 
@@ -1632,7 +1589,6 @@ section.filter_course_wrapper div.courses {
     min-height: 1300px;
 }
 
-
 /*SortView*/
 
 div.sort_filter div.sortOption {
@@ -1676,7 +1632,6 @@ section.filter_course_wrapper div.course_wrapper .paging.bottom_side_video {
     position: relative;
     bottom: 0;
 }
-
 
 /****Paging****/
 
@@ -1849,7 +1804,6 @@ div.search_result_container p.search_count {
     color: #373f49;
 }
 
-
 /********************** VideoCourses ************************/
 
 div.main_video {
@@ -1911,7 +1865,6 @@ p.video_course_title_detail.views span.view_value {
     margin-right: 7px;
 }
 
-
 /***Video***/
 
 section.intro_course {
@@ -1930,6 +1883,7 @@ div.video_wrapper {
     float: right;
     height: 480px;
 }
+
 figure.video_figure img {
     float: right;
 }
@@ -1950,7 +1904,6 @@ figure.video_figure a.icon_play {
     height: 80px;
     background: url("../icons/icons.png") -101px -47px;
 }
-
 
 /*****aside*****/
 
@@ -2054,7 +2007,6 @@ li.list_course_download_details_item button.download_link_course span.icon {
     float: right;
 }
 
-
 /************CourseContent**************/
 
 div.course_detailes_wrapper {
@@ -2104,7 +2056,7 @@ div.course_comment_wrapper a.show_more {
     background: linear-gradient(rgba(250, 250, 250, 0), rgba(250, 250, 250, 0.95), #f7f7f7);
 }
 
-div.course_comment_wrapper a.show_more span{
+div.course_comment_wrapper a.show_more span {
     margin-right: 10px;
 }
 
@@ -2141,7 +2093,6 @@ section.section_course header.section_course_header h5 {
     margin-left: 4px;
     display: inline-block;
 }
-
 
 /***********courseAccordion**************/
 
@@ -2249,7 +2200,6 @@ section.section_course article.section_course_accordion:last-child header.header
     border-bottom: 1px solid #eee;
 }
 
-
 /*mainAccordion*/
 
 article.section_course_accordion main.main_section_course_accordion {
@@ -2263,7 +2213,6 @@ article.section_course_accordion main.main_section_course_accordion {
     border-top: none;
 }
 
-
 /*activeAccordion*/
 
 article.section_course_accordion header.header_lecture_course.active {
@@ -2274,7 +2223,6 @@ article.section_course_accordion header.header_lecture_course.active {
 header.section_course_header.active span.icon_accordion {
     background: url("../icons/icons.png") -369px -57px;
 }
-
 
 /*******SimilarCourses*********/
 
@@ -2324,11 +2272,10 @@ a.similar_courses_item_link:hover div.similar_course_details p {
     color: #0b71cb;
 }
 
-
 /*******SearchVideo*******/
 
 section.search_video_section input.search_video_section_input {
-    background:#f5f5f5 url(../icons/search_icon.png) 2% 50% no-repeat;
+    background: #f5f5f5 url(../icons/search_icon.png) 2% 50% no-repeat;
     border: 1px solid #ccc;
     padding: 10px 9px;
     width: 100%;
@@ -2417,7 +2364,6 @@ div.angucomplete-row.video_search div.course_assets {
     }
 }
 
-
 /*customScroll*/
 
 main.filter_main .mCS-autoHide > .mCustomScrollBox > .mCSB_scrollTools,
@@ -2463,7 +2409,6 @@ div.course_main_intro_wrapper .mCS-minimal-dark.mCSB_scrollTools .mCSB_dragger:a
     filter: "alpha(opacity=50)";
     -ms-filter: "alpha(opacity=50)"
 }
-
 
 /*rzSlider*/
 
@@ -2631,8 +2576,9 @@ div.course_main_intro_wrapper .mCS-minimal-dark.mCSB_scrollTools .mCSB_dragger:a
         height: 770px;
     }
 }
+
 /*jwPlayer*/
-.jwlogo{
+.jwlogo {
     display: none;
 }
 
